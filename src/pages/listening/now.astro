@@ -1,0 +1,46 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+
+const albums = JSON.parse(
+  fs.readFileSync(path.join(process.cwd(), "data", "albums.json"), "utf-8")
+);
+
+const nowPath = path.join(process.cwd(), "data", "now.json");
+
+let nowId = null;
+if (fs.existsSync(nowPath)) {
+  try {
+    nowId = JSON.parse(fs.readFileSync(nowPath, "utf-8"))?.id ?? null;
+  } catch {
+    nowId = null;
+  }
+}
+
+const album = nowId ? albums.find((a) => a.id === nowId) : null;
+const missing = nowId && !album;
+---
+
+<h1>Now Listening</h1>
+
+{album ? (
+  <>
+    <h2>{album.title}</h2>
+    <p>{album.artist}  {album.year}{album.label ? `  ${album.label}` : ""}</p>
+
+    {album.ranks?.rollingstone ? <p>RS #{album.ranks.rollingstone}</p> : null}
+    {album.ranks?.apple ? <p>Apple #{album.ranks.apple}</p> : null}
+
+    {album.notes ? <pre style="white-space: pre-wrap">{album.notes}</pre> : <p class="muted">No notes yet.</p>}
+  </>
+) :  missing ? (
+  <>
+    <p>Pinned album id <code>{nowId}</code> wasn’t found in <code>data/albums.json</code>.</p>
+    <p>Run <code>npm run albums:build</code> (then commit) or repick.</p>
+  </>
+) : (
+  <>
+    <p>No pinned album yet (or it’s invalid).</p>
+    <p>Run <code>npm run pick:album</code> locally to generate <code>data/now.json</code>.</p>
+  </>
+)}

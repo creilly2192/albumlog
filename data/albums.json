@@ -1,0 +1,3402 @@
+[
+  {
+    "id": "sade-diamond-life-1984",
+    "title": "Diamond Life",
+    "artist": "Sade",
+    "year": 1984,
+    "label": "Epic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 200,
+      "apple": null
+    },
+    "canonicalRank": 200
+  },
+  {
+    "id": "pavement-slanted-and-enchanted-1993",
+    "title": "Slanted and Enchanted",
+    "artist": "Pavement",
+    "year": 1993,
+    "label": "Matador",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 199,
+      "apple": null
+    },
+    "canonicalRank": 199
+  },
+  {
+    "id": "the-b-52s-the-b-52s-1979",
+    "title": "The B-52s",
+    "artist": "The B-52’s",
+    "year": 1979,
+    "label": "Warner Bros.",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 198,
+      "apple": null
+    },
+    "canonicalRank": 198
+  },
+  {
+    "id": "the-beatles-meet-the-beatles-1964",
+    "title": "Meet the Beatles!",
+    "artist": "The Beatles",
+    "year": 1964,
+    "label": "Capitol",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 197,
+      "apple": null
+    },
+    "canonicalRank": 197
+  },
+  {
+    "id": "robyn-body-talk-2010",
+    "title": "Body Talk",
+    "artist": "Robyn",
+    "year": 2010,
+    "label": "Konichiwa",
+    "status": "listened",
+    "rating": "loved",
+    "favorite": true,
+    "listenedAt": "2026-02-09",
+    "notes": "Brings me back to college. Dancing on my Own and Indestructible are bangers that were on repeat back then. This was my first time listening to the whole album. Great album to code to when you would rather be at the beach.",
+    "ranks": {
+      "rollingstone": 196,
+      "apple": 100
+    },
+    "canonicalRank": 100
+  },
+  {
+    "id": "leonard-cohen-songs-of-leonard-cohen-1967",
+    "title": "Songs of Leonard Cohen",
+    "artist": "Leonard Cohen",
+    "year": 1967,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 195,
+      "apple": null
+    },
+    "canonicalRank": 195
+  },
+  {
+    "id": "michael-jackson-bad-1987",
+    "title": "Bad",
+    "artist": "Michael Jackson",
+    "year": 1987,
+    "label": "Epic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 194,
+      "apple": null
+    },
+    "canonicalRank": 194
+  },
+  {
+    "id": "creedence-clearwater-revival-willy-and-the-poor-boys-1969",
+    "title": "Willy and the Poor Boys",
+    "artist": "Creedence Clearwater Revival",
+    "year": 1969,
+    "label": "Fantasy",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 193,
+      "apple": null
+    },
+    "canonicalRank": 193
+  },
+  {
+    "id": "beastie-boys-licensed-to-ill-1986",
+    "title": "Licensed to Ill",
+    "artist": "Beastie Boys",
+    "year": 1986,
+    "label": "Def Jam/Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 192,
+      "apple": null
+    },
+    "canonicalRank": 192
+  },
+  {
+    "id": "etta-james-at-last-1961",
+    "title": "At Last!",
+    "artist": "Etta James",
+    "year": 1961,
+    "label": "Argo",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 191,
+      "apple": null
+    },
+    "canonicalRank": 191
+  },
+  {
+    "id": "the-who-tommy-1969",
+    "title": "Tommy",
+    "artist": "The Who",
+    "year": 1969,
+    "label": "Decca",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 190,
+      "apple": null
+    },
+    "canonicalRank": 190
+  },
+  {
+    "id": "sleater-kinney-dig-me-out-1997",
+    "title": "Dig Me Out",
+    "artist": "Sleater-Kinney",
+    "year": 1997,
+    "label": "Kill Rock Stars",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 189,
+      "apple": null
+    },
+    "canonicalRank": 189
+  },
+  {
+    "id": "t-rex-electric-warrior-1971",
+    "title": "Electric Warrior",
+    "artist": "T. Rex",
+    "year": 1971,
+    "label": "Reprise",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 188,
+      "apple": null
+    },
+    "canonicalRank": 188
+  },
+  {
+    "id": "ice-cube-amerikkkas-most-wanted-1990",
+    "title": "AmeriKKKas Most Wanted",
+    "artist": "Ice Cube",
+    "year": 1990,
+    "label": "Priority",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 187,
+      "apple": null
+    },
+    "canonicalRank": 187
+  },
+  {
+    "id": "red-hot-chili-peppers-blood-sugar-sex-magik-1991",
+    "title": "Blood Sugar Sex Magik",
+    "artist": "Red Hot Chili Peppers",
+    "year": 1991,
+    "label": "Warner Bros.",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 186,
+      "apple": null
+    },
+    "canonicalRank": 186
+  },
+  {
+    "id": "the-rolling-stones-beggars-banquet-1968",
+    "title": "Beggars Banquet",
+    "artist": "The Rolling Stones",
+    "year": 1968,
+    "label": "Decca",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 185,
+      "apple": null
+    },
+    "canonicalRank": 185
+  },
+  {
+    "id": "cyndi-lauper-shes-so-unusual-1983",
+    "title": "Shes So Unusual",
+    "artist": "Cyndi Lauper",
+    "year": 1983,
+    "label": "Portrait",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 184,
+      "apple": null
+    },
+    "canonicalRank": 184
+  },
+  {
+    "id": "dangelo-brown-sugar-1995",
+    "title": "Brown Sugar",
+    "artist": "D’Angelo",
+    "year": 1995,
+    "label": "EMI",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 183,
+      "apple": null
+    },
+    "canonicalRank": 183
+  },
+  {
+    "id": "james-taylor-sweet-baby-james-1970",
+    "title": "Sweet Baby James",
+    "artist": "James Taylor",
+    "year": 1970,
+    "label": "Warner Bros.",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 182,
+      "apple": null
+    },
+    "canonicalRank": 182
+  },
+  {
+    "id": "bob-dylan-bringing-it-all-back-home-1965",
+    "title": "Bringing It All Back Home",
+    "artist": "Bob Dylan",
+    "year": 1965,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 181,
+      "apple": null
+    },
+    "canonicalRank": 181
+  },
+  {
+    "id": "love-forever-changes-1967",
+    "title": "Forever Changes",
+    "artist": "Love",
+    "year": 1967,
+    "label": "Elektra",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 180,
+      "apple": null
+    },
+    "canonicalRank": 180
+  },
+  {
+    "id": "notorious-b-i-g-life-after-death-1997",
+    "title": "Life After Death",
+    "artist": "Notorious B.I.G.",
+    "year": 1997,
+    "label": "Bad Boy",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 179,
+      "apple": null
+    },
+    "canonicalRank": 179
+  },
+  {
+    "id": "otis-redding-otis-blue-1965",
+    "title": "Otis Blue",
+    "artist": "Otis Redding",
+    "year": 1965,
+    "label": "Volt",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 178,
+      "apple": null
+    },
+    "canonicalRank": 178
+  },
+  {
+    "id": "rod-stewart-every-picture-tells-a-story-1971",
+    "title": "Every Picture Tells a Story",
+    "artist": "Rod Stewart",
+    "year": 1971,
+    "label": "Mercury",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 177,
+      "apple": null
+    },
+    "canonicalRank": 177
+  },
+  {
+    "id": "public-enemy-fear-of-a-black-planet-1990",
+    "title": "Fear of a Black Planet",
+    "artist": "Public Enemy",
+    "year": 1990,
+    "label": "Def Jam/Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 176,
+      "apple": null
+    },
+    "canonicalRank": 176
+  },
+  {
+    "id": "kendrick-lamar-damn-2017",
+    "title": "DAMN.",
+    "artist": "Kendrick Lamar",
+    "year": 2017,
+    "label": "TDE",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 175,
+      "apple": null
+    },
+    "canonicalRank": 175
+  },
+  {
+    "id": "jimmy-cliff-and-various-artists-the-harder-they-come-original-soundtrack-1972",
+    "title": "The Harder They Come: Original Soundtrack",
+    "artist": "Jimmy Cliff and Various Artists",
+    "year": 1972,
+    "label": "Mango",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 174,
+      "apple": null
+    },
+    "canonicalRank": 174
+  },
+  {
+    "id": "nirvana-in-utero-1993",
+    "title": "In Utero",
+    "artist": "Nirvana",
+    "year": 1993,
+    "label": "Geffen",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 173,
+      "apple": null
+    },
+    "canonicalRank": 173
+  },
+  {
+    "id": "simon-and-garfunkel-bridge-over-troubled-water-1970",
+    "title": "Bridge Over Troubled Water",
+    "artist": "Simon and Garfunkel",
+    "year": 1970,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 172,
+      "apple": null
+    },
+    "canonicalRank": 172
+  },
+  {
+    "id": "sonic-youth-daydream-nation-1988",
+    "title": "Daydream Nation",
+    "artist": "Sonic Youth",
+    "year": 1988,
+    "label": "Enigma",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 171,
+      "apple": null
+    },
+    "canonicalRank": 171
+  },
+  {
+    "id": "taylor-swift-folklore-2020",
+    "title": "Folklore",
+    "artist": "Taylor Swift",
+    "year": 2020,
+    "label": "Republic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 170,
+      "apple": null
+    },
+    "canonicalRank": 170
+  },
+  {
+    "id": "billy-joel-the-stranger-1977",
+    "title": "The Stranger",
+    "artist": "Billy Joel",
+    "year": 1977,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 169,
+      "apple": null
+    },
+    "canonicalRank": 169
+  },
+  {
+    "id": "steely-dan-cant-buy-a-thrill-1972",
+    "title": "Cant Buy a Thrill",
+    "artist": "Steely Dan",
+    "year": 1972,
+    "label": "ABC",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 168,
+      "apple": null
+    },
+    "canonicalRank": 168
+  },
+  {
+    "id": "depeche-mode-violator-1990",
+    "title": "Violator",
+    "artist": "Depeche Mode",
+    "year": 1990,
+    "label": "Sire",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 167,
+      "apple": null
+    },
+    "canonicalRank": 167
+  },
+  {
+    "id": "buddy-holly-20-golden-greats-1978",
+    "title": "20 Golden Greats",
+    "artist": "Buddy Holly",
+    "year": 1978,
+    "label": "MCA",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 166,
+      "apple": null
+    },
+    "canonicalRank": 166
+  },
+  {
+    "id": "r-e-m-murmur-1983",
+    "title": "Murmur",
+    "artist": "R.E.M.",
+    "year": 1983,
+    "label": "I.R.S.",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 165,
+      "apple": null
+    },
+    "canonicalRank": 165
+  },
+  {
+    "id": "johnny-cash-at-folsom-prison-1968",
+    "title": "At Folsom Prison",
+    "artist": "Johnny Cash",
+    "year": 1968,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 164,
+      "apple": null
+    },
+    "canonicalRank": 164
+  },
+  {
+    "id": "various-artists-saturday-night-fever-1977",
+    "title": "Saturday Night Fever",
+    "artist": "Various Artists",
+    "year": 1977,
+    "label": "RSO",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 163,
+      "apple": null
+    },
+    "canonicalRank": 163
+  },
+  {
+    "id": "pulp-different-class-1995",
+    "title": "Different Class",
+    "artist": "Pulp",
+    "year": 1995,
+    "label": "Island",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 162,
+      "apple": null
+    },
+    "canonicalRank": 162
+  },
+  {
+    "id": "crosby-stills-and-nash-1969",
+    "title": "Stills & Nash",
+    "artist": "Crosby",
+    "year": 1969,
+    "label": "Atlantic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 161,
+      "apple": null
+    },
+    "canonicalRank": 161
+  },
+  {
+    "id": "pearl-jam-ten-1991",
+    "title": "Ten",
+    "artist": "Pearl Jam",
+    "year": 1991,
+    "label": "Epic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 160,
+      "apple": null
+    },
+    "canonicalRank": 160
+  },
+  {
+    "id": "the-police-synchronicity-1983",
+    "title": "Synchronicity",
+    "artist": "The Police",
+    "year": 1983,
+    "label": "A&M",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 159,
+      "apple": null
+    },
+    "canonicalRank": 159
+  },
+  {
+    "id": "erykah-badu-mamas-gun-2000",
+    "title": "Mamas Gun",
+    "artist": "Erykah Badu",
+    "year": 2000,
+    "label": "Motown",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 158,
+      "apple": null
+    },
+    "canonicalRank": 158
+  },
+  {
+    "id": "oasis-whats-the-story-morning-glory-1995",
+    "title": "(Whats the Story) Morning Glory?",
+    "artist": "Oasis",
+    "year": 1995,
+    "label": "Epic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 157,
+      "apple": 58
+    },
+    "canonicalRank": 58
+  },
+  {
+    "id": "the-replacements-let-it-be-1984",
+    "title": "Let It Be",
+    "artist": "The Replacements",
+    "year": 1984,
+    "label": "Twin/Tone",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 156,
+      "apple": null
+    },
+    "canonicalRank": 156
+  },
+  {
+    "id": "jay-z-the-black-album-2003",
+    "title": "The Black Album",
+    "artist": "Jay-Z",
+    "year": 2003,
+    "label": "Roc-A-Fella",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 155,
+      "apple": null
+    },
+    "canonicalRank": 155
+  },
+  {
+    "id": "aretha-franklin-amazing-grace-1972",
+    "title": "Amazing Grace",
+    "artist": "Aretha Franklin",
+    "year": 1972,
+    "label": "Atlantic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 154,
+      "apple": null
+    },
+    "canonicalRank": 154
+  },
+  {
+    "id": "pj-harvey-rid-of-me-1993",
+    "title": "Rid of Me",
+    "artist": "PJ Harvey",
+    "year": 1993,
+    "label": "Island",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 153,
+      "apple": null
+    },
+    "canonicalRank": 153
+  },
+  {
+    "id": "the-pretenders-pretenders-1980",
+    "title": "Pretenders",
+    "artist": "The Pretenders",
+    "year": 1980,
+    "label": "Sire",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 152,
+      "apple": null
+    },
+    "canonicalRank": 152
+  },
+  {
+    "id": "george-michael-faith-1987",
+    "title": "Faith",
+    "artist": "George Michael",
+    "year": 1987,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 151,
+      "apple": null
+    },
+    "canonicalRank": 151
+  },
+  {
+    "id": "bruce-springsteen-nebraska-1982",
+    "title": "Nebraska",
+    "artist": "Bruce Springsteen",
+    "year": 1982,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 150,
+      "apple": null
+    },
+    "canonicalRank": 150
+  },
+  {
+    "id": "john-prine-john-prine-1971",
+    "title": "John Prine",
+    "artist": "John Prine",
+    "year": 1971,
+    "label": "Atlantic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 149,
+      "apple": null
+    },
+    "canonicalRank": 149
+  },
+  {
+    "id": "frank-ocean-channel-orange-2012",
+    "title": "Channel Orange",
+    "artist": "Frank Ocean",
+    "year": 2012,
+    "label": "Def Jam",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 148,
+      "apple": null
+    },
+    "canonicalRank": 148
+  },
+  {
+    "id": "jeff-buckley-grace-1994",
+    "title": "Grace",
+    "artist": "Jeff Buckley",
+    "year": 1994,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 147,
+      "apple": null
+    },
+    "canonicalRank": 147
+  },
+  {
+    "id": "blondie-parallel-lines-1978",
+    "title": "Parallel Lines",
+    "artist": "Blondie",
+    "year": 1978,
+    "label": "Chrysalis",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 146,
+      "apple": null
+    },
+    "canonicalRank": 146
+  },
+  {
+    "id": "eminem-the-marshall-mathers-lp-2000",
+    "title": "The Marshall Mathers LP",
+    "artist": "Eminem",
+    "year": 2000,
+    "label": "Interscope",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 145,
+      "apple": 80
+    },
+    "canonicalRank": 80
+  },
+  {
+    "id": "led-zeppelin-physical-graffiti-1975",
+    "title": "Physical Graffiti",
+    "artist": "Led Zeppelin",
+    "year": 1975,
+    "label": "Swan Song",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 144,
+      "apple": null
+    },
+    "canonicalRank": 144
+  },
+  {
+    "id": "the-velvet-underground-the-velvet-underground-1969",
+    "title": "The Velvet Underground",
+    "artist": "The Velvet Underground",
+    "year": 1969,
+    "label": "MGM",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 143,
+      "apple": null
+    },
+    "canonicalRank": 143
+  },
+  {
+    "id": "bruce-springsteen-born-in-the-u-s-a-1984",
+    "title": "Born in the U.S.A.",
+    "artist": "Bruce Springsteen",
+    "year": 1984,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 142,
+      "apple": null
+    },
+    "canonicalRank": 142
+  },
+  {
+    "id": "pixies-doolittle-1989",
+    "title": "Doolittle",
+    "artist": "Pixies",
+    "year": 1989,
+    "label": "4AD/Elektra",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 141,
+      "apple": null
+    },
+    "canonicalRank": 141
+  },
+  {
+    "id": "bob-marley-and-the-wailers-catch-a-fire-1973",
+    "title": "Catch a Fire",
+    "artist": "Bob Marley and the Wailers",
+    "year": 1973,
+    "label": "Island",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 140,
+      "apple": null
+    },
+    "canonicalRank": 140
+  },
+  {
+    "id": "black-sabbath-paranoid-1970",
+    "title": "Paranoid",
+    "artist": "Black Sabbath",
+    "year": 1970,
+    "label": "Vertigo",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 139,
+      "apple": null
+    },
+    "canonicalRank": 139
+  },
+  {
+    "id": "madonna-the-immaculate-collection-1990",
+    "title": "The Immaculate Collection",
+    "artist": "Madonna",
+    "year": 1990,
+    "label": "Sire",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 138,
+      "apple": null
+    },
+    "canonicalRank": 138
+  },
+  {
+    "id": "adele-21-2011",
+    "title": "21",
+    "artist": "Adele",
+    "year": 2011,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 137,
+      "apple": 15
+    },
+    "canonicalRank": 15
+  },
+  {
+    "id": "funkadelic-maggot-brain-1971",
+    "title": "Maggot Brain",
+    "artist": "Funkadelic",
+    "year": 1971,
+    "label": "Westbound",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 136,
+      "apple": null
+    },
+    "canonicalRank": 136
+  },
+  {
+    "id": "u2-the-joshua-tree-1987",
+    "title": "The Joshua Tree",
+    "artist": "U2",
+    "year": 1987,
+    "label": "Island",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 135,
+      "apple": 49
+    },
+    "canonicalRank": 49
+  },
+  {
+    "id": "fugees-the-score-1996",
+    "title": "The Score",
+    "artist": "Fugees",
+    "year": 1996,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 134,
+      "apple": null
+    },
+    "canonicalRank": 134
+  },
+  {
+    "id": "joni-mitchell-hejira-1976",
+    "title": "Hejira",
+    "artist": "Joni Mitchell",
+    "year": 1976,
+    "label": "Asylum",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 133,
+      "apple": null
+    },
+    "canonicalRank": 133
+  },
+  {
+    "id": "hank-williams-40-greatest-hits-1978",
+    "title": "40 Greatest Hits",
+    "artist": "Hank Williams",
+    "year": 1978,
+    "label": "Polydor",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 132,
+      "apple": null
+    },
+    "canonicalRank": 132
+  },
+  {
+    "id": "portishead-dummy-1994",
+    "title": "Dummy",
+    "artist": "Portishead",
+    "year": 1994,
+    "label": "Go! Beat",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 131,
+      "apple": 67
+    },
+    "canonicalRank": 67
+  },
+  {
+    "id": "prince-1999-1982",
+    "title": "1999",
+    "artist": "Prince",
+    "year": 1982,
+    "label": "Warner Bros.",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 130,
+      "apple": null
+    },
+    "canonicalRank": 130
+  },
+  {
+    "id": "pink-floyd-the-wall-1979",
+    "title": "The Wall",
+    "artist": "Pink Floyd",
+    "year": 1979,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 129,
+      "apple": null
+    },
+    "canonicalRank": 129
+  },
+  {
+    "id": "queen-a-night-at-the-opera-1975",
+    "title": "A Night at the Opera",
+    "artist": "Queen",
+    "year": 1975,
+    "label": "Elektra",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 128,
+      "apple": null
+    },
+    "canonicalRank": 128
+  },
+  {
+    "id": "ray-charles-modern-sounds-in-country-and-western-music-1962",
+    "title": "Modern Sounds in Country and Western Music",
+    "artist": "Ray Charles",
+    "year": 1962,
+    "label": "ABC-Paramount",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 127,
+      "apple": null
+    },
+    "canonicalRank": 127
+  },
+  {
+    "id": "mary-j-blige-my-life-1994",
+    "title": "My Life",
+    "artist": "Mary J. Blige",
+    "year": 1994,
+    "label": "Uptown",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 126,
+      "apple": 86
+    },
+    "canonicalRank": 86
+  },
+  {
+    "id": "beastie-boys-pauls-boutique-1989",
+    "title": "Pauls Boutique",
+    "artist": "Beastie Boys",
+    "year": 1989,
+    "label": "Capitol",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 125,
+      "apple": 48
+    },
+    "canonicalRank": 48
+  },
+  {
+    "id": "u2-achtung-baby-1991",
+    "title": "Achtung Baby",
+    "artist": "U2",
+    "year": 1991,
+    "label": "Island",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 124,
+      "apple": null
+    },
+    "canonicalRank": 124
+  },
+  {
+    "id": "led-zeppelin-led-zeppelin-ii-1969",
+    "title": "Led Zeppelin II",
+    "artist": "Led Zeppelin",
+    "year": 1969,
+    "label": "Atlantic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 123,
+      "apple": 27
+    },
+    "canonicalRank": 27
+  },
+  {
+    "id": "nine-inch-nails-the-downward-spiral-1994",
+    "title": "The Downward Spiral",
+    "artist": "Nine Inch Nails",
+    "year": 1994,
+    "label": "Nothing/Interscope",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 122,
+      "apple": 74
+    },
+    "canonicalRank": 74
+  },
+  {
+    "id": "elvis-costello-this-years-model-1978",
+    "title": "This Years Model",
+    "artist": "Elvis Costello",
+    "year": 1978,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 121,
+      "apple": null
+    },
+    "canonicalRank": 121
+  },
+  {
+    "id": "van-morrison-moondance-1970",
+    "title": "Moondance",
+    "artist": "Van Morrison",
+    "year": 1970,
+    "label": "Warner Bros.",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 120,
+      "apple": null
+    },
+    "canonicalRank": 120
+  },
+  {
+    "id": "sly-and-the-family-stone-stand-1969",
+    "title": "Stand!",
+    "artist": "Sly and the Family Stone",
+    "year": 1969,
+    "label": "Epic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 119,
+      "apple": null
+    },
+    "canonicalRank": 119
+  },
+  {
+    "id": "the-eagles-hotel-california-1976",
+    "title": "Hotel California",
+    "artist": "The Eagles",
+    "year": 1976,
+    "label": "Asylum",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 118,
+      "apple": null
+    },
+    "canonicalRank": 118
+  },
+  {
+    "id": "kanye-west-late-registration-2005",
+    "title": "Late Registration",
+    "artist": "Kanye West",
+    "year": 2005,
+    "label": "Roc-A-Fella",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 117,
+      "apple": null
+    },
+    "canonicalRank": 117
+  },
+  {
+    "id": "the-cure-disintegration-1989",
+    "title": "Disintegration",
+    "artist": "The Cure",
+    "year": 1989,
+    "label": "Fiction",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 116,
+      "apple": 56
+    },
+    "canonicalRank": 56
+  },
+  {
+    "id": "kendrick-lamar-good-kid-m-a-a-d-city-2012",
+    "title": "good kid m.A.A.d city",
+    "artist": "Kendrick Lamar",
+    "year": 2012,
+    "label": "TDE",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 115,
+      "apple": null
+    },
+    "canonicalRank": 115
+  },
+  {
+    "id": "the-strokes-is-this-it-2001",
+    "title": "Is This It",
+    "artist": "The Strokes",
+    "year": 2001,
+    "label": "RCA",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 114,
+      "apple": 68
+    },
+    "canonicalRank": 68
+  },
+  {
+    "id": "the-smiths-the-queen-is-dead-1986",
+    "title": "The Queen Is Dead",
+    "artist": "The Smiths",
+    "year": 1986,
+    "label": "Sire",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 113,
+      "apple": 66
+    },
+    "canonicalRank": 66
+  },
+  {
+    "id": "elton-john-goodbye-yellow-brick-road-1973",
+    "title": "Goodbye Yellow Brick Road",
+    "artist": "Elton John",
+    "year": 1973,
+    "label": "MCA",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 112,
+      "apple": 78
+    },
+    "canonicalRank": 78
+  },
+  {
+    "id": "janet-jackson-control-1986",
+    "title": "Control",
+    "artist": "Janet Jackson",
+    "year": 1986,
+    "label": "A&M",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 111,
+      "apple": 42
+    },
+    "canonicalRank": 42
+  },
+  {
+    "id": "joni-mitchell-court-and-spark-1974",
+    "title": "Court and Spark",
+    "artist": "Joni Mitchell",
+    "year": 1974,
+    "label": "Asylum",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 110,
+      "apple": null
+    },
+    "canonicalRank": 110
+  },
+  {
+    "id": "lou-reed-transformer-1972",
+    "title": "Transformer",
+    "artist": "Lou Reed",
+    "year": 1972,
+    "label": "RCA",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 109,
+      "apple": null
+    },
+    "canonicalRank": 109
+  },
+  {
+    "id": "fiona-apple-when-the-pawn-1999",
+    "title": "When the Pawn ...",
+    "artist": "Fiona Apple",
+    "year": 1999,
+    "label": "Epic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 108,
+      "apple": null
+    },
+    "canonicalRank": 108
+  },
+  {
+    "id": "television-marquee-moon-1977",
+    "title": "Marquee Moon",
+    "artist": "Television",
+    "year": 1977,
+    "label": "Elektra",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 107,
+      "apple": null
+    },
+    "canonicalRank": 107
+  },
+  {
+    "id": "hole-live-through-this-1994",
+    "title": "Live Through This",
+    "artist": "Hole",
+    "year": 1994,
+    "label": "Geffen",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 106,
+      "apple": null
+    },
+    "canonicalRank": 106
+  },
+  {
+    "id": "the-allman-brothers-at-fillmore-east-1971",
+    "title": "At Fillmore East",
+    "artist": "The Allman Brothers",
+    "year": 1971,
+    "label": "Capricorn",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 105,
+      "apple": null
+    },
+    "canonicalRank": 105
+  },
+  {
+    "id": "the-rolling-stones-sticky-fingers-1971",
+    "title": "Sticky Fingers",
+    "artist": "The Rolling Stones",
+    "year": 1971,
+    "label": "Rolling Stones",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 104,
+      "apple": null
+    },
+    "canonicalRank": 104
+  },
+  {
+    "id": "de-la-soul-three-feet-high-and-rising-1989",
+    "title": "Three Feet High And Rising",
+    "artist": "De La Soul",
+    "year": 1989,
+    "label": "Tommy Boy",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 103,
+      "apple": null
+    },
+    "canonicalRank": 103
+  },
+  {
+    "id": "the-clash-the-clash-1977",
+    "title": "The Clash",
+    "artist": "The Clash",
+    "year": 1977,
+    "label": "CBS",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 102,
+      "apple": null
+    },
+    "canonicalRank": 102
+  },
+  {
+    "id": "led-zeppelin-led-zeppelin-1969",
+    "title": "Led Zeppelin",
+    "artist": "Led Zeppelin",
+    "year": 1969,
+    "label": "Atlantic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 101,
+      "apple": null
+    },
+    "canonicalRank": 101
+  },
+  {
+    "id": "the-band-music-from-big-pink-1968",
+    "title": "Music From Big Pink",
+    "artist": "The Band",
+    "year": 1968,
+    "label": "Capitol",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 100,
+      "apple": null
+    },
+    "canonicalRank": 100
+  },
+  {
+    "id": "taylor-swift-red-2012",
+    "title": "Red",
+    "artist": "Taylor Swift",
+    "year": 2012,
+    "label": "Big Machine",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 99,
+      "apple": null
+    },
+    "canonicalRank": 99
+  },
+  {
+    "id": "lucinda-williams-car-wheels-on-a-gravel-road-1998",
+    "title": "Car Wheels on a Gravel Road",
+    "artist": "Lucinda Williams",
+    "year": 1998,
+    "label": "Mercury",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 98,
+      "apple": null
+    },
+    "canonicalRank": 98
+  },
+  {
+    "id": "metallica-master-of-puppets-1986",
+    "title": "Master of Puppets",
+    "artist": "Metallica",
+    "year": 1986,
+    "label": "Elektra",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 97,
+      "apple": 69
+    },
+    "canonicalRank": 69
+  },
+  {
+    "id": "r-e-m-automatic-for-the-people-1992",
+    "title": "Automatic for the People",
+    "artist": "R.E.M.",
+    "year": 1992,
+    "label": "Warner Bros.",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 96,
+      "apple": null
+    },
+    "canonicalRank": 96
+  },
+  {
+    "id": "drake-take-care-2011",
+    "title": "Take Care",
+    "artist": "Drake",
+    "year": 2011,
+    "label": "Cash Money",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 95,
+      "apple": 47
+    },
+    "canonicalRank": 47
+  },
+  {
+    "id": "the-stooges-fun-house-1970",
+    "title": "Fun House",
+    "artist": "The Stooges",
+    "year": 1970,
+    "label": "Elektra",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 94,
+      "apple": null
+    },
+    "canonicalRank": 94
+  },
+  {
+    "id": "missy-misdemeanor-elliott-supa-dupa-fly-1997",
+    "title": "Supa Dupa Fly",
+    "artist": "Missy “Misdemeanor” Elliott",
+    "year": 1997,
+    "label": "Goldmind",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 93,
+      "apple": null
+    },
+    "canonicalRank": 93
+  },
+  {
+    "id": "the-jimi-hendrix-experience-axis-bold-as-love-1967",
+    "title": "Axis: Bold as Love",
+    "artist": "The Jimi Hendrix Experience",
+    "year": 1967,
+    "label": "Track",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 92,
+      "apple": null
+    },
+    "canonicalRank": 92
+  },
+  {
+    "id": "bruce-springsteen-darkness-on-the-edge-of-town-1978",
+    "title": "Darkness on the Edge of Town",
+    "artist": "Bruce Springsteen",
+    "year": 1978,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 91,
+      "apple": null
+    },
+    "canonicalRank": 91
+  },
+  {
+    "id": "neil-young-after-the-gold-rush-1970",
+    "title": "After the Gold Rush",
+    "artist": "Neil Young",
+    "year": 1970,
+    "label": "Reprise",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 90,
+      "apple": 81
+    },
+    "canonicalRank": 81
+  },
+  {
+    "id": "erykah-badu-baduizm-1997",
+    "title": "Baduizm",
+    "artist": "Erykah Badu",
+    "year": 1997,
+    "label": "Kedar",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 89,
+      "apple": 64
+    },
+    "canonicalRank": 64
+  },
+  {
+    "id": "david-bowie-hunky-dory-1971",
+    "title": "Hunky Dory",
+    "artist": "David Bowie",
+    "year": 1971,
+    "label": "RCA",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 88,
+      "apple": null
+    },
+    "canonicalRank": 88
+  },
+  {
+    "id": "miles-davis-bitches-brew-1970",
+    "title": "Bitches Brew",
+    "artist": "Miles Davis",
+    "year": 1970,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 87,
+      "apple": null
+    },
+    "canonicalRank": 87
+  },
+  {
+    "id": "the-doors-the-doors-1967",
+    "title": "The Doors",
+    "artist": "The Doors",
+    "year": 1967,
+    "label": "Elektra",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 86,
+      "apple": null
+    },
+    "canonicalRank": 86
+  },
+  {
+    "id": "john-lennon-plastic-ono-band-1970",
+    "title": "Plastic Ono Band",
+    "artist": "John Lennon",
+    "year": 1970,
+    "label": "Apple",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 85,
+      "apple": null
+    },
+    "canonicalRank": 85
+  },
+  {
+    "id": "ac-dc-back-in-black-1980",
+    "title": "Back in Black",
+    "artist": "AC/DC",
+    "year": 1980,
+    "label": "Atlantic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 84,
+      "apple": 90
+    },
+    "canonicalRank": 84
+  },
+  {
+    "id": "dusty-springfield-dusty-in-memphis-1969",
+    "title": "Dusty in Memphis",
+    "artist": "Dusty Springfield",
+    "year": 1969,
+    "label": "Atlantic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 83,
+      "apple": null
+    },
+    "canonicalRank": 83
+  },
+  {
+    "id": "sly-and-the-family-stone-theres-a-riot-goin-on-1971",
+    "title": "Theres a Riot Goin On",
+    "artist": "Sly and the Family Stone",
+    "year": 1971,
+    "label": "Epic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 82,
+      "apple": null
+    },
+    "canonicalRank": 82
+  },
+  {
+    "id": "beyonce-beyonce-2013",
+    "title": "Beyoncé",
+    "artist": "Beyoncé",
+    "year": 2013,
+    "label": "Parkwood/Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 81,
+      "apple": 36
+    },
+    "canonicalRank": 36
+  },
+  {
+    "id": "the-sex-pistols-never-mind-the-bollocks-heres-the-sex-pistols-1977",
+    "title": "Never Mind the Bollocks Heres the Sex Pistols",
+    "artist": "The Sex Pistols",
+    "year": 1977,
+    "label": "Warner Bros.",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 80,
+      "apple": null
+    },
+    "canonicalRank": 80
+  },
+  {
+    "id": "frank-ocean-blond-2016",
+    "title": "Blond",
+    "artist": "Frank Ocean",
+    "year": 2016,
+    "label": "Boys Don’t Cry",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 79,
+      "apple": null
+    },
+    "canonicalRank": 79
+  },
+  {
+    "id": "elvis-presley-the-sun-sessions-1976",
+    "title": "The Sun Sessions",
+    "artist": "Elvis Presley",
+    "year": 1976,
+    "label": "RCA",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 78,
+      "apple": null
+    },
+    "canonicalRank": 78
+  },
+  {
+    "id": "the-who-whos-next-1971",
+    "title": "Whos Next",
+    "artist": "The Who",
+    "year": 1971,
+    "label": "Decca",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 77,
+      "apple": null
+    },
+    "canonicalRank": 77
+  },
+  {
+    "id": "curtis-mayfield-superfly-1972",
+    "title": "Superfly",
+    "artist": "Curtis Mayfield",
+    "year": 1972,
+    "label": "Curtom",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 76,
+      "apple": null
+    },
+    "canonicalRank": 76
+  },
+  {
+    "id": "aretha-franklin-lady-soul-1968",
+    "title": "Lady Soul",
+    "artist": "Aretha Franklin",
+    "year": 1968,
+    "label": "Atlantic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 75,
+      "apple": null
+    },
+    "canonicalRank": 75
+  },
+  {
+    "id": "kanye-west-the-college-dropout-2004",
+    "title": "The College Dropout",
+    "artist": "Kanye West",
+    "year": 2004,
+    "label": "Roc-A-Fella",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 74,
+      "apple": null
+    },
+    "canonicalRank": 74
+  },
+  {
+    "id": "my-bloody-valentine-loveless-1991",
+    "title": "Loveless",
+    "artist": "My Bloody Valentine",
+    "year": 1991,
+    "label": "Sire",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 73,
+      "apple": null
+    },
+    "canonicalRank": 73
+  },
+  {
+    "id": "neil-young-harvest-1972",
+    "title": "Harvest",
+    "artist": "Neil Young",
+    "year": 1972,
+    "label": "Reprise",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 72,
+      "apple": null
+    },
+    "canonicalRank": 72
+  },
+  {
+    "id": "beyonce-renaissance-2022",
+    "title": "Renaissance",
+    "artist": "Beyonce",
+    "year": 2022,
+    "label": "Parkwood/Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 71,
+      "apple": null
+    },
+    "canonicalRank": 71
+  },
+  {
+    "id": "n-w-a-straight-outta-compton-1988",
+    "title": "Straight Outta Compton",
+    "artist": "N.W.A",
+    "year": 1988,
+    "label": "Ruthless",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 70,
+      "apple": 70
+    },
+    "canonicalRank": 70
+  },
+  {
+    "id": "alanis-morissette-jagged-little-pill-1995",
+    "title": "Jagged Little Pill",
+    "artist": "Alanis Morissette",
+    "year": 1995,
+    "label": "Maverick",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 69,
+      "apple": 31
+    },
+    "canonicalRank": 31
+  },
+  {
+    "id": "kate-bush-hounds-of-love-1985",
+    "title": "Hounds of Love",
+    "artist": "Kate Bush",
+    "year": 1985,
+    "label": "EMI",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 68,
+      "apple": 50
+    },
+    "canonicalRank": 50
+  },
+  {
+    "id": "jay-z-reasonable-doubt-1996",
+    "title": "Reasonable Doubt",
+    "artist": "Jay-Z",
+    "year": 1996,
+    "label": "Roc-A-Fella",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 67,
+      "apple": null
+    },
+    "canonicalRank": 67
+  },
+  {
+    "id": "john-coltrane-a-love-supreme-1965",
+    "title": "A Love Supreme",
+    "artist": "John Coltrane",
+    "year": 1965,
+    "label": "Impulse!",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 66,
+      "apple": 54
+    },
+    "canonicalRank": 54
+  },
+  {
+    "id": "james-brown-live-at-the-apollo-1963",
+    "title": "Live at the Apollo",
+    "artist": "James Brown",
+    "year": 1963,
+    "label": "King",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 65,
+      "apple": null
+    },
+    "canonicalRank": 65
+  },
+  {
+    "id": "outkast-stankonia-2000",
+    "title": "Stankonia",
+    "artist": "OutKast",
+    "year": 2000,
+    "label": "LaFace",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 64,
+      "apple": null
+    },
+    "canonicalRank": 64
+  },
+  {
+    "id": "steely-dan-aja-1977",
+    "title": "Aja",
+    "artist": "Steely Dan",
+    "year": 1977,
+    "label": "ABC",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 63,
+      "apple": 73
+    },
+    "canonicalRank": 63
+  },
+  {
+    "id": "guns-n-roses-appetite-for-destruction-1987",
+    "title": "Appetite for Destruction",
+    "artist": "Guns N’ Roses",
+    "year": 1987,
+    "label": "Geffen",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 62,
+      "apple": 52
+    },
+    "canonicalRank": 52
+  },
+  {
+    "id": "eric-b-and-rakim-paid-in-full-1987",
+    "title": "Paid in Full",
+    "artist": "Eric B. and Rakim",
+    "year": 1987,
+    "label": "4th & B’way",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 61,
+      "apple": null
+    },
+    "canonicalRank": 61
+  },
+  {
+    "id": "van-morrison-astral-weeks-1968",
+    "title": "Astral Weeks",
+    "artist": "Van Morrison",
+    "year": 1968,
+    "label": "Warner Bros.",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 60,
+      "apple": null
+    },
+    "canonicalRank": 60
+  },
+  {
+    "id": "stevie-wonder-talking-book-1972",
+    "title": "Talking Book",
+    "artist": "Stevie Wonder",
+    "year": 1972,
+    "label": "Tamla/Motown",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 59,
+      "apple": null
+    },
+    "canonicalRank": 59
+  },
+  {
+    "id": "led-zeppelin-led-zeppelin-iv-1971",
+    "title": "Led Zeppelin IV",
+    "artist": "Led Zeppelin",
+    "year": 1971,
+    "label": "Atlantic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 58,
+      "apple": null
+    },
+    "canonicalRank": 58
+  },
+  {
+    "id": "the-band-the-band-1969",
+    "title": "The Band",
+    "artist": "The Band",
+    "year": 1969,
+    "label": "Capitol",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 57,
+      "apple": null
+    },
+    "canonicalRank": 57
+  },
+  {
+    "id": "liz-phair-exile-in-guyville-1993",
+    "title": "Exile in Guyville",
+    "artist": "Liz Phair",
+    "year": 1993,
+    "label": "Matador",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 56,
+      "apple": null
+    },
+    "canonicalRank": 56
+  },
+  {
+    "id": "pink-floyd-the-dark-side-of-the-moon-1973",
+    "title": "The Dark Side of the Moon",
+    "artist": "Pink Floyd",
+    "year": 1973,
+    "label": "EMI",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 55,
+      "apple": 28
+    },
+    "canonicalRank": 28
+  },
+  {
+    "id": "james-brown-star-time-1991",
+    "title": "Star Time",
+    "artist": "James Brown",
+    "year": 1991,
+    "label": "Polydor",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 54,
+      "apple": null
+    },
+    "canonicalRank": 54
+  },
+  {
+    "id": "jimi-hendrix-electric-ladyland-1968",
+    "title": "Electric Ladyland",
+    "artist": "Jimi Hendrix",
+    "year": 1968,
+    "label": "Reprise",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 53,
+      "apple": null
+    },
+    "canonicalRank": 53
+  },
+  {
+    "id": "david-bowie-station-to-station-1976",
+    "title": "Station to Station",
+    "artist": "David Bowie",
+    "year": 1976,
+    "label": "RCA",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 52,
+      "apple": null
+    },
+    "canonicalRank": 52
+  },
+  {
+    "id": "chuck-berry-the-great-twenty-eight-1982",
+    "title": "The Great Twenty-Eight",
+    "artist": "Chuck Berry",
+    "year": 1982,
+    "label": "Chess",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 51,
+      "apple": null
+    },
+    "canonicalRank": 51
+  },
+  {
+    "id": "jay-z-the-blueprint-2001",
+    "title": "The Blueprint",
+    "artist": "Jay-Z",
+    "year": 2001,
+    "label": "Roc-A-Fella",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 50,
+      "apple": 13
+    },
+    "canonicalRank": 13
+  },
+  {
+    "id": "outkast-aquemini-1998",
+    "title": "Aquemini",
+    "artist": "OutKast",
+    "year": 1998,
+    "label": "LaFace",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 49,
+      "apple": 41
+    },
+    "canonicalRank": 41
+  },
+  {
+    "id": "bob-marley-and-the-wailers-exodus-1977",
+    "title": "Exodus",
+    "artist": "Bob Marley and the Wailers",
+    "year": 1977,
+    "label": "Island",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 48,
+      "apple": 46
+    },
+    "canonicalRank": 46
+  },
+  {
+    "id": "ramones-ramones-1976",
+    "title": "Ramones",
+    "artist": "Ramones",
+    "year": 1976,
+    "label": "Sire",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 47,
+      "apple": null
+    },
+    "canonicalRank": 47
+  },
+  {
+    "id": "paul-simon-graceland-1986",
+    "title": "Graceland",
+    "artist": "Paul Simon",
+    "year": 1986,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 46,
+      "apple": null
+    },
+    "canonicalRank": 46
+  },
+  {
+    "id": "prince-sign-o-the-times-1987",
+    "title": "Sign O the Times",
+    "artist": "Prince",
+    "year": 1987,
+    "label": "Paisley Park/Warner Bros.",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 45,
+      "apple": 51
+    },
+    "canonicalRank": 45
+  },
+  {
+    "id": "nas-illmatic-1994",
+    "title": "Illmatic",
+    "artist": "Nas",
+    "year": 1994,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 44,
+      "apple": 39
+    },
+    "canonicalRank": 39
+  },
+  {
+    "id": "a-tribe-called-quest-the-low-end-theory-1991",
+    "title": "The Low End Theory",
+    "artist": "A Tribe Called Quest",
+    "year": 1991,
+    "label": "Jive",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 43,
+      "apple": 29
+    },
+    "canonicalRank": 29
+  },
+  {
+    "id": "radiohead-ok-computer-1997",
+    "title": "OK Computer",
+    "artist": "Radiohead",
+    "year": 1997,
+    "label": "Capitol",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 42,
+      "apple": 12
+    },
+    "canonicalRank": 12
+  },
+  {
+    "id": "the-rolling-stones-let-it-bleed-1969",
+    "title": "Let It Bleed",
+    "artist": "The Rolling Stones",
+    "year": 1969,
+    "label": "ABKCO",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 41,
+      "apple": null
+    },
+    "canonicalRank": 41
+  },
+  {
+    "id": "david-bowie-the-rise-and-fall-of-ziggy-stardust-and-the-spiders-from-mars-1972",
+    "title": "The Rise and Fall of Ziggy Stardust and the Spiders From Mars",
+    "artist": "David Bowie",
+    "year": 1972,
+    "label": "RCA",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 40,
+      "apple": 24
+    },
+    "canonicalRank": 24
+  },
+  {
+    "id": "talking-heads-remain-in-light-1980",
+    "title": "Remain in Light",
+    "artist": "Talking Heads",
+    "year": 1980,
+    "label": "Sire",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 39,
+      "apple": 43
+    },
+    "canonicalRank": 39
+  },
+  {
+    "id": "bob-dylan-blonde-on-blonde-1966",
+    "title": "Blonde on Blonde",
+    "artist": "Bob Dylan",
+    "year": 1966,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 38,
+      "apple": null
+    },
+    "canonicalRank": 38
+  },
+  {
+    "id": "dr-dre-the-chronic-1992",
+    "title": "The Chronic",
+    "artist": "Dr. Dre",
+    "year": 1992,
+    "label": "Deathrow",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 37,
+      "apple": 19
+    },
+    "canonicalRank": 19
+  },
+  {
+    "id": "michael-jackson-off-the-wall-1979",
+    "title": "Off the Wall",
+    "artist": "Michael Jackson",
+    "year": 1979,
+    "label": "Epic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 36,
+      "apple": null
+    },
+    "canonicalRank": 36
+  },
+  {
+    "id": "the-beatles-rubber-soul-1965",
+    "title": "Rubber Soul",
+    "artist": "The Beatles",
+    "year": 1965,
+    "label": "Parlophone",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 35,
+      "apple": null
+    },
+    "canonicalRank": 35
+  },
+  {
+    "id": "stevie-wonder-innervisions-1973",
+    "title": "Innervisions",
+    "artist": "Stevie Wonder",
+    "year": 1973,
+    "label": "Tamla/Motown",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 34,
+      "apple": 44
+    },
+    "canonicalRank": 34
+  },
+  {
+    "id": "amy-winehouse-back-to-black-2006",
+    "title": "Back to Black",
+    "artist": "Amy Winehouse",
+    "year": 2006,
+    "label": "Island",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 33,
+      "apple": 8
+    },
+    "canonicalRank": 8
+  },
+  {
+    "id": "beyonce-lemonade-2016",
+    "title": "Lemonade",
+    "artist": "Beyoncé",
+    "year": 2016,
+    "label": "Parkwood/Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 32,
+      "apple": 10
+    },
+    "canonicalRank": 10
+  },
+  {
+    "id": "miles-davis-kind-of-blue-1959",
+    "title": "Kind of Blue",
+    "artist": "Miles Davis",
+    "year": 1959,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 31,
+      "apple": 25
+    },
+    "canonicalRank": 25
+  },
+  {
+    "id": "jimi-hendrix-are-you-experienced-1967",
+    "title": "Are You Experienced",
+    "artist": "Jimi Hendrix",
+    "year": 1967,
+    "label": "Track",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 30,
+      "apple": null
+    },
+    "canonicalRank": 30
+  },
+  {
+    "id": "the-beatles-white-album-1968",
+    "title": "White Album",
+    "artist": "The Beatles",
+    "year": 1968,
+    "label": "Apple",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 29,
+      "apple": null
+    },
+    "canonicalRank": 29
+  },
+  {
+    "id": "dangelo-voodoo-2000",
+    "title": "Voodoo",
+    "artist": "D’Angelo",
+    "year": 2000,
+    "label": "EMI",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 28,
+      "apple": 57
+    },
+    "canonicalRank": 28
+  },
+  {
+    "id": "wu-tang-clan-enter-the-wu-tang-36-chambers-1993",
+    "title": "Enter the Wu-Tang(36 Chambers)",
+    "artist": "Wu-Tang Clan",
+    "year": 1993,
+    "label": "Loud",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 27,
+      "apple": 37
+    },
+    "canonicalRank": 27
+  },
+  {
+    "id": "patti-smith-horses-1975",
+    "title": "Horses",
+    "artist": "Patti Smith",
+    "year": 1975,
+    "label": "Arista",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 26,
+      "apple": 83
+    },
+    "canonicalRank": 26
+  },
+  {
+    "id": "carole-king-tapestry-1971",
+    "title": "Tapestry",
+    "artist": "Carole King",
+    "year": 1971,
+    "label": "Sony",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 25,
+      "apple": 38
+    },
+    "canonicalRank": 25
+  },
+  {
+    "id": "the-beatles-sgt-peppers-lonely-hearts-club-band-1967",
+    "title": "Sgt. Peppers Lonely Hearts Club Band",
+    "artist": "The Beatles",
+    "year": 1967,
+    "label": "Capitol",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 24,
+      "apple": null
+    },
+    "canonicalRank": 24
+  },
+  {
+    "id": "the-velvet-underground-the-velvet-underground-and-nico-1967",
+    "title": "The Velvet Underground and Nico",
+    "artist": "The Velvet Underground",
+    "year": 1967,
+    "label": "Verve",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 23,
+      "apple": null
+    },
+    "canonicalRank": 23
+  },
+  {
+    "id": "the-notorious-b-i-g-ready-to-die-1994",
+    "title": "Ready to Die",
+    "artist": "The Notorious B.I.G.",
+    "year": 1994,
+    "label": "Bad Boy",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 22,
+      "apple": 32
+    },
+    "canonicalRank": 22
+  },
+  {
+    "id": "bruce-springsteen-born-to-run-1975",
+    "title": "Born to Run",
+    "artist": "Bruce Springsteen",
+    "year": 1975,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 21,
+      "apple": 22
+    },
+    "canonicalRank": 21
+  },
+  {
+    "id": "radiohead-kid-a-2000",
+    "title": "Kid A",
+    "artist": "Radiohead",
+    "year": 2000,
+    "label": "Parlophone",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 20,
+      "apple": 33
+    },
+    "canonicalRank": 20
+  },
+  {
+    "id": "kendrick-lamar-to-pimp-a-butterfly-2015",
+    "title": "To Pimp a Butterfly",
+    "artist": "Kendrick Lamar",
+    "year": 2015,
+    "label": "TDE",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 19,
+      "apple": null
+    },
+    "canonicalRank": 19
+  },
+  {
+    "id": "bob-dylan-highway-61-revisited-1965",
+    "title": "Highway 61 Revisited",
+    "artist": "Bob Dylan",
+    "year": 1965,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 18,
+      "apple": 14
+    },
+    "canonicalRank": 14
+  },
+  {
+    "id": "kanye-west-my-beautiful-dark-twisted-fantasy-2010",
+    "title": "My Beautiful Dark Twisted Fantasy",
+    "artist": "Kanye West",
+    "year": 2010,
+    "label": "Roc-A-Fella",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 17,
+      "apple": 26
+    },
+    "canonicalRank": 17
+  },
+  {
+    "id": "the-clash-london-calling-1979",
+    "title": "London Calling",
+    "artist": "The Clash",
+    "year": 1979,
+    "label": "CBS",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 16,
+      "apple": 35
+    },
+    "canonicalRank": 16
+  },
+  {
+    "id": "public-enemy-it-takes-a-nation-of-millions-to-hold-us-back-1988",
+    "title": "It Takes a Nation of Millions to Hold Us Back",
+    "artist": "Public Enemy",
+    "year": 1988,
+    "label": "Def Jam",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 15,
+      "apple": 34
+    },
+    "canonicalRank": 15
+  },
+  {
+    "id": "the-rolling-stones-exile-on-main-street-1972",
+    "title": "Exile on Main Street",
+    "artist": "The Rolling Stones",
+    "year": 1972,
+    "label": "Rolling Stones Records",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 14,
+      "apple": null
+    },
+    "canonicalRank": 14
+  },
+  {
+    "id": "aretha-franklin-i-never-loved-a-man-the-way-i-love-you-1967",
+    "title": "I Never Loved a Man the Way I Love You",
+    "artist": "Aretha Franklin",
+    "year": 1967,
+    "label": "Atlantic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 13,
+      "apple": 40
+    },
+    "canonicalRank": 13
+  },
+  {
+    "id": "michael-jackson-thriller-1982",
+    "title": "Thriller",
+    "artist": "Michael Jackson",
+    "year": 1982,
+    "label": "Epic",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 12,
+      "apple": 2
+    },
+    "canonicalRank": 2
+  },
+  {
+    "id": "the-beatles-revolver-1966",
+    "title": "Revolver",
+    "artist": "The Beatles",
+    "year": 1966,
+    "label": "Apple",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 11,
+      "apple": 21
+    },
+    "canonicalRank": 11
+  },
+  {
+    "id": "lauryn-hill-the-miseducation-of-lauryn-hill-1998",
+    "title": "The Miseducation of Lauryn Hill",
+    "artist": "Lauryn Hill",
+    "year": 1998,
+    "label": "Ruffhouse/Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 10,
+      "apple": 1
+    },
+    "canonicalRank": 1
+  },
+  {
+    "id": "bob-dylan-blood-on-the-tracks-1975",
+    "title": "Blood on the Tracks",
+    "artist": "Bob Dylan",
+    "year": 1975,
+    "label": "Columbia",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 9,
+      "apple": null
+    },
+    "canonicalRank": 9
+  },
+  {
+    "id": "prince-and-the-revolution-purple-rain-1984",
+    "title": "Purple Rain",
+    "artist": "Prince and the Revolution",
+    "year": 1984,
+    "label": "Warner Bros.",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 8,
+      "apple": null
+    },
+    "canonicalRank": 8
+  },
+  {
+    "id": "fleetwood-mac-rumours-1977",
+    "title": "Rumours",
+    "artist": "Fleetwood Mac",
+    "year": 1977,
+    "label": "Warner Bros.",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 7,
+      "apple": 11
+    },
+    "canonicalRank": 7
+  },
+  {
+    "id": "nirvana-nevermind-1991",
+    "title": "Nevermind",
+    "artist": "Nirvana",
+    "year": 1991,
+    "label": "Geffen",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 6,
+      "apple": 9
+    },
+    "canonicalRank": 6
+  },
+  {
+    "id": "the-beatles-abbey-road-1969",
+    "title": "Abbey Road",
+    "artist": "The Beatles",
+    "year": 1969,
+    "label": "Apple",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 5,
+      "apple": 3
+    },
+    "canonicalRank": 3
+  },
+  {
+    "id": "stevie-wonder-songs-in-the-key-of-life-1976",
+    "title": "Songs in the Key of Life",
+    "artist": "Stevie Wonder",
+    "year": 1976,
+    "label": "Tamla/Motown",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 4,
+      "apple": 6
+    },
+    "canonicalRank": 4
+  },
+  {
+    "id": "joni-mitchell-blue-1971",
+    "title": "Blue",
+    "artist": "Joni Mitchell",
+    "year": 1971,
+    "label": "Reprise",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 3,
+      "apple": 16
+    },
+    "canonicalRank": 3
+  },
+  {
+    "id": "the-beach-boys-pet-sounds-1966",
+    "title": "Pet Sounds",
+    "artist": "The Beach Boys",
+    "year": 1966,
+    "label": "Capitol",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 2,
+      "apple": 20
+    },
+    "canonicalRank": 2
+  },
+  {
+    "id": "marvin-gaye-whats-going-on-1971",
+    "title": "Whats Going On",
+    "artist": "Marvin Gaye",
+    "year": 1971,
+    "label": "Tamla/Motown",
+    "status": "queue",
+    "rating": null,
+    "favorite": false,
+    "listenedAt": null,
+    "notes": "",
+    "ranks": {
+      "rollingstone": 1,
+      "apple": 17
+    },
+    "canonicalRank": 1
+  }
+]

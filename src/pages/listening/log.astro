@@ -1,0 +1,39 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+
+function formatMonthYear(iso) {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "";
+  return new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" }).format(d);
+}
+
+const albums = JSON.parse(
+  fs.readFileSync(path.join(process.cwd(), "data", "albums.json"), "utf-8")
+);
+
+const listened = albums
+  .filter((a) => a.status === "listened" && a.listenedAt)
+  .sort((a, b) => new Date(b.listenedAt).getTime() - new Date(a.listenedAt).getTime());
+---
+
+<h1>Listening Log</h1>
+
+{listened.length === 0 ? (
+  <p>Nothing logged yet.</p>
+) : (
+  <ul>
+    {listened.map((a) => (
+      <li>
+        <strong>{a.title}</strong> — {a.artist}
+        {" • "}
+        {a.rating ?? "unrated"}
+        {" • "}
+        {a.favorite ? "★" : "☆"}
+        {" • "}
+        {formatMonthYear(a.listenedAt)}
+      </li>
+    ))}
+  </ul>
+)}

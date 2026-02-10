@@ -1,0 +1,30 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+
+const albums = JSON.parse(
+  fs.readFileSync(path.join(process.cwd(), "data", "albums.json"), "utf-8")
+);
+
+const favorites = albums
+  .filter((a) => a.favorite === true)
+  .sort((a, b) => {
+    const ad = a.listenedAt ? new Date(a.listenedAt).getTime() : 0;
+    const bd = b.listenedAt ? new Date(b.listenedAt).getTime() : 0;
+    return bd - ad;
+  });
+---
+
+<h1>Favorites</h1>
+
+{favorites.length === 0 ? (
+  <p>No favorites yet.</p>
+) : (
+  <ul>
+    {favorites.map((a) => (
+      <li>
+        ★ <strong>{a.title}</strong> — {a.artist} ({a.year})
+      </li>
+    ))}
+  </ul>
+)}
