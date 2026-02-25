@@ -82,7 +82,9 @@
       "rollingstone": 196,
       "apple": 100
     },
-    "canonicalRank": 100
+    "canonicalRank": 100,
+    "standoutTracks": ["Indestructible", "Dancing on My Own"],
+    "spotifyLink": "https://open.spotify.com/album/0Rzg7fqyWE39G6wKipxrns"
   },
   {
     "id": "leonard-cohen-songs-of-leonard-cohen-1967",
@@ -3136,13 +3138,15 @@
     "status": "queue",
     "rating": null,
     "favorite": false,
-    "listenedAt": null,
+    "listenedAt": "2026-02-23",
     "notes": "",
     "ranks": {
       "rollingstone": 16,
       "apple": 35
     },
-    "canonicalRank": 16
+    "canonicalRank": 16,
+    "standoutTracks": ["London Calling"],
+    "spotifyLink": "https://open.spotify.com/album/0Rzg7fqyWE39G6wKipxrns"
   },
   {
     "id": "public-enemy-it-takes-a-nation-of-millions-to-hold-us-back-1988",

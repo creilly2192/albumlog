@@ -1,20 +1,19 @@
 ---
-import fs from "node:fs";
-import path from "node:path";
 
-const albums = JSON.parse(
-  fs.readFileSync(path.join(process.cwd(), "data", "albums.json"), "utf-8")
-);
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { readAlbums } from "../../lib/data";
+
+const albums = readAlbums();
 
 const favorites = albums
-  .filter((a) => a.favorite === true)
-  .sort((a, b) => {
+  .filter((a: { favorite: boolean; }) => a.favorite === true)
+  .sort((a: { listenedAt: string | number | Date; }, b: { listenedAt: string | number | Date; }) => {
     const ad = a.listenedAt ? new Date(a.listenedAt).getTime() : 0;
     const bd = b.listenedAt ? new Date(b.listenedAt).getTime() : 0;
     return bd - ad;
   });
 ---
-
+<BaseLayout title="Favorites">
 <h1>Favorites</h1>
 
 {favorites.length === 0 ? (
@@ -28,3 +27,4 @@ const favorites = albums
     ))}
   </ul>
 )}
+</BaseLayout>

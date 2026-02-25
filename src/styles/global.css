@@ -1,0 +1,210 @@
+/* ===== CSS TOKENS ===== */
+:root {
+  --color-bg: #fffbf5;
+  --color-text: #2d2d2d;
+
+  --card: #ffffff;
+  --card-foreground: #2d2d2d;
+  --popover: #ffffff;
+  --popover-foreground: #2d2d2d;
+
+  --primary: #2d2d2d;
+  --primary-foreground: #ffffff;
+  --secondary: #f8f4ee;
+  --secondary-foreground: #2d2d2d;
+  --muted: #f8f4ee;
+  --muted-foreground: #7a7a7a;
+
+  --accent: #ebe7e0;
+  --accent-foreground: #2d2d2d;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+
+  --color-coral: #ff6b6b;
+  --color-blue: #5b9cff;
+  --color-purple: #a78bfa;
+  --color-yellow: #fbbf24;
+  --color-green: #4ade80;
+  --color-pink: #ff8ba7;
+  --color-orange: #fb923c;
+
+  --border: #e8e4dc;
+
+  --font-serif: "EB Garamond", cursive;
+  --font-sans:
+    "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body:
+    "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --leading-body: 1.6;
+  --leading-heading: 1.25;
+  --font-size: 16px;
+}
+
+/* ===== BASE RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  scroll-behavior: smooth;
+  font-size: var(--font-size);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: var(--leading-heading);
+  margin: 0;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+/* Containers */
+.container {
+  max-width: 55rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header */
+.site-header .container {
+  padding-bottom: 0.5rem;
+}
+
+.site-header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-header__nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.site-header__nav-list a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  color: var(--color-text);
+  transition: border-color 0.3s ease;
+}
+.site-header__nav-list a:hover {
+  border-color: var(--color-text);
+}
+/* Helpers */
+.overline {
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  font-family: var(--font-sans);
+}
+
+/* Now */
+.now-listening__album {
+  font-size: 6rem;
+  font-family: var(--font-sans);
+  margin-top: 3rem;
+}
+.now-listening__artist {
+  font-size: 2rem;
+  color: var(--muted-foreground);
+  font-family: var(--font-sans);
+}
+
+.now-listening__ranks {
+  margin-top: 3rem;
+}
+
+.now-listening__rank {
+  margin-top: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 2.5rem;
+  padding: 0.5rem 1.15rem;
+  display: inline-flex;
+}
+
+.now-listening__rank:first-of-type {
+  border-color: var(--color-pink);
+}
+
+.now-listening__rank:last-of-type {
+  border-color: var(--color-blue);
+}
+
+.now-listening__rank strong {
+  padding-left: 0.25rem;
+}
+
+.now-listening__spotify-link {
+  margin-top: 3rem;
+  display: inline-block;
+  border: 1px solid var(--color-green);
+  background-color: var(--color-green);
+  color: white;
+  border-radius: 2.5rem;
+  padding: 0.25rem 0.85rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.now-listening__spotify-link:hover {
+  background-color: transparent;
+  color: var(--color-green);
+}
+
+/* Log */
+.listening-log__group:first-of-type {
+  padding-top: 2rem;
+}
+.listening-log__month {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  border-bottom: 0.0625rem solid var(--border);
+  color: var(--muted-foreground);
+}
+.listening-log__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listening-log__item-content {
+  display: flex;
+  justify-content: space-between;
+}

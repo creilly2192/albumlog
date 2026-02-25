@@ -1,0 +1,26 @@
+---
+import * as fs from "fs";
+import * as path from "path";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const albums = JSON.parse(
+    fs.readFileSync(
+      path.join(process.cwd(), "data", "albums.json"),
+      "utf-8"
+    )
+  );
+
+  return albums.map((album) => ({
+    params: { id: album.id },
+    props: { album },
+  }));
+}
+
+const { album } = Astro.props;
+---
+<BaseLayout title={`${album.title} — ${album.artist}`}>
+  <h1>{album.title}</h1>
+  <p>{album.artist} ({album.year})</p>
+  <p>{album.notes}</p>
+</BaseLayout>

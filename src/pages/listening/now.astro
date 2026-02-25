@@ -1,37 +1,36 @@
 ---
-import fs from "node:fs";
-import path from "node:path";
+import { readAlbums, readNowId } from "../../lib/data";
 
-const albums = JSON.parse(
-  fs.readFileSync(path.join(process.cwd(), "data", "albums.json"), "utf-8")
-);
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const nowPath = path.join(process.cwd(), "data", "now.json");
-
-let nowId = null;
-if (fs.existsSync(nowPath)) {
-  try {
-    nowId = JSON.parse(fs.readFileSync(nowPath, "utf-8"))?.id ?? null;
-  } catch {
-    nowId = null;
-  }
-}
+const albums = readAlbums();
+const nowId = readNowId();
 
 const album = nowId ? albums.find((a) => a.id === nowId) : null;
 const missing = nowId && !album;
----
 
-<h1>Now Listening</h1>
+---
+<BaseLayout title="Now Listening">
+<span class="now-listening__label overline">Now Listening</span>
 
 {album ? (
   <>
-    <h2>{album.title}</h2>
-    <p>{album.artist}  {album.year}{album.label ? `  ${album.label}` : ""}</p>
+    <h1 class="now-listening__album">{album.title}</h1>
+    <h2 class="now-listening__artist">{album.artist}</h2>
+    <p class="now-listening__released">Released {album.year}{album.label ? `, ${album.label}` : ""}</p>
+    
+{album.ranks ? (
+    <div class="now-listening__ranks">
+      <h3 class="overline">Rankings</h3>
+      {album.ranks?.rollingstone ? <span class="now-listening__rank">Rolling Stone: <strong> #{album.ranks.rollingstone}</strong>/500</span> : null}
+      {album.ranks?.apple ? <span class="now-listening__rank">Apple: <strong> #{album.ranks.apple}</strong>/100</span> : null}
+    </div>
+) : null}
 
-    {album.ranks?.rollingstone ? <p>RS #{album.ranks.rollingstone}</p> : null}
-    {album.ranks?.apple ? <p>Apple #{album.ranks.apple}</p> : null}
+{album.spotifyLink ? (
+    <a href={album.spotifyLink} target="_blank" rel="noopener" class="now-listening__spotify-link">Listen on Spotify</a>
+) : null}
 
-    {album.notes ? <pre style="white-space: pre-wrap">{album.notes}</pre> : <p class="muted">No notes yet.</p>}
   </>
 ) :  missing ? (
   <>
@@ -44,3 +43,4 @@ const missing = nowId && !album;
     <p>Run <code>npm run pick:album</code> locally to generate <code>data/now.json</code>.</p>
   </>
 )}
+</BaseLayout>

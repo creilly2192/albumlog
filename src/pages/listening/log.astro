@@ -1,6 +1,7 @@
 ---
-import fs from "node:fs";
-import path from "node:path";
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { readAlbums } from "../../lib/data";
 
 function formatMonthYear(iso) {
   if (!iso) return "";
@@ -9,31 +10,108 @@ function formatMonthYear(iso) {
   return new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" }).format(d);
 }
 
-const albums = JSON.parse(
-  fs.readFileSync(path.join(process.cwd(), "data", "albums.json"), "utf-8")
-);
+const albums = readAlbums();
 
+function parseDate(s) {
+  if (!s) return null;
+  return new Date(`${s}T00:00:00`);
+}
+
+function formatMonthYear(date) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    year: "numeric",
+  }).format(date);
+}
+
+// Filter listened
 const listened = albums
   .filter((a) => a.status === "listened" && a.listenedAt)
-  .sort((a, b) => new Date(b.listenedAt).getTime() - new Date(a.listenedAt).getTime());
+  .sort(
+    (a, b) =>
+      parseDate(b.listenedAt).getTime() -
+      parseDate(a.listenedAt).getTime()
+  );
+
+// Group by month-year
+const groups = {};
+
+for (const a of listened) {
+  const d = parseDate(a.listenedAt);
+  if (!d) continue;
+
+  const key = `${d.getFullYear()}-${d.getMonth()}`; // stable key
+
+  if (!groups[key]) {
+    groups[key] = {
+      label: formatMonthYear(d),
+      items: [],
+      sortValue: new Date(d.getFullYear(), d.getMonth(), 1).getTime(),
+    };
+  }
+
+  groups[key].items.push(a);
+}
+
+// Sort groups descending by month
+const sortedGroups = Object.values(groups).sort(
+  (a, b) => b.sortValue - a.sortValue
+);
+
+const RATING_CONFIG = {
+    loved: {
+        color: "var(--color-coral)",
+        label: "Loved"
+    },
+    interesting: {
+        color: "var(--color-purple)",
+        label: "Interesting"
+    },
+    "not-for-me": {
+        color: "var(--color-blue)",
+        label: "Not for me"
+    }
+    } as const;
+
+// Get a color based on artist name
+const getColorForArtist = (artist: string) => {
+  const hash = artist.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  const colors = ['var(--color-coral)', 'var(--color-purple)', 'var(--color-blue)', 'var(--color-green)', 'var(--color-yellow)'];
+  return colors[hash % colors.length];
+};
+
 ---
 
+<BaseLayout title="Listening Log">
 <h1>Listening Log</h1>
 
-{listened.length === 0 ? (
-  <p>Nothing logged yet.</p>
-) : (
-  <ul>
-    {listened.map((a) => (
-      <li>
-        <strong>{a.title}</strong> — {a.artist}
-        {" • "}
-        {a.rating ?? "unrated"}
-        {" • "}
-        {a.favorite ? "★" : "☆"}
-        {" • "}
-        {formatMonthYear(a.listenedAt)}
-      </li>
-    ))}
-  </ul>
-)}
+{sortedGroups.length === 0 ? (
+    <p>Nothing logged yet.</p>
+  ) : (
+    sortedGroups.map((group) => (
+      <section class="listening-log__group">
+        <h2 class="listening-log__month">{group.label}</h2>
+        <ul class="listening-log__list">
+          {group.items.map((a) => (
+            <li class="listening-log__item">
+              <a href={`/listening/${a.id}`}>
+                <div class="listening-log__item-content">
+                    <div class="listening-log__album">
+                        <p class="listening-log__title">{a.title}</p>
+                        <span class="listening-log__artist">{a.artist}</span>
+                    </div>
+
+                    <div class="listening-log__ratings">
+                        <span class="listening-log__rating">{a.rating ?? "unrated"}</span>
+                        <span class="listening-log__rating-is-favorite">{a.favorite ? "★" : "☆"}</span>
+                    </div>
+
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  )}
+</BaseLayout>
