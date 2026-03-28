@@ -83,7 +83,10 @@
       "apple": 100
     },
     "canonicalRank": 100,
-    "standoutTracks": ["Indestructible", "Dancing on My Own"],
+    "standoutTracks": [
+      "Indestructible",
+      "Dancing on My Own"
+    ],
     "spotifyLink": "https://open.spotify.com/album/0Rzg7fqyWE39G6wKipxrns"
   },
   {
@@ -3135,8 +3138,8 @@
     "artist": "The Clash",
     "year": 1979,
     "label": "CBS",
-    "status": "queue",
-    "rating": null,
+    "status": "listened",
+    "rating": "not_for_me",
     "favorite": false,
     "listenedAt": "2026-02-23",
     "notes": "",
@@ -3145,7 +3148,9 @@
       "apple": 35
     },
     "canonicalRank": 16,
-    "standoutTracks": ["London Calling"],
+    "standoutTracks": [
+      "London Calling"
+    ],
     "spotifyLink": "https://open.spotify.com/album/0Rzg7fqyWE39G6wKipxrns"
   },
   {

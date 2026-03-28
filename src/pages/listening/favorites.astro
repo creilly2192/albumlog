@@ -1,30 +1,37 @@
 ---
-
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { readAlbums } from "../../lib/data";
+
+import AlbumListItem from "../../components/AlbumListItem.astro";
 
 const albums = readAlbums();
 
 const favorites = albums
-  .filter((a: { favorite: boolean; }) => a.favorite === true)
-  .sort((a: { listenedAt: string | number | Date; }, b: { listenedAt: string | number | Date; }) => {
-    const ad = a.listenedAt ? new Date(a.listenedAt).getTime() : 0;
-    const bd = b.listenedAt ? new Date(b.listenedAt).getTime() : 0;
-    return bd - ad;
-  });
+  .filter((a: { favorite: boolean }) => a.favorite === true)
+  .sort(
+    (
+      a: { listenedAt: string | number | Date },
+      b: { listenedAt: string | number | Date },
+    ) => {
+      const ad = a.listenedAt ? new Date(a.listenedAt).getTime() : 0;
+      const bd = b.listenedAt ? new Date(b.listenedAt).getTime() : 0;
+      return bd - ad;
+    },
+  );
 ---
-<BaseLayout title="Favorites">
-<h1>Favorites</h1>
 
-{favorites.length === 0 ? (
-  <p>No favorites yet.</p>
-) : (
-  <ul>
-    {favorites.map((a) => (
-      <li>
-        ★ <strong>{a.title}</strong> — {a.artist} ({a.year})
-      </li>
-    ))}
-  </ul>
-)}
+<BaseLayout title="Favorites">
+  <h1>Favorites</h1>
+
+  {
+    favorites.length === 0 ? (
+      <p>No favorites yet.</p>
+    ) : (
+      <ul class="listening-log__list listening-log__list--favorites">
+        {favorites.map((a) => (
+          <AlbumListItem album={a} />
+        ))}
+      </ul>
+    )
+  }
 </BaseLayout>

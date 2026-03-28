@@ -1,13 +1,18 @@
 ---
-
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { readAlbums } from "../../lib/data";
+import { Award } from "@lucide/astro";
+
+import AlbumListItem from "../../components/AlbumListItem.astro";
 
 function formatMonthYear(iso) {
   if (!iso) return "";
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return "";
-  return new Intl.DateTimeFormat("en-US", { month: "short", year: "numeric" }).format(d);
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    year: "numeric",
+  }).format(d);
 }
 
 const albums = readAlbums();
@@ -17,20 +22,12 @@ function parseDate(s) {
   return new Date(`${s}T00:00:00`);
 }
 
-function formatMonthYear(date) {
-  return new Intl.DateTimeFormat("en-US", {
-    month: "short",
-    year: "numeric",
-  }).format(date);
-}
-
 // Filter listened
 const listened = albums
   .filter((a) => a.status === "listened" && a.listenedAt)
   .sort(
     (a, b) =>
-      parseDate(b.listenedAt).getTime() -
-      parseDate(a.listenedAt).getTime()
+      parseDate(b.listenedAt).getTime() - parseDate(a.listenedAt).getTime(),
   );
 
 // Group by month-year
@@ -55,63 +52,58 @@ for (const a of listened) {
 
 // Sort groups descending by month
 const sortedGroups = Object.values(groups).sort(
-  (a, b) => b.sortValue - a.sortValue
+  (a, b) => b.sortValue - a.sortValue,
 );
 
 const RATING_CONFIG = {
-    loved: {
-        color: "var(--color-coral)",
-        label: "Loved"
-    },
-    interesting: {
-        color: "var(--color-purple)",
-        label: "Interesting"
-    },
-    "not-for-me": {
-        color: "var(--color-blue)",
-        label: "Not for me"
+  loved: {
+    color: "var(--color-coral)",
+    label: "Loved",
+  },
+  interesting: {
+    color: "var(--color-purple)",
+    label: "Interesting",
+  },
+  not_for_me: {
+    color: "var(--color-blue)",
+    label: "Not for me",
+  },
+} as const;
+
+const getRatingMeta = (rating: string | null) => {
+  if (!rating) {
+    return {
+      color: "var(--color-border-muted)",
+      label: "Unrated",
+    };
+  }
+
+  return (
+    RATING_CONFIG[rating as keyof typeof RATING_CONFIG] ?? {
+      color: "var(--color-border-muted)",
+      label: rating,
     }
-    } as const;
-
-// Get a color based on artist name
-const getColorForArtist = (artist: string) => {
-  const hash = artist.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-  const colors = ['var(--color-coral)', 'var(--color-purple)', 'var(--color-blue)', 'var(--color-green)', 'var(--color-yellow)'];
-  return colors[hash % colors.length];
+  );
 };
-
 ---
 
 <BaseLayout title="Listening Log">
-<h1>Listening Log</h1>
+  <h1>Listening Log</h1>
 
-{sortedGroups.length === 0 ? (
-    <p>Nothing logged yet.</p>
-  ) : (
-    sortedGroups.map((group) => (
-      <section class="listening-log__group">
-        <h2 class="listening-log__month">{group.label}</h2>
-        <ul class="listening-log__list">
-          {group.items.map((a) => (
-            <li class="listening-log__item">
-              <a href={`/listening/${a.id}`}>
-                <div class="listening-log__item-content">
-                    <div class="listening-log__album">
-                        <p class="listening-log__title">{a.title}</p>
-                        <span class="listening-log__artist">{a.artist}</span>
-                    </div>
-
-                    <div class="listening-log__ratings">
-                        <span class="listening-log__rating">{a.rating ?? "unrated"}</span>
-                        <span class="listening-log__rating-is-favorite">{a.favorite ? "★" : "☆"}</span>
-                    </div>
-
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    ))
-  )}
+  {
+    sortedGroups.length === 0 ? (
+      <p>Nothing logged yet.</p>
+    ) : (
+      sortedGroups.map((group) => (
+        <section class="listening-log__group">
+          <h2 class="listening-log__month">{group.label}</h2>
+          <ul class="listening-log__list">
+            {group.items.map((a) => {
+              return <AlbumListItem album={a} />;
+            })}
+          </ul>
+        </section>
+      ))
+    )
+  }
 </BaseLayout>
