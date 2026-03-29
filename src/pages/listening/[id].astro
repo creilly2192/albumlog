@@ -2,13 +2,12 @@
 import * as fs from "fs";
 import * as path from "path";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatReleaseText, formatListenedAt } from "../../lib/releasedYear";
+import { getRatingMeta } from "../../lib/rating";
 
 export async function getStaticPaths() {
   const albums = JSON.parse(
-    fs.readFileSync(
-      path.join(process.cwd(), "data", "albums.json"),
-      "utf-8"
-    )
+    fs.readFileSync(path.join(process.cwd(), "data", "albums.json"), "utf-8"),
   );
 
   return albums.map((album) => ({
@@ -18,9 +17,72 @@ export async function getStaticPaths() {
 }
 
 const { album } = Astro.props;
+const releasedText = formatReleaseText(album);
+const listenedAtText = formatListenedAt(album.listenedAt);
+const ratingMeta = getRatingMeta(album.rating);
 ---
+
 <BaseLayout title={`${album.title} — ${album.artist}`}>
-  <h1>{album.title}</h1>
-  <p>{album.artist} ({album.year})</p>
-  <p>{album.notes}</p>
+  <h1 class="album-details__album">{album.title}</h1>
+  <p class="album-details__artist">{album.artist} ({album.year})</p>
+  <p class="album-details__released">{releasedText}</p>
+
+  {
+    album.ranks ? (
+      <div class="album__ranks">
+        {album.ranks?.rollingstone ? (
+          <span class="album__rank">
+            Rolling Stone: <strong> #{album.ranks.rollingstone}</strong>/500
+          </span>
+        ) : null}
+        {album.ranks?.apple ? (
+          <span class="album__rank">
+            Apple: <strong> #{album.ranks.apple}</strong>/100
+          </span>
+        ) : null}
+      </div>
+    ) : null
+  }
+
+  <h2 class="overline-heading">My Rating</h2>
+  <div
+    class="album-details__ratings"
+    style={`--rating-color: ${ratingMeta.color};`}
+  >
+    <span class="album-details__rating">
+      {ratingMeta.label}
+    </span>
+
+    <span class="album-details__rating-is-favorite">
+      {album.favorite ? "★" : "☆"}
+    </span>
+  </div>
+
+  <hr />
+
+  {
+    listenedAtText ? (
+      <h3 class="album-details__listened-at">Listened in {listenedAtText}</h3>
+    ) : null
+  }
+
+  <h4 class="album-details__heading">Notes</h4>
+  <div class="album-details__notes">
+    <p>{album.notes}</p>
+  </div>
+
+  {
+    album.standoutTracks && album.standoutTracks.length ? (
+      <h4 class="album-details__heading">Standout Tracks</h4>
+      <div class="album-details__standout-tracks-container">
+        <ul class="album-details__standout-tracks">
+        {album.standoutTracks.map((track) => (
+          <li>{track}</li>
+        ))}
+      </ul>
+      </div>
+    ) : (
+      <p>No standout tracks listed.</p>
+    )
+  }
 </BaseLayout>

@@ -1,36 +1,7 @@
 ---
 const { album } = Astro.props;
 
-const RATING_CONFIG = {
-    loved: {
-        color: "var(--color-coral)",
-        label: "Loved",
-    },
-    interesting: {
-        color: "var(--color-purple)",
-        label: "Interesting",
-    },
-    not_for_me: {
-        color: "var(--color-blue)",
-        label: "Not for me",
-    },
-};
-
-const getRatingMeta = (rating) => {
-    if (!rating) {
-        return {
-            color: "var(--color-border-muted)",
-            label: "Unrated",
-        };
-    }
-
-    return (
-        RATING_CONFIG[rating] ?? {
-            color: "var(--color-border-muted)",
-            label: "Unrated",
-        }
-    );
-};
+import { getRatingMeta } from "../lib/rating";
 
 const ratingMeta = getRatingMeta(album.rating);
 ---

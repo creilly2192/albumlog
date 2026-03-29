@@ -1,6 +1,7 @@
 ---
 import { readAlbums, readNowId } from "../../lib/data";
-import { Play, Music2, Award } from "@lucide/astro";
+import { Play } from "@lucide/astro";
+import { formatReleaseText } from "../../lib/releasedYear";
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
@@ -9,9 +10,7 @@ const nowId = readNowId();
 
 const album = nowId ? albums.find((a) => a.id === nowId) : null;
 const missing = nowId && !album;
-const releasedText = album
-  ? `Released ${album.year}${album.label ? ", " + album.label : ""}`
-  : null;
+const releasedText = formatReleaseText(album);
 ---
 
 <BaseLayout title="Now Listening">
@@ -33,28 +32,17 @@ const releasedText = album
         <p class="now-listening__released">{releasedText}</p>
 
         {album.ranks ? (
-          <div class="now-listening__ranks">
+          <div class="album__ranks">
             {album.ranks?.rollingstone ? (
-              <span class="now-listening__rank">
+              <span class="album__rank">
                 Rolling Stone: <strong> #{album.ranks.rollingstone}</strong>/500
               </span>
             ) : null}
             {album.ranks?.apple ? (
-              <span class="now-listening__rank">
+              <span class="album__rank">
                 Apple: <strong> #{album.ranks.apple}</strong>/100
               </span>
             ) : null}
-
-            {/* {album.spotifyLink ? (
-              <a
-                href={album.spotifyLink}
-                target="_blank"
-                rel="noopener"
-                class="now-listening__spotify-link"
-              >
-                Listen on Spotify
-              </a>
-            ) : null} */}
           </div>
         ) : null}
       </>

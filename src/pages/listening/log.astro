@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { readAlbums } from "../../lib/data";
-import { Award } from "@lucide/astro";
 
 import AlbumListItem from "../../components/AlbumListItem.astro";
 
@@ -54,37 +53,6 @@ for (const a of listened) {
 const sortedGroups = Object.values(groups).sort(
   (a, b) => b.sortValue - a.sortValue,
 );
-
-const RATING_CONFIG = {
-  loved: {
-    color: "var(--color-coral)",
-    label: "Loved",
-  },
-  interesting: {
-    color: "var(--color-purple)",
-    label: "Interesting",
-  },
-  not_for_me: {
-    color: "var(--color-blue)",
-    label: "Not for me",
-  },
-} as const;
-
-const getRatingMeta = (rating: string | null) => {
-  if (!rating) {
-    return {
-      color: "var(--color-border-muted)",
-      label: "Unrated",
-    };
-  }
-
-  return (
-    RATING_CONFIG[rating as keyof typeof RATING_CONFIG] ?? {
-      color: "var(--color-border-muted)",
-      label: rating,
-    }
-  );
-};
 ---
 
 <BaseLayout title="Listening Log">

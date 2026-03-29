@@ -151,7 +151,7 @@ p {
   height: 2.5rem;
 }
 
-.now-listening__ranks h3 {
+.album__ranks h3 {
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -175,7 +175,11 @@ p {
   margin-top: 3rem;
 }
 
-.now-listening__rank {
+.album__ranks {
+  margin-top: 2rem;
+}
+
+.album__rank {
   margin-top: 0.5rem;
   border: 1px solid var(--border);
   border-radius: 2.5rem;
@@ -183,15 +187,15 @@ p {
   display: inline-flex;
 }
 
-.now-listening__rank:first-of-type {
+.album__rank:first-of-type {
   border-color: var(--color-pink);
 }
 
-.now-listening__rank:last-of-type {
+.album__rank:last-of-type {
   border-color: var(--color-blue);
 }
 
-.now-listening__rank strong {
+.album__rank strong {
   padding-left: 0.25rem;
 }
 
@@ -346,4 +350,81 @@ p {
 
 .listening-log__list--favorites .listening-log__item:not(:last-child) {
   margin-bottom: 1.5rem;
+}
+
+/* Detail Page */
+.album-details__album {
+  font-size: 4rem;
+  font-family: var(--font-sans);
+  margin-top: 3rem;
+  line-height: 1;
+}
+
+.album-details__artist {
+  font-size: 2rem;
+  color: var(--muted-foreground);
+  font-family: var(--font-sans);
+  margin-bottom: .375rem;
+}
+
+.album-details__released {
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  font-family: var(--font-sans);
+}
+
+.overline-heading {
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  margin-top: 3rem;
+  margin-bottom: .5rem;
+}
+
+.album-details__ratings {
+  background-color: var(--rating-color, var(--color-text-muted));
+  color: var(--white);
+  padding: .25rem 1.25rem;
+  border-radius: 1.25rem;
+  display: inline-flex;
+}
+
+.album-details__ratings+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-text-muted);
+}
+
+.album-details__listened-at {
+  font-family: var(--font-sans);
+  color: var(--muted-foreground);
+  font-size: 1rem;
+}
+
+.album-details__heading {
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+}
+
+.album-details__notes,
+.album-details__standout-tracks-container {
+  background-color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  border-radius: .9375rem;
+}
+
+.album-details__standout-tracks {
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.album-details__standout-tracks li:not(:last-child) {
+  margin-bottom: .5rem;
 }
