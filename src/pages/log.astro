@@ -1,10 +1,10 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import { readAlbums } from "../../lib/data";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { readAlbums } from "../lib/data";
 
-import AlbumListItem from "../../components/AlbumListItem.astro";
+import AlbumListItem from "../components/AlbumListItem.astro";
 
-function formatMonthYear(iso: string) {
+function formatMonthYear(iso) {
   if (!iso) return "";
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return "";
@@ -16,25 +16,21 @@ function formatMonthYear(iso: string) {
 
 const albums = readAlbums();
 
-function parseDate(s: string) {
+function parseDate(s) {
   if (!s) return null;
   return new Date(`${s}T00:00:00`);
 }
 
 // Filter listened
 const listened = albums
-  .filter((a: any) => a.status === "listened" && a.listenedAt)
+  .filter((a) => a.status === "listened" && a.listenedAt)
   .sort(
-    (a: any, b: any) =>
-      (parseDate(b.listenedAt)?.getTime() ?? 0) -
-      (parseDate(a.listenedAt)?.getTime() ?? 0),
+    (a, b) =>
+      parseDate(b.listenedAt).getTime() - parseDate(a.listenedAt).getTime(),
   );
 
 // Group by month-year
-const groups: Record<
-  string,
-  { label: string; items: any[]; sortValue: number }
-> = {};
+const groups = {};
 
 for (const a of listened) {
   const d = parseDate(a.listenedAt);
@@ -44,7 +40,7 @@ for (const a of listened) {
 
   if (!groups[key]) {
     groups[key] = {
-      label: formatMonthYear(d.toISOString()),
+      label: formatMonthYear(d),
       items: [],
       sortValue: new Date(d.getFullYear(), d.getMonth(), 1).getTime(),
     };

@@ -1,8 +1,73 @@
 ---
+import { readAlbums, readNowId } from "../lib/data";
+import { Play } from "@lucide/astro";
+import { formatReleaseText } from "../lib/releasedYear";
+
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+const albums = readAlbums();
+const nowId = readNowId();
+
+const album = nowId ? albums.find((a) => a.id === nowId) : null;
+const missing = nowId && !album;
+const releasedText = formatReleaseText(album);
 ---
-<BaseLayout>
 
+<BaseLayout title="Now Listening">
+    <div class="now-listing__top">
+        <div class="now-listening__play-circle">
+            <Play
+                class="now-listening__play-icon"
+                style={{ color: "var(--white)" }}
+            />
+        </div>
+        <span class="now-listening__label overline">Now Listening</span>
+    </div>
 
+    {
+        album ? (
+            <>
+                <h1 class="now-listening__album">{album.title}</h1>
+                <h2 class="now-listening__artist">{album.artist}</h2>
+                <p class="now-listening__released">{releasedText}</p>
+
+                {album.ranks ? (
+                    <div class="album__ranks">
+                        {album.ranks?.rollingstone ? (
+                            <span class="album__rank">
+                                Rolling Stone:{" "}
+                                <strong> #{album.ranks.rollingstone}</strong>
+                                /500
+                            </span>
+                        ) : null}
+                        {album.ranks?.apple ? (
+                            <span class="album__rank">
+                                Apple: <strong> #{album.ranks.apple}</strong>
+                                /100
+                            </span>
+                        ) : null}
+                    </div>
+                ) : null}
+            </>
+        ) : missing ? (
+            <>
+                <p>
+                    Pinned album id <code>{nowId}</code> wasn’t found in{" "}
+                    <code>data/albums.json</code>.
+                </p>
+                <p>
+                    Run <code>npm run albums:build</code> (then commit) or
+                    repick.
+                </p>
+            </>
+        ) : (
+            <>
+                <p>No pinned album yet (or it’s invalid).</p>
+                <p>
+                    Run <code>npm run pick:album</code> locally to generate{" "}
+                    <code>data/now.json</code>.
+                </p>
+            </>
+        )
+    }
 </BaseLayout>

@@ -108,6 +108,11 @@ p {
   gap: 1rem;
 }
 
+.site-name a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
 .site-header__nav-list {
   list-style: none;
   display: flex;
@@ -388,6 +393,7 @@ p {
   padding: .25rem 1.25rem;
   border-radius: 1.25rem;
   display: inline-flex;
+  gap: .25rem;
 }
 
 .album-details__ratings+hr {

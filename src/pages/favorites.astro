@@ -1,8 +1,8 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import { readAlbums } from "../../lib/data";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { readAlbums } from "../lib/data";
 
-import AlbumListItem from "../../components/AlbumListItem.astro";
+import AlbumListItem from "../components/AlbumListItem.astro";
 
 const albums = readAlbums();
 
@@ -28,7 +28,7 @@ const favorites = albums
       <p>No favorites yet.</p>
     ) : (
       <ul class="listening-log__list listening-log__list--favorites">
-        {favorites.map((a) => (
+        {favorites.map((a: unknown) => (
           <AlbumListItem album={a} />
         ))}
       </ul>
