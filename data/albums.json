@@ -2356,15 +2356,19 @@
     "artist": "Guns N’ Roses",
     "year": 1987,
     "label": "Geffen",
-    "status": "queue",
-    "rating": null,
+    "status": "listened",
+    "rating": "not_for_me",
     "favorite": false,
-    "listenedAt": null,
-    "notes": "",
+    "listenedAt": "2026-04-03",
+    "notes": "eh.",
     "ranks": {
       "rollingstone": 62,
       "apple": 52
     },
+    "standoutTracks": [
+      "Paradise City",
+      "Sweet Child O’ Mine"
+    ],
     "canonicalRank": 52
   },
   {
