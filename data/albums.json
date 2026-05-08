@@ -1506,16 +1506,21 @@
     "artist": "Elton John",
     "year": 1973,
     "label": "MCA",
-    "status": "queue",
-    "rating": null,
+    "status": "listened",
+    "rating": "interesting",
     "favorite": false,
-    "listenedAt": null,
+    "listenedAt": "2026-04-28",
     "notes": "",
     "ranks": {
       "rollingstone": 112,
       "apple": 78
     },
-    "canonicalRank": 78
+    "canonicalRank": 78,
+    "standoutTracks": [
+      "Bennie and the Jets",
+      "Candle in the Wind",
+      "I've Seen That Movie Too"
+    ]
   },
   {
     "id": "janet-jackson-control-1986",

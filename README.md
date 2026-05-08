@@ -86,6 +86,7 @@ The app will be available at `http://localhost:4321`.
 | `npm run preview` | Serves the production build locally |
 | `npm run albums:build` | Rebuilds `data/albums.json` from the source CSV files |
 | `npm run pick:album` | Picks a random album with `status === "queue"` and writes it to `data/now.json` |
+| `npm run repick:album` | Same as `pick:album` but overwrites `data/now.json` even if it already exists |
 | `npm run astro -- --help` | Shows Astro CLI help |
 
 ## Data Workflow
@@ -112,10 +113,10 @@ After generation, you can update `data/albums.json` manually as you listen:
 
 `npm run pick:album` selects a random album from the records where `status === "queue"` and writes its `id` into `data/now.json`.
 
-If `data/now.json` already exists, the script exits without overwriting it. To repick, either delete `data/now.json` first or run the script file directly with:
+If `data/now.json` already exists, the script exits without overwriting it. To repick, run:
 
 ```sh
-node scripts/pick-album.mjs --force
+npm run repick:album
 ```
 
 ## Build Notes

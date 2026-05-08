@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "albums:build": "node scripts/build-albums-json.mjs",
-    "pick:album": "node scripts/pick-album.mjs"
+    "pick:album": "node scripts/pick-album.mjs",
+    "repick:album": "node scripts/pick-album.mjs --force"
   },
   "dependencies": {
     "@lucide/astro": "^0.575.0",
