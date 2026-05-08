@@ -1,14 +1,11 @@
 ---
-import * as fs from "fs";
-import * as path from "path";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { readAlbums } from "../../lib/data";
 import { formatReleaseText, formatListenedAt } from "../../lib/releasedYear";
 import { getRatingMeta } from "../../lib/rating";
 
 export async function getStaticPaths() {
-  const albums = JSON.parse(
-    fs.readFileSync(path.join(process.cwd(), "data", "albums.json"), "utf-8"),
-  );
+  const albums = readAlbums();
 
   return albums.map((album) => ({
     params: { id: album.id },

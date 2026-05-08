@@ -73,12 +73,6 @@ function main() {
       year,
       label,
 
-      status: "queue",
-      rating: null,
-      favorite: false,
-      listenedAt: null,
-      notes: "",
-
       ranks: {
         rollingstone: Number.isFinite(rsRank) ? rsRank : null,
         apple: null,

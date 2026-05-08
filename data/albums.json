@@ -5,11 +5,6 @@
     "artist": "Sade",
     "year": 1984,
     "label": "Epic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 200,
       "apple": null
@@ -22,11 +17,6 @@
     "artist": "Pavement",
     "year": 1993,
     "label": "Matador",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 199,
       "apple": null
@@ -39,11 +29,6 @@
     "artist": "The B-52’s",
     "year": 1979,
     "label": "Warner Bros.",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 198,
       "apple": null
@@ -56,11 +41,6 @@
     "artist": "The Beatles",
     "year": 1964,
     "label": "Capitol",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 197,
       "apple": null
@@ -73,21 +53,11 @@
     "artist": "Robyn",
     "year": 2010,
     "label": "Konichiwa",
-    "status": "listened",
-    "rating": "loved",
-    "favorite": true,
-    "listenedAt": "2026-02-09",
-    "notes": "Brings me back to college. Dancing on my Own and Indestructible are bangers that were on repeat back then. This was my first time listening to the whole album. Great album to code to when you would rather be at the beach.",
     "ranks": {
       "rollingstone": 196,
       "apple": 100
     },
-    "canonicalRank": 100,
-    "standoutTracks": [
-      "Indestructible",
-      "Dancing on My Own"
-    ],
-    "spotifyLink": "https://open.spotify.com/album/0Rzg7fqyWE39G6wKipxrns"
+    "canonicalRank": 100
   },
   {
     "id": "leonard-cohen-songs-of-leonard-cohen-1967",
@@ -95,11 +65,6 @@
     "artist": "Leonard Cohen",
     "year": 1967,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 195,
       "apple": null
@@ -112,11 +77,6 @@
     "artist": "Michael Jackson",
     "year": 1987,
     "label": "Epic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 194,
       "apple": null
@@ -129,11 +89,6 @@
     "artist": "Creedence Clearwater Revival",
     "year": 1969,
     "label": "Fantasy",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 193,
       "apple": null
@@ -146,11 +101,6 @@
     "artist": "Beastie Boys",
     "year": 1986,
     "label": "Def Jam/Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 192,
       "apple": null
@@ -163,11 +113,6 @@
     "artist": "Etta James",
     "year": 1961,
     "label": "Argo",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 191,
       "apple": null
@@ -180,11 +125,6 @@
     "artist": "The Who",
     "year": 1969,
     "label": "Decca",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 190,
       "apple": null
@@ -197,11 +137,6 @@
     "artist": "Sleater-Kinney",
     "year": 1997,
     "label": "Kill Rock Stars",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 189,
       "apple": null
@@ -214,11 +149,6 @@
     "artist": "T. Rex",
     "year": 1971,
     "label": "Reprise",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 188,
       "apple": null
@@ -231,11 +161,6 @@
     "artist": "Ice Cube",
     "year": 1990,
     "label": "Priority",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 187,
       "apple": null
@@ -248,11 +173,6 @@
     "artist": "Red Hot Chili Peppers",
     "year": 1991,
     "label": "Warner Bros.",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 186,
       "apple": null
@@ -265,11 +185,6 @@
     "artist": "The Rolling Stones",
     "year": 1968,
     "label": "Decca",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 185,
       "apple": null
@@ -282,11 +197,6 @@
     "artist": "Cyndi Lauper",
     "year": 1983,
     "label": "Portrait",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 184,
       "apple": null
@@ -299,11 +209,6 @@
     "artist": "D’Angelo",
     "year": 1995,
     "label": "EMI",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 183,
       "apple": null
@@ -316,11 +221,6 @@
     "artist": "James Taylor",
     "year": 1970,
     "label": "Warner Bros.",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 182,
       "apple": null
@@ -333,11 +233,6 @@
     "artist": "Bob Dylan",
     "year": 1965,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 181,
       "apple": null
@@ -350,11 +245,6 @@
     "artist": "Love",
     "year": 1967,
     "label": "Elektra",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 180,
       "apple": null
@@ -367,11 +257,6 @@
     "artist": "Notorious B.I.G.",
     "year": 1997,
     "label": "Bad Boy",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 179,
       "apple": null
@@ -384,11 +269,6 @@
     "artist": "Otis Redding",
     "year": 1965,
     "label": "Volt",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 178,
       "apple": null
@@ -401,11 +281,6 @@
     "artist": "Rod Stewart",
     "year": 1971,
     "label": "Mercury",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 177,
       "apple": null
@@ -418,11 +293,6 @@
     "artist": "Public Enemy",
     "year": 1990,
     "label": "Def Jam/Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 176,
       "apple": null
@@ -435,11 +305,6 @@
     "artist": "Kendrick Lamar",
     "year": 2017,
     "label": "TDE",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 175,
       "apple": null
@@ -452,11 +317,6 @@
     "artist": "Jimmy Cliff and Various Artists",
     "year": 1972,
     "label": "Mango",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 174,
       "apple": null
@@ -469,11 +329,6 @@
     "artist": "Nirvana",
     "year": 1993,
     "label": "Geffen",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 173,
       "apple": null
@@ -486,11 +341,6 @@
     "artist": "Simon and Garfunkel",
     "year": 1970,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 172,
       "apple": null
@@ -503,11 +353,6 @@
     "artist": "Sonic Youth",
     "year": 1988,
     "label": "Enigma",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 171,
       "apple": null
@@ -520,11 +365,6 @@
     "artist": "Taylor Swift",
     "year": 2020,
     "label": "Republic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 170,
       "apple": null
@@ -537,11 +377,6 @@
     "artist": "Billy Joel",
     "year": 1977,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 169,
       "apple": null
@@ -554,11 +389,6 @@
     "artist": "Steely Dan",
     "year": 1972,
     "label": "ABC",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 168,
       "apple": null
@@ -571,11 +401,6 @@
     "artist": "Depeche Mode",
     "year": 1990,
     "label": "Sire",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 167,
       "apple": null
@@ -588,11 +413,6 @@
     "artist": "Buddy Holly",
     "year": 1978,
     "label": "MCA",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 166,
       "apple": null
@@ -605,11 +425,6 @@
     "artist": "R.E.M.",
     "year": 1983,
     "label": "I.R.S.",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 165,
       "apple": null
@@ -622,11 +437,6 @@
     "artist": "Johnny Cash",
     "year": 1968,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 164,
       "apple": null
@@ -639,11 +449,6 @@
     "artist": "Various Artists",
     "year": 1977,
     "label": "RSO",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 163,
       "apple": null
@@ -656,11 +461,6 @@
     "artist": "Pulp",
     "year": 1995,
     "label": "Island",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 162,
       "apple": null
@@ -673,11 +473,6 @@
     "artist": "Crosby",
     "year": 1969,
     "label": "Atlantic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 161,
       "apple": null
@@ -690,11 +485,6 @@
     "artist": "Pearl Jam",
     "year": 1991,
     "label": "Epic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 160,
       "apple": null
@@ -707,11 +497,6 @@
     "artist": "The Police",
     "year": 1983,
     "label": "A&M",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 159,
       "apple": null
@@ -724,11 +509,6 @@
     "artist": "Erykah Badu",
     "year": 2000,
     "label": "Motown",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 158,
       "apple": null
@@ -741,11 +521,6 @@
     "artist": "Oasis",
     "year": 1995,
     "label": "Epic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 157,
       "apple": 58
@@ -758,11 +533,6 @@
     "artist": "The Replacements",
     "year": 1984,
     "label": "Twin/Tone",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 156,
       "apple": null
@@ -775,11 +545,6 @@
     "artist": "Jay-Z",
     "year": 2003,
     "label": "Roc-A-Fella",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 155,
       "apple": null
@@ -792,11 +557,6 @@
     "artist": "Aretha Franklin",
     "year": 1972,
     "label": "Atlantic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 154,
       "apple": null
@@ -809,11 +569,6 @@
     "artist": "PJ Harvey",
     "year": 1993,
     "label": "Island",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 153,
       "apple": null
@@ -826,11 +581,6 @@
     "artist": "The Pretenders",
     "year": 1980,
     "label": "Sire",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 152,
       "apple": null
@@ -843,11 +593,6 @@
     "artist": "George Michael",
     "year": 1987,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 151,
       "apple": null
@@ -860,11 +605,6 @@
     "artist": "Bruce Springsteen",
     "year": 1982,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 150,
       "apple": null
@@ -877,11 +617,6 @@
     "artist": "John Prine",
     "year": 1971,
     "label": "Atlantic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 149,
       "apple": null
@@ -894,11 +629,6 @@
     "artist": "Frank Ocean",
     "year": 2012,
     "label": "Def Jam",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 148,
       "apple": null
@@ -911,11 +641,6 @@
     "artist": "Jeff Buckley",
     "year": 1994,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 147,
       "apple": null
@@ -928,11 +653,6 @@
     "artist": "Blondie",
     "year": 1978,
     "label": "Chrysalis",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 146,
       "apple": null
@@ -945,11 +665,6 @@
     "artist": "Eminem",
     "year": 2000,
     "label": "Interscope",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 145,
       "apple": 80
@@ -962,11 +677,6 @@
     "artist": "Led Zeppelin",
     "year": 1975,
     "label": "Swan Song",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 144,
       "apple": null
@@ -979,11 +689,6 @@
     "artist": "The Velvet Underground",
     "year": 1969,
     "label": "MGM",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 143,
       "apple": null
@@ -996,11 +701,6 @@
     "artist": "Bruce Springsteen",
     "year": 1984,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 142,
       "apple": null
@@ -1013,11 +713,6 @@
     "artist": "Pixies",
     "year": 1989,
     "label": "4AD/Elektra",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 141,
       "apple": null
@@ -1030,11 +725,6 @@
     "artist": "Bob Marley and the Wailers",
     "year": 1973,
     "label": "Island",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 140,
       "apple": null
@@ -1047,11 +737,6 @@
     "artist": "Black Sabbath",
     "year": 1970,
     "label": "Vertigo",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 139,
       "apple": null
@@ -1064,11 +749,6 @@
     "artist": "Madonna",
     "year": 1990,
     "label": "Sire",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 138,
       "apple": null
@@ -1081,11 +761,6 @@
     "artist": "Adele",
     "year": 2011,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 137,
       "apple": 15
@@ -1098,11 +773,6 @@
     "artist": "Funkadelic",
     "year": 1971,
     "label": "Westbound",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 136,
       "apple": null
@@ -1115,11 +785,6 @@
     "artist": "U2",
     "year": 1987,
     "label": "Island",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 135,
       "apple": 49
@@ -1132,11 +797,6 @@
     "artist": "Fugees",
     "year": 1996,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 134,
       "apple": null
@@ -1149,11 +809,6 @@
     "artist": "Joni Mitchell",
     "year": 1976,
     "label": "Asylum",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 133,
       "apple": null
@@ -1166,11 +821,6 @@
     "artist": "Hank Williams",
     "year": 1978,
     "label": "Polydor",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 132,
       "apple": null
@@ -1183,11 +833,6 @@
     "artist": "Portishead",
     "year": 1994,
     "label": "Go! Beat",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 131,
       "apple": 67
@@ -1200,11 +845,6 @@
     "artist": "Prince",
     "year": 1982,
     "label": "Warner Bros.",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 130,
       "apple": null
@@ -1217,11 +857,6 @@
     "artist": "Pink Floyd",
     "year": 1979,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 129,
       "apple": null
@@ -1234,11 +869,6 @@
     "artist": "Queen",
     "year": 1975,
     "label": "Elektra",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 128,
       "apple": null
@@ -1251,11 +881,6 @@
     "artist": "Ray Charles",
     "year": 1962,
     "label": "ABC-Paramount",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 127,
       "apple": null
@@ -1268,11 +893,6 @@
     "artist": "Mary J. Blige",
     "year": 1994,
     "label": "Uptown",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 126,
       "apple": 86
@@ -1285,11 +905,6 @@
     "artist": "Beastie Boys",
     "year": 1989,
     "label": "Capitol",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 125,
       "apple": 48
@@ -1302,11 +917,6 @@
     "artist": "U2",
     "year": 1991,
     "label": "Island",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 124,
       "apple": null
@@ -1319,11 +929,6 @@
     "artist": "Led Zeppelin",
     "year": 1969,
     "label": "Atlantic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 123,
       "apple": 27
@@ -1336,11 +941,6 @@
     "artist": "Nine Inch Nails",
     "year": 1994,
     "label": "Nothing/Interscope",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 122,
       "apple": 74
@@ -1353,11 +953,6 @@
     "artist": "Elvis Costello",
     "year": 1978,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 121,
       "apple": null
@@ -1370,11 +965,6 @@
     "artist": "Van Morrison",
     "year": 1970,
     "label": "Warner Bros.",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 120,
       "apple": null
@@ -1387,11 +977,6 @@
     "artist": "Sly and the Family Stone",
     "year": 1969,
     "label": "Epic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 119,
       "apple": null
@@ -1404,11 +989,6 @@
     "artist": "The Eagles",
     "year": 1976,
     "label": "Asylum",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 118,
       "apple": null
@@ -1421,11 +1001,6 @@
     "artist": "Kanye West",
     "year": 2005,
     "label": "Roc-A-Fella",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 117,
       "apple": null
@@ -1438,11 +1013,6 @@
     "artist": "The Cure",
     "year": 1989,
     "label": "Fiction",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 116,
       "apple": 56
@@ -1455,11 +1025,6 @@
     "artist": "Kendrick Lamar",
     "year": 2012,
     "label": "TDE",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 115,
       "apple": null
@@ -1472,11 +1037,6 @@
     "artist": "The Strokes",
     "year": 2001,
     "label": "RCA",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 114,
       "apple": 68
@@ -1489,11 +1049,6 @@
     "artist": "The Smiths",
     "year": 1986,
     "label": "Sire",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 113,
       "apple": 66
@@ -1506,21 +1061,11 @@
     "artist": "Elton John",
     "year": 1973,
     "label": "MCA",
-    "status": "listened",
-    "rating": "interesting",
-    "favorite": false,
-    "listenedAt": "2026-04-28",
-    "notes": "",
     "ranks": {
       "rollingstone": 112,
       "apple": 78
     },
-    "canonicalRank": 78,
-    "standoutTracks": [
-      "Bennie and the Jets",
-      "Candle in the Wind",
-      "I've Seen That Movie Too"
-    ]
+    "canonicalRank": 78
   },
   {
     "id": "janet-jackson-control-1986",
@@ -1528,11 +1073,6 @@
     "artist": "Janet Jackson",
     "year": 1986,
     "label": "A&M",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 111,
       "apple": 42
@@ -1545,11 +1085,6 @@
     "artist": "Joni Mitchell",
     "year": 1974,
     "label": "Asylum",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 110,
       "apple": null
@@ -1562,11 +1097,6 @@
     "artist": "Lou Reed",
     "year": 1972,
     "label": "RCA",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 109,
       "apple": null
@@ -1579,11 +1109,6 @@
     "artist": "Fiona Apple",
     "year": 1999,
     "label": "Epic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 108,
       "apple": null
@@ -1596,11 +1121,6 @@
     "artist": "Television",
     "year": 1977,
     "label": "Elektra",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 107,
       "apple": null
@@ -1613,11 +1133,6 @@
     "artist": "Hole",
     "year": 1994,
     "label": "Geffen",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 106,
       "apple": null
@@ -1630,11 +1145,6 @@
     "artist": "The Allman Brothers",
     "year": 1971,
     "label": "Capricorn",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 105,
       "apple": null
@@ -1647,11 +1157,6 @@
     "artist": "The Rolling Stones",
     "year": 1971,
     "label": "Rolling Stones",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 104,
       "apple": null
@@ -1664,11 +1169,6 @@
     "artist": "De La Soul",
     "year": 1989,
     "label": "Tommy Boy",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 103,
       "apple": null
@@ -1681,11 +1181,6 @@
     "artist": "The Clash",
     "year": 1977,
     "label": "CBS",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 102,
       "apple": null
@@ -1698,11 +1193,6 @@
     "artist": "Led Zeppelin",
     "year": 1969,
     "label": "Atlantic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 101,
       "apple": null
@@ -1715,11 +1205,6 @@
     "artist": "The Band",
     "year": 1968,
     "label": "Capitol",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 100,
       "apple": null
@@ -1732,11 +1217,6 @@
     "artist": "Taylor Swift",
     "year": 2012,
     "label": "Big Machine",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 99,
       "apple": null
@@ -1749,11 +1229,6 @@
     "artist": "Lucinda Williams",
     "year": 1998,
     "label": "Mercury",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 98,
       "apple": null
@@ -1766,11 +1241,6 @@
     "artist": "Metallica",
     "year": 1986,
     "label": "Elektra",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 97,
       "apple": 69
@@ -1783,11 +1253,6 @@
     "artist": "R.E.M.",
     "year": 1992,
     "label": "Warner Bros.",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 96,
       "apple": null
@@ -1800,11 +1265,6 @@
     "artist": "Drake",
     "year": 2011,
     "label": "Cash Money",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 95,
       "apple": 47
@@ -1817,11 +1277,6 @@
     "artist": "The Stooges",
     "year": 1970,
     "label": "Elektra",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 94,
       "apple": null
@@ -1834,11 +1289,6 @@
     "artist": "Missy “Misdemeanor” Elliott",
     "year": 1997,
     "label": "Goldmind",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 93,
       "apple": null
@@ -1851,11 +1301,6 @@
     "artist": "The Jimi Hendrix Experience",
     "year": 1967,
     "label": "Track",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 92,
       "apple": null
@@ -1868,11 +1313,6 @@
     "artist": "Bruce Springsteen",
     "year": 1978,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 91,
       "apple": null
@@ -1885,11 +1325,6 @@
     "artist": "Neil Young",
     "year": 1970,
     "label": "Reprise",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 90,
       "apple": 81
@@ -1902,11 +1337,6 @@
     "artist": "Erykah Badu",
     "year": 1997,
     "label": "Kedar",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 89,
       "apple": 64
@@ -1919,11 +1349,6 @@
     "artist": "David Bowie",
     "year": 1971,
     "label": "RCA",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 88,
       "apple": null
@@ -1936,11 +1361,6 @@
     "artist": "Miles Davis",
     "year": 1970,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 87,
       "apple": null
@@ -1953,11 +1373,6 @@
     "artist": "The Doors",
     "year": 1967,
     "label": "Elektra",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 86,
       "apple": null
@@ -1970,11 +1385,6 @@
     "artist": "John Lennon",
     "year": 1970,
     "label": "Apple",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 85,
       "apple": null
@@ -1987,11 +1397,6 @@
     "artist": "AC/DC",
     "year": 1980,
     "label": "Atlantic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 84,
       "apple": 90
@@ -2004,11 +1409,6 @@
     "artist": "Dusty Springfield",
     "year": 1969,
     "label": "Atlantic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 83,
       "apple": null
@@ -2021,11 +1421,6 @@
     "artist": "Sly and the Family Stone",
     "year": 1971,
     "label": "Epic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 82,
       "apple": null
@@ -2038,11 +1433,6 @@
     "artist": "Beyoncé",
     "year": 2013,
     "label": "Parkwood/Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 81,
       "apple": 36
@@ -2055,11 +1445,6 @@
     "artist": "The Sex Pistols",
     "year": 1977,
     "label": "Warner Bros.",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 80,
       "apple": null
@@ -2072,11 +1457,6 @@
     "artist": "Frank Ocean",
     "year": 2016,
     "label": "Boys Don’t Cry",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 79,
       "apple": null
@@ -2089,11 +1469,6 @@
     "artist": "Elvis Presley",
     "year": 1976,
     "label": "RCA",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 78,
       "apple": null
@@ -2106,11 +1481,6 @@
     "artist": "The Who",
     "year": 1971,
     "label": "Decca",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 77,
       "apple": null
@@ -2123,11 +1493,6 @@
     "artist": "Curtis Mayfield",
     "year": 1972,
     "label": "Curtom",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 76,
       "apple": null
@@ -2140,11 +1505,6 @@
     "artist": "Aretha Franklin",
     "year": 1968,
     "label": "Atlantic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 75,
       "apple": null
@@ -2157,11 +1517,6 @@
     "artist": "Kanye West",
     "year": 2004,
     "label": "Roc-A-Fella",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 74,
       "apple": null
@@ -2174,11 +1529,6 @@
     "artist": "My Bloody Valentine",
     "year": 1991,
     "label": "Sire",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 73,
       "apple": null
@@ -2191,11 +1541,6 @@
     "artist": "Neil Young",
     "year": 1972,
     "label": "Reprise",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 72,
       "apple": null
@@ -2208,11 +1553,6 @@
     "artist": "Beyonce",
     "year": 2022,
     "label": "Parkwood/Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 71,
       "apple": null
@@ -2225,11 +1565,6 @@
     "artist": "N.W.A",
     "year": 1988,
     "label": "Ruthless",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 70,
       "apple": 70
@@ -2242,11 +1577,6 @@
     "artist": "Alanis Morissette",
     "year": 1995,
     "label": "Maverick",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 69,
       "apple": 31
@@ -2259,11 +1589,6 @@
     "artist": "Kate Bush",
     "year": 1985,
     "label": "EMI",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 68,
       "apple": 50
@@ -2276,11 +1601,6 @@
     "artist": "Jay-Z",
     "year": 1996,
     "label": "Roc-A-Fella",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 67,
       "apple": null
@@ -2293,11 +1613,6 @@
     "artist": "John Coltrane",
     "year": 1965,
     "label": "Impulse!",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 66,
       "apple": 54
@@ -2310,11 +1625,6 @@
     "artist": "James Brown",
     "year": 1963,
     "label": "King",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 65,
       "apple": null
@@ -2327,11 +1637,6 @@
     "artist": "OutKast",
     "year": 2000,
     "label": "LaFace",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 64,
       "apple": null
@@ -2344,11 +1649,6 @@
     "artist": "Steely Dan",
     "year": 1977,
     "label": "ABC",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 63,
       "apple": 73
@@ -2361,19 +1661,10 @@
     "artist": "Guns N’ Roses",
     "year": 1987,
     "label": "Geffen",
-    "status": "listened",
-    "rating": "not_for_me",
-    "favorite": false,
-    "listenedAt": "2026-04-03",
-    "notes": "eh.",
     "ranks": {
       "rollingstone": 62,
       "apple": 52
     },
-    "standoutTracks": [
-      "Paradise City",
-      "Sweet Child O’ Mine"
-    ],
     "canonicalRank": 52
   },
   {
@@ -2382,11 +1673,6 @@
     "artist": "Eric B. and Rakim",
     "year": 1987,
     "label": "4th & B’way",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 61,
       "apple": null
@@ -2399,11 +1685,6 @@
     "artist": "Van Morrison",
     "year": 1968,
     "label": "Warner Bros.",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 60,
       "apple": null
@@ -2416,11 +1697,6 @@
     "artist": "Stevie Wonder",
     "year": 1972,
     "label": "Tamla/Motown",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 59,
       "apple": null
@@ -2433,11 +1709,6 @@
     "artist": "Led Zeppelin",
     "year": 1971,
     "label": "Atlantic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 58,
       "apple": null
@@ -2450,11 +1721,6 @@
     "artist": "The Band",
     "year": 1969,
     "label": "Capitol",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 57,
       "apple": null
@@ -2467,11 +1733,6 @@
     "artist": "Liz Phair",
     "year": 1993,
     "label": "Matador",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 56,
       "apple": null
@@ -2484,11 +1745,6 @@
     "artist": "Pink Floyd",
     "year": 1973,
     "label": "EMI",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 55,
       "apple": 28
@@ -2501,11 +1757,6 @@
     "artist": "James Brown",
     "year": 1991,
     "label": "Polydor",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 54,
       "apple": null
@@ -2518,11 +1769,6 @@
     "artist": "Jimi Hendrix",
     "year": 1968,
     "label": "Reprise",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 53,
       "apple": null
@@ -2535,11 +1781,6 @@
     "artist": "David Bowie",
     "year": 1976,
     "label": "RCA",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 52,
       "apple": null
@@ -2552,11 +1793,6 @@
     "artist": "Chuck Berry",
     "year": 1982,
     "label": "Chess",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 51,
       "apple": null
@@ -2569,11 +1805,6 @@
     "artist": "Jay-Z",
     "year": 2001,
     "label": "Roc-A-Fella",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 50,
       "apple": 13
@@ -2586,11 +1817,6 @@
     "artist": "OutKast",
     "year": 1998,
     "label": "LaFace",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 49,
       "apple": 41
@@ -2603,11 +1829,6 @@
     "artist": "Bob Marley and the Wailers",
     "year": 1977,
     "label": "Island",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 48,
       "apple": 46
@@ -2620,11 +1841,6 @@
     "artist": "Ramones",
     "year": 1976,
     "label": "Sire",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 47,
       "apple": null
@@ -2637,11 +1853,6 @@
     "artist": "Paul Simon",
     "year": 1986,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 46,
       "apple": null
@@ -2654,11 +1865,6 @@
     "artist": "Prince",
     "year": 1987,
     "label": "Paisley Park/Warner Bros.",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 45,
       "apple": 51
@@ -2671,11 +1877,6 @@
     "artist": "Nas",
     "year": 1994,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 44,
       "apple": 39
@@ -2688,11 +1889,6 @@
     "artist": "A Tribe Called Quest",
     "year": 1991,
     "label": "Jive",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 43,
       "apple": 29
@@ -2705,11 +1901,6 @@
     "artist": "Radiohead",
     "year": 1997,
     "label": "Capitol",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 42,
       "apple": 12
@@ -2722,11 +1913,6 @@
     "artist": "The Rolling Stones",
     "year": 1969,
     "label": "ABKCO",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 41,
       "apple": null
@@ -2739,11 +1925,6 @@
     "artist": "David Bowie",
     "year": 1972,
     "label": "RCA",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 40,
       "apple": 24
@@ -2756,11 +1937,6 @@
     "artist": "Talking Heads",
     "year": 1980,
     "label": "Sire",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 39,
       "apple": 43
@@ -2773,11 +1949,6 @@
     "artist": "Bob Dylan",
     "year": 1966,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 38,
       "apple": null
@@ -2790,11 +1961,6 @@
     "artist": "Dr. Dre",
     "year": 1992,
     "label": "Deathrow",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 37,
       "apple": 19
@@ -2807,11 +1973,6 @@
     "artist": "Michael Jackson",
     "year": 1979,
     "label": "Epic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 36,
       "apple": null
@@ -2824,11 +1985,6 @@
     "artist": "The Beatles",
     "year": 1965,
     "label": "Parlophone",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 35,
       "apple": null
@@ -2841,11 +1997,6 @@
     "artist": "Stevie Wonder",
     "year": 1973,
     "label": "Tamla/Motown",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 34,
       "apple": 44
@@ -2858,11 +2009,6 @@
     "artist": "Amy Winehouse",
     "year": 2006,
     "label": "Island",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 33,
       "apple": 8
@@ -2875,11 +2021,6 @@
     "artist": "Beyoncé",
     "year": 2016,
     "label": "Parkwood/Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 32,
       "apple": 10
@@ -2892,11 +2033,6 @@
     "artist": "Miles Davis",
     "year": 1959,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 31,
       "apple": 25
@@ -2909,11 +2045,6 @@
     "artist": "Jimi Hendrix",
     "year": 1967,
     "label": "Track",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 30,
       "apple": null
@@ -2926,11 +2057,6 @@
     "artist": "The Beatles",
     "year": 1968,
     "label": "Apple",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 29,
       "apple": null
@@ -2943,11 +2069,6 @@
     "artist": "D’Angelo",
     "year": 2000,
     "label": "EMI",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 28,
       "apple": 57
@@ -2960,11 +2081,6 @@
     "artist": "Wu-Tang Clan",
     "year": 1993,
     "label": "Loud",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 27,
       "apple": 37
@@ -2977,11 +2093,6 @@
     "artist": "Patti Smith",
     "year": 1975,
     "label": "Arista",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 26,
       "apple": 83
@@ -2994,11 +2105,6 @@
     "artist": "Carole King",
     "year": 1971,
     "label": "Sony",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 25,
       "apple": 38
@@ -3011,11 +2117,6 @@
     "artist": "The Beatles",
     "year": 1967,
     "label": "Capitol",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 24,
       "apple": null
@@ -3028,11 +2129,6 @@
     "artist": "The Velvet Underground",
     "year": 1967,
     "label": "Verve",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 23,
       "apple": null
@@ -3045,11 +2141,6 @@
     "artist": "The Notorious B.I.G.",
     "year": 1994,
     "label": "Bad Boy",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 22,
       "apple": 32
@@ -3062,11 +2153,6 @@
     "artist": "Bruce Springsteen",
     "year": 1975,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 21,
       "apple": 22
@@ -3079,11 +2165,6 @@
     "artist": "Radiohead",
     "year": 2000,
     "label": "Parlophone",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 20,
       "apple": 33
@@ -3096,11 +2177,6 @@
     "artist": "Kendrick Lamar",
     "year": 2015,
     "label": "TDE",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 19,
       "apple": null
@@ -3113,11 +2189,6 @@
     "artist": "Bob Dylan",
     "year": 1965,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 18,
       "apple": 14
@@ -3130,11 +2201,6 @@
     "artist": "Kanye West",
     "year": 2010,
     "label": "Roc-A-Fella",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 17,
       "apple": 26
@@ -3147,20 +2213,11 @@
     "artist": "The Clash",
     "year": 1979,
     "label": "CBS",
-    "status": "listened",
-    "rating": "not_for_me",
-    "favorite": false,
-    "listenedAt": "2026-02-23",
-    "notes": "",
     "ranks": {
       "rollingstone": 16,
       "apple": 35
     },
-    "canonicalRank": 16,
-    "standoutTracks": [
-      "London Calling"
-    ],
-    "spotifyLink": "https://open.spotify.com/album/0Rzg7fqyWE39G6wKipxrns"
+    "canonicalRank": 16
   },
   {
     "id": "public-enemy-it-takes-a-nation-of-millions-to-hold-us-back-1988",
@@ -3168,11 +2225,6 @@
     "artist": "Public Enemy",
     "year": 1988,
     "label": "Def Jam",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 15,
       "apple": 34
@@ -3185,11 +2237,6 @@
     "artist": "The Rolling Stones",
     "year": 1972,
     "label": "Rolling Stones Records",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 14,
       "apple": null
@@ -3202,11 +2249,6 @@
     "artist": "Aretha Franklin",
     "year": 1967,
     "label": "Atlantic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 13,
       "apple": 40
@@ -3219,11 +2261,6 @@
     "artist": "Michael Jackson",
     "year": 1982,
     "label": "Epic",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 12,
       "apple": 2
@@ -3236,11 +2273,6 @@
     "artist": "The Beatles",
     "year": 1966,
     "label": "Apple",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 11,
       "apple": 21
@@ -3253,11 +2285,6 @@
     "artist": "Lauryn Hill",
     "year": 1998,
     "label": "Ruffhouse/Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 10,
       "apple": 1
@@ -3270,11 +2297,6 @@
     "artist": "Bob Dylan",
     "year": 1975,
     "label": "Columbia",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 9,
       "apple": null
@@ -3287,11 +2309,6 @@
     "artist": "Prince and the Revolution",
     "year": 1984,
     "label": "Warner Bros.",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 8,
       "apple": null
@@ -3304,11 +2321,6 @@
     "artist": "Fleetwood Mac",
     "year": 1977,
     "label": "Warner Bros.",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 7,
       "apple": 11
@@ -3321,11 +2333,6 @@
     "artist": "Nirvana",
     "year": 1991,
     "label": "Geffen",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 6,
       "apple": 9
@@ -3338,11 +2345,6 @@
     "artist": "The Beatles",
     "year": 1969,
     "label": "Apple",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 5,
       "apple": 3
@@ -3355,11 +2357,6 @@
     "artist": "Stevie Wonder",
     "year": 1976,
     "label": "Tamla/Motown",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 4,
       "apple": 6
@@ -3372,11 +2369,6 @@
     "artist": "Joni Mitchell",
     "year": 1971,
     "label": "Reprise",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 3,
       "apple": 16
@@ -3389,11 +2381,6 @@
     "artist": "The Beach Boys",
     "year": 1966,
     "label": "Capitol",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 2,
       "apple": 20
@@ -3406,11 +2393,6 @@
     "artist": "Marvin Gaye",
     "year": 1971,
     "label": "Tamla/Motown",
-    "status": "queue",
-    "rating": null,
-    "favorite": false,
-    "listenedAt": null,
-    "notes": "",
     "ranks": {
       "rollingstone": 1,
       "apple": 17

@@ -1,0 +1,48 @@
+{
+  "robyn-body-talk-2010": {
+    "status": "listened",
+    "rating": "loved",
+    "favorite": true,
+    "listenedAt": "2026-02-09",
+    "notes": "Brings me back to college. Dancing on my Own and Indestructible are bangers that were on repeat back then. This was my first time listening to the whole album. Great album to code to when you would rather be at the beach.",
+    "standoutTracks": [
+      "Indestructible",
+      "Dancing on My Own"
+    ],
+    "spotifyLink": "https://open.spotify.com/album/0Rzg7fqyWE39G6wKipxrns"
+  },
+  "elton-john-goodbye-yellow-brick-road-1973": {
+    "status": "listened",
+    "rating": "interesting",
+    "favorite": false,
+    "listenedAt": "2026-04-28",
+    "notes": "",
+    "standoutTracks": [
+      "Bennie and the Jets",
+      "Candle in the Wind",
+      "I've Seen That Movie Too"
+    ]
+  },
+  "guns-n-roses-appetite-for-destruction-1987": {
+    "status": "listened",
+    "rating": "not_for_me",
+    "favorite": false,
+    "listenedAt": "2026-04-03",
+    "notes": "eh.",
+    "standoutTracks": [
+      "Paradise City",
+      "Sweet Child O’ Mine"
+    ]
+  },
+  "the-clash-london-calling-1979": {
+    "status": "listened",
+    "rating": "not_for_me",
+    "favorite": false,
+    "listenedAt": "2026-02-23",
+    "notes": "",
+    "standoutTracks": [
+      "London Calling"
+    ],
+    "spotifyLink": "https://open.spotify.com/album/0Rzg7fqyWE39G6wKipxrns"
+  }
+}

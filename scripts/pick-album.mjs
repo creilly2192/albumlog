@@ -3,6 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const albumsPath = path.join(root, "data", "albums.json");
+const progressPath = path.join(root, "data", "progress.json");
 const nowPath = path.join(root, "data", "now.json");
 
 const force = process.argv.includes("--force");
@@ -20,7 +21,11 @@ if (fs.existsSync(nowPath) && !force) {
 }
 
 const albums = JSON.parse(fs.readFileSync(albumsPath, "utf-8"));
-const queue = albums.filter((a) => a.status === "queue");
+const progress = fs.existsSync(progressPath)
+  ? JSON.parse(fs.readFileSync(progressPath, "utf-8"))
+  : {};
+
+const queue = albums.filter((a) => (progress[a.id]?.status ?? "queue") === "queue");
 
 if (!queue.length) {
   console.error("No queued albums (status === 'queue').");

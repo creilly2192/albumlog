@@ -9,9 +9,9 @@ The site is driven by local JSON data generated from source CSV files in `data/s
 - `/` shows the currently pinned "Now Listening" album from `data/now.json`
 - `/log` shows albums marked as listened, grouped by month
 - `/favorites` shows albums marked as favorites
-- `/listening/[id]` builds a detail page for every album in `data/albums.json`
+- `/listening/[id]` builds a detail page for every album, with personal data merged from `data/progress.json`
 
-Each album record can include:
+Each album record combines:
 
 - Basic metadata: `id`, `title`, `artist`, `year`, `label`
 - Listening state: `status`, `listenedAt`, `favorite`, `rating`
@@ -29,7 +29,8 @@ Current rating labels in the UI are:
 ```text
 /
 ├── data/
-│   ├── albums.json
+│   ├── albums.json        ← album metadata (generated from CSVs)
+│   ├── progress.json      ← personal listening data (status, notes, ratings)
 │   ├── now.json
 │   └── sources/
 │       ├── RollingStone.csv
@@ -38,6 +39,7 @@ Current rating labels in the UI are:
 ├── public/
 ├── scripts/
 │   ├── build-albums-json.mjs
+│   ├── migrate-progress.mjs
 │   └── pick-album.mjs
 ├── src/
 │   ├── components/
@@ -91,23 +93,34 @@ The app will be available at `http://localhost:4321`.
 
 ## Data Workflow
 
+Album data is split across two files:
+
+- **`data/albums.json`** — metadata only (title, artist, year, label, ranks). Generated from CSVs by `albums:build` and safe to regenerate at any time.
+- **`data/progress.json`** — your personal listening data, keyed by album ID. Never overwritten by `albums:build`.
+
 `scripts/build-albums-json.mjs` treats the Rolling Stone list as the canonical base dataset, then merges Apple ranking data where an artist/title match is found.
 
-The generated `data/albums.json` file starts each album with defaults like:
+To record a listen, add an entry to `data/progress.json`:
 
-- `status: "queue"`
-- `rating: null`
-- `favorite: false`
-- `listenedAt: null`
-- `notes: ""`
+```json
+{
+  "artist-title-year": {
+    "status": "listened",
+    "listenedAt": "2026-02-09",
+    "rating": "loved",
+    "favorite": true,
+    "notes": "...",
+    "standoutTracks": ["Track Name"],
+    "spotifyLink": "https://open.spotify.com/album/..."
+  }
+}
+```
 
-After generation, you can update `data/albums.json` manually as you listen:
+Albums not present in `progress.json` default to `status: "queue"`.
 
-- Set `status` to `"listened"`
-- Add a `listenedAt` date like `2026-02-09`
-- Set `rating` to one of the supported values
-- Mark favorites with `favorite: true`
-- Add `notes`, `standoutTracks`, or `spotifyLink`
+### Forking this project
+
+To use this as a blank slate, delete `data/progress.json` and `data/now.json`. Your own listening data will never be mixed into the album metadata.
 
 ## Picking The Current Album
 
@@ -121,6 +134,6 @@ npm run repick:album
 
 ## Build Notes
 
-- The detail pages under `/listening/[id]` are generated statically from `data/albums.json`
+- The detail pages under `/listening/[id]` are generated statically, with album metadata from `data/albums.json` merged with personal data from `data/progress.json`
 - If `data/now.json` points to an ID that no longer exists, the home page shows a recovery message
 - The site reads album data directly from the filesystem at build/runtime, so the JSON files in `data/` are part of the app's source of truth
