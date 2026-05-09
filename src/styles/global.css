@@ -2,6 +2,8 @@
 :root {
   --color-bg: #f0e7d6;
   --color-text: #241a12;
+  --color-ink: #241a12;
+  --color-ink2: #4a3a2a;
   --paper: #f7efe0;
 
   --card: #ffffff;
@@ -178,20 +180,30 @@ p {
 }
 
 /* Now */
-.now-listing__top {
-  display: flex;
-  align-items: center;
-  gap: .5375rem;
+.now-listening__album-container {
+  margin-top: 3.75rem;
 }
 
-.now-listening__play-circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.now-listening__label {
+  font-size: .9375rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.75rem;
+  display: block;
+}
+
+.now-listening__label::before {
+  content: "";
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
   border-radius: 50%;
-  background-color: var(--color-coral);
-  width: 2.5rem;
-  height: 2.5rem;
+  background-color: var(--accent);
+  position: relative;
+  top: -0.0938rem;
 }
 
 .album__ranks h3 {
@@ -201,17 +213,26 @@ p {
 }
 
 .now-listening__album {
-  font-size: 4rem;
-  font-family: var(--font-sans);
-  margin-top: 3rem;
-  line-height: 1;
+  font-size: 9rem;
+  font-family: var(--font-display);
+  line-height: .86;
+  letter-spacing: -0.04rem;
+  color: var(--color-ink);
+}
+
+.now-listening__album em {
+  color: var(--accent);
 }
 
 .now-listening__artist {
-  font-size: 2rem;
-  color: var(--muted-foreground);
-  font-family: var(--font-sans);
-  margin-bottom: .375rem;
+  font-size: 2.375rem;
+  color: var(--ink2);
+  font-family: var(--font-display);
+  margin-bottom: 2.25rem;
+}
+
+.now-listening__artist span {
+  color: var(--muted);
 }
 
 .now-listening__ranks {
