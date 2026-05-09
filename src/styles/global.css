@@ -1,7 +1,8 @@
 /* ===== CSS TOKENS ===== */
 :root {
-  --color-bg: #fffbf5;
-  --color-text: #2d2d2d;
+  --color-bg: #f0e7d6;
+  --color-text: #241a12;
+  --paper: #f7efe0;
 
   --card: #ffffff;
   --card-foreground: #2d2d2d;
@@ -12,11 +13,14 @@
   --primary-foreground: #ffffff;
   --secondary: #f8f4ee;
   --secondary-foreground: #2d2d2d;
-  --muted: #f8f4ee;
+  --muted: #8a7864;
   --muted-foreground: #7a7a7a;
   --white: #ffffff;
 
-  --accent: #ebe7e0;
+  --accent: #b85a3c;
+  --accentDeep: #8a3a22;
+  --rule: #cfc0a4;
+
   --accent-foreground: #2d2d2d;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
@@ -31,11 +35,11 @@
 
   --border: #e8e4dc;
 
-  --font-serif: "EB Garamond", cursive;
-  --font-sans:
-    "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body:
-    "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Newsreader", serif;
+  --font-display: "Instrument Serif", serif;
+  --font-sans: "Inter Tight", sans-serif;
+  --font-body: "JetBrains Mono", monospace;
+  --font-mono: "JetBrains Mono", monospace;
 
   --leading-body: 1.6;
   --leading-heading: 1.25;
@@ -92,25 +96,41 @@ p {
 
 /* Containers */
 .container {
-  max-width: 55rem;
+  max-width: 82.5rem;
   margin: 0 auto;
-  padding: 1rem;
 }
 
 /* Header */
 .site-header .container {
   padding-bottom: 0.5rem;
+
 }
 
 .site-header__nav {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  border-bottom: .0625rem solid var(--rule);
+  align-items: center;
+  padding: 2rem 0;
 }
 
 .site-name a {
   color: var(--color-text);
+  font-style: italic;
   text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: -0.0006rem;
+}
+
+.site-name__version {
+  font-family: var(--font-mono);
+  font-size: .5625rem;
+  letter-spacing: 0.18rem;
+  color: var(--accent);
+  text-transform: uppercase;
 }
 
 .site-header__nav-list {
@@ -123,13 +143,31 @@ p {
 
 .site-header__nav-list a {
   text-decoration: none;
-  border-bottom: 1px solid transparent;
   color: var(--color-text);
-  transition: border-color 0.3s ease;
+  border-bottom: .0625rem solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  font-size: 1.125rem;
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+.site-header__nav-list li:not(:last-child)::after {
+  content: "·";
+  position: relative;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  display: inline-block;
+  color: var(--muted);
 }
 
 .site-header__nav-list a:hover {
-  border-color: var(--color-text);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.site-header__nav-list a.active {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /* Helpers */

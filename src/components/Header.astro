@@ -1,28 +1,18 @@
+---
+const { pathname } = Astro.url;
+---
 <header class="site-header">
     <div class="container">
         <nav class="site-header__nav">
             <span class="site-name"
-                ><a href="/">Greatest Albums Project</a></span
+                ><a href="/">Album Log.</a>
+                <span class="site-name__version">№ 01</span></span
             >
             <ul class="site-header__nav-list">
-                <li><a href="/">Now Listening</a></li>
-                <li><a href="/log">Log</a></li>
-                <li><a href="/favorites">Favorites</a></li>
+                <li><a href="/" class={pathname === "/" ? "active" : ""}>Now Listening</a></li>
+                <li><a href="/log" class={pathname === "/log" ? "active" : ""}>Log</a></li>
+                <li><a href="/favorites" class={pathname === "/favorites" ? "active" : ""}>Favorites</a></li>
             </ul>
         </nav>
     </div>
-    <svg
-        width="100%"
-        height="30"
-        viewBox="0 0 1000 30"
-        preserveAspectRatio="none"
-        fill="none"
-    >
-        <path
-            d="M 0 15 Q 250 5, 500 15 T 1000 15"
-            stroke="var(--color-blue)"
-            stroke-width="1"
-            fill="none"
-            opacity="0.25"></path>
-    </svg>
 </header>
