@@ -100,6 +100,7 @@ p {
 .container {
   max-width: 82.5rem;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* Header */
@@ -182,6 +183,17 @@ p {
 /* Now */
 .now-listening__album-container {
   margin-top: 3.75rem;
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+}
+
+.now-listening__album-meta {
+  grid-column: 1 / span 5;
+}
+
+.now-listening__album-cover {
+  grid-column: 6 / span 5;
 }
 
 .now-listening__label {
@@ -229,38 +241,29 @@ p {
   color: var(--ink2);
   font-family: var(--font-display);
   margin-bottom: 2.25rem;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .now-listening__artist span {
   color: var(--muted);
 }
 
-.now-listening__ranks {
-  margin-top: 3rem;
+.now-listening__meta-stats {
+  display: flex;
+  gap: 2rem;
 }
 
-.album__ranks {
-  margin-top: 2rem;
+.now-listening__meta-stats-label {
+  font-size: .875rem;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  margin-bottom: .25rem;
 }
 
-.album__rank {
-  margin-top: 0.5rem;
-  border: 1px solid var(--border);
-  border-radius: 2.5rem;
-  padding: 0.5rem 1.15rem;
-  display: inline-flex;
-}
-
-.album__rank:first-of-type {
-  border-color: var(--color-pink);
-}
-
-.album__rank:last-of-type {
-  border-color: var(--color-blue);
-}
-
-.album__rank strong {
-  padding-left: 0.25rem;
+.now-listening__released {
+  font-size: 1rem;
+  color: var(--ink2);
 }
 
 .now-listening__spotify-link {

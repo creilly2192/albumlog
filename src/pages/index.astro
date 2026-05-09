@@ -33,29 +33,37 @@ const releasedText = formatReleaseText(album);
                             <span>by</span>
                             {album.artist}
                         </h2>
-                        <p class="now-listening__released">{releasedText}</p>
 
-                        {album.ranks ? (
-                            <div class="album__ranks">
-                                {album.ranks?.rollingstone ? (
-                                    <span class="album__rank">
-                                        Rolling Stone:{" "}
-                                        <strong>
-                                            {" "}
-                                            #{album.ranks.rollingstone}
-                                        </strong>
-                                        /500
-                                    </span>
-                                ) : null}
-                                {album.ranks?.apple ? (
-                                    <span class="album__rank">
-                                        Apple:{" "}
-                                        <strong> #{album.ranks.apple}</strong>
-                                        /100
-                                    </span>
-                                ) : null}
+                        <div class="now-listening__meta-stats">
+                            <div class="now-listening__released">
+                                <p class="now-listening__meta-stats-label">
+                                    Released
+                                </p>
+                                <p>{releasedText}</p>
                             </div>
-                        ) : null}
+
+                            {album.ranks ? (
+                                <div class="album__ranks">
+                                    <p class="now-listening__meta-stats-label">
+                                        Ranking
+                                    </p>
+                                    {album.ranks?.rollingstone ? (
+                                        <span class="album__rank">
+                                            Rolling Stone №{" "}
+                                            <span>
+                                                {" "}
+                                                {album.ranks.rollingstone}
+                                            </span>
+                                        </span>
+                                    ) : null}
+                                    {album.ranks?.apple ? (
+                                        <span class="album__rank">
+                                            № <span> {album.ranks.apple}</span>
+                                        </span>
+                                    ) : null}
+                                </div>
+                            ) : null}
+                        </div>
                     </div>
 
                     <div class="now-listening__album-cover"> cover</div>
