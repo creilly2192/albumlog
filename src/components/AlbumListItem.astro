@@ -2,50 +2,48 @@
 const { album } = Astro.props;
 
 import { getRatingMeta } from "../lib/rating";
+import { formatReleaseText } from "../lib/releasedYear";
 
 const ratingMeta = getRatingMeta(album.rating);
+const releasedText = formatReleaseText(album.release);
 ---
 
 <li class="listening-log__item">
     <div class="listening-log__item-wrapper">
-        <a
-            href={`/listening/${album.id}`}
-            class="listening-log__letter"
-            style={`--album-accent: ${ratingMeta.color};`}
-        >
-            <span>{album.title ? album.title.charAt(0) : ""}</span>
-        </a>
-
         <div class="listening-log__item-content">
             <div class="listening-log__album-details">
                 <div class="listening-log__album">
-                    <p class="listening-log__title">{album.title}</p>
+                    <span class="listening-log__release">{releasedText}</span>
+                    <a
+                        class="listening-log__title"
+                        href={`/listening/${album.id}`}
+                        target="_blank"
+                    >
+                        {album.title}
+                    </a>
                     <span class="listening-log__artist">{album.artist}</span>
                 </div>
 
-                <div
-                    class="listening-log__ratings"
-                    style={`--rating-color: ${ratingMeta.color};`}
-                >
-                    <span class="listening-log__rating">
-                        {ratingMeta.label}
-                    </span>
-
-                    <span class="listening-log__rating-is-favorite">
-                        {album.favorite ? "★" : "☆"}
-                    </span>
-                </div>
-            </div>
-
-            <div class="listening-log__rankings">
-                {
-                    album.ranks?.rollingstone ? (
-                        <span class="listening-log__ranking">
-                            <strong>#{album.ranks.rollingstone}</strong> Rolling
-                            Stone
+                <div class="listening-log__meta">
+                    <div
+                        class="listening-log__ratings"
+                        style={`--rating-color: ${ratingMeta.color};`}
+                    >
+                        <span class="listening-log__rating">
+                            &mdash; {ratingMeta.label}
                         </span>
-                    ) : null
-                }
+                    </div>
+
+                    <div class="listening-log__rankings">
+                        {
+                            album.ranks?.rollingstone ? (
+                                <span class="listening-log__ranking">
+                                    #{album.ranks.rollingstone} Rolling Stone
+                                </span>
+                            ) : null
+                        }
+                    </div>
+                </div>
             </div>
         </div>
     </div>
