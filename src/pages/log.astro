@@ -9,7 +9,7 @@ function formatMonthYear(iso) {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return "";
   return new Intl.DateTimeFormat("en-US", {
-    month: "short",
+    month: "long",
     year: "numeric",
   }).format(d);
 }
@@ -56,7 +56,15 @@ const sortedGroups = Object.values(groups).sort(
 ---
 
 <BaseLayout title="Listening Log">
-  <h1>Listening Log</h1>
+  <div class="section-heading section-heading--grid">
+    <h1 class="display">
+      What I've been <em>listening</em> to
+    </h1>
+    <p>
+      A ledger of every album I've listened to this year from this project —
+      what stuck, what didn't, and what I'd play again.
+    </p>
+  </div>
 
   {
     sortedGroups.length === 0 ? (
@@ -64,7 +72,12 @@ const sortedGroups = Object.values(groups).sort(
     ) : (
       sortedGroups.map((group) => (
         <section class="listening-log__group">
-          <h2 class="listening-log__month">{group.label}</h2>
+          <div class="listening-log__group-header">
+            <h2 class="listening-log__month">{group.label}</h2>
+            <span class="listening-log__month-count">
+              {group.items.length} albums
+            </span>
+          </div>
           <ul class="listening-log__list">
             {group.items.map((a) => {
               return <AlbumListItem album={a} />;

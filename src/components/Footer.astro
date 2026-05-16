@@ -1,0 +1,50 @@
+---
+const { pathname } = Astro.url;
+---
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__top-left">
+                <div>
+                    <span class="footer__site-title"> Album Log. </span>
+                    <span class="footer__site-tagline"> № 01 </span>
+                </div>
+                <p>A log of records — kept for the love of listening.</p>
+            </div>
+
+            <div class="footer__column">
+                <span class="footer__column-label">Index</span>
+                <li>
+                    <a href="/">Now Listening</a>
+                </li>
+                <li>
+                    <a href="/log">Log</a>
+                </li>
+                <li>
+                    <a href="/favorites">Favorites</a>
+                </li>
+            </div>
+
+            <div class="footer__column">
+                <span class="footer__column-label">Sources</span>
+                <li>
+                    <a href="/">Rolling Stone</a>
+                </li>
+                <li>
+                    <a href="/log">Apple 100</a>
+                </li>
+                <li>
+                    <a href="#">Personal Shelf</a>
+                </li>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>
+                Made by <a href="https://christinareilly.com">Christina</a>. ©
+                2026.
+            </p>
+        </div>
+    </div>
+</footer>

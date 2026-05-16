@@ -14,40 +14,60 @@ const releasedText = formatReleaseText(album);
 ---
 
 <BaseLayout title="Now Listening">
-    <div class="now-listing__top">
-        <div class="now-listening__play-circle">
-            <Play
-                class="now-listening__play-icon"
-                style={{ color: "var(--white)" }}
-            />
-        </div>
-        <span class="now-listening__label overline">Now Listening</span>
-    </div>
-
     {
         album ? (
             <>
-                <h1 class="now-listening__album">{album.title}</h1>
-                <h2 class="now-listening__artist">{album.artist}</h2>
-                <p class="now-listening__released">{releasedText}</p>
+                <div class="now-listening__album-container">
+                    <div class="now-listening__album-meta">
+                        <span class="now-listening__label overline">
+                            Now Listening
+                        </span>
+                        <h1 class="now-listening__album">
+                            {album.title
+                                .split(" ")
+                                .map((word, i) =>
+                                    i === 1 ? <em>{word} </em> : word + " ",
+                                )}
+                        </h1>
+                        <h2 class="now-listening__artist">
+                            <span>by</span>
+                            {album.artist}
+                        </h2>
 
-                {album.ranks ? (
-                    <div class="album__ranks">
-                        {album.ranks?.rollingstone ? (
-                            <span class="album__rank">
-                                Rolling Stone:{" "}
-                                <strong> #{album.ranks.rollingstone}</strong>
-                                /500
-                            </span>
-                        ) : null}
-                        {album.ranks?.apple ? (
-                            <span class="album__rank">
-                                Apple: <strong> #{album.ranks.apple}</strong>
-                                /100
-                            </span>
-                        ) : null}
+                        <div class="now-listening__meta-stats">
+                            <div class="now-listening__released">
+                                <p class="now-listening__meta-stats-label">
+                                    Released
+                                </p>
+                                <p>{releasedText}</p>
+                            </div>
+
+                            {album.ranks ? (
+                                <div class="album__ranks">
+                                    <p class="now-listening__meta-stats-label">
+                                        Ranking
+                                    </p>
+                                    {album.ranks?.rollingstone ? (
+                                        <span class="album__rank">
+                                            Rolling Stone №{" "}
+                                            <span>
+                                                {" "}
+                                                {album.ranks.rollingstone}
+                                            </span>
+                                        </span>
+                                    ) : null}
+                                    {album.ranks?.apple ? (
+                                        <span class="album__rank">
+                                            № <span> {album.ranks.apple}</span>
+                                        </span>
+                                    ) : null}
+                                </div>
+                            ) : null}
+                        </div>
                     </div>
-                ) : null}
+
+                    <div class="now-listening__album-cover"> </div>
+                </div>
             </>
         ) : missing ? (
             <>

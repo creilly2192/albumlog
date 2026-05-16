@@ -20,66 +20,87 @@ const ratingMeta = getRatingMeta(album.rating);
 ---
 
 <BaseLayout title={`${album.title} — ${album.artist}`}>
-  <h1 class="album-details__album">{album.title}</h1>
-  <p class="album-details__artist">{album.artist} ({album.year})</p>
-  <p class="album-details__released">{releasedText}</p>
+  <div class="album-details__grid">
+    <div class="album-details__left">
+      <h1 class="album-details__album">{album.title
+                                .split(" ")
+                                .map((word, i) =>
+                                    i === 1 ? <em>{word} </em> : word + " ",
+                                )}</h1>
+      <p class="album-details__artist">{album.artist}, {album.year}</p>
+    
+      <div class="album-details__meta">
+        <div>
+          <span class="album-details__label">Listened</span>
 
-  {
-    album.ranks ? (
-      <div class="album__ranks">
-        {album.ranks?.rollingstone ? (
-          <span class="album__rank">
-            Rolling Stone: <strong> #{album.ranks.rollingstone}</strong>/500
-          </span>
-        ) : null}
-        {album.ranks?.apple ? (
-          <span class="album__rank">
-            Apple: <strong> #{album.ranks.apple}</strong>/100
-          </span>
-        ) : null}
+          {
+            listenedAtText ? (
+              <span class="album-details__listened-at">{listenedAtText}</span>
+            ) : null
+          }
+        </div>
+        <div class="album__personal-rating">
+          <span class="album-details__label">My Rating</span>
+          <div
+              class="album-details__ratings"
+              style={`--rating-color: ${ratingMeta.color};`}
+            >
+              <span class="album-details__rating">
+                {ratingMeta.label}
+              </span>
+            </div>
+        </div>
+
+        {
+          album.ranks ? (
+            <div class="album__ranks">
+              <span class="album-details__label">Index</span>
+              {album.ranks?.rollingstone ? (
+                <span class="album__rank">
+                  Rolling Stone #{album.ranks.rollingstone}
+                </span>
+              ) : null}
+              {album.ranks?.apple ? (
+                <span class="album__rank">
+                  Apple #{album.ranks.apple}
+                </span>
+              ) : null}
+            </div>
+          ) : null
+        }
+
       </div>
-    ) : null
-  }
+              
 
-  <h2 class="overline-heading">My Rating</h2>
-  <div
-    class="album-details__ratings"
-    style={`--rating-color: ${ratingMeta.color};`}
-  >
-    <span class="album-details__rating">
-      {ratingMeta.label}
-    </span>
+    </div>
 
-    <span class="album-details__rating-is-favorite">
-      {album.favorite ? "★" : "☆"}
-    </span>
-  </div>
-
-  <hr />
-
-  {
-    listenedAtText ? (
-      <h3 class="album-details__listened-at">Listened in {listenedAtText}</h3>
-    ) : null
-  }
-
-  <!-- <h4 class="album-details__heading">Notes</h4>
-  <div class="album-details__notes">
-    <p>{album.notes}</p>
-  </div> -->
-
-  {
+    <div class="album-details__right">
+      {
     album.standoutTracks && album.standoutTracks.length ? (
-      <h4 class="album-details__heading">Standout Tracks</h4>
+      <h4 class="album-details__tracks-label">Standout Tracks</h4>
       <div class="album-details__standout-tracks-container">
-        <ul class="album-details__standout-tracks">
+        <ol class="album-details__standout-tracks">
         {album.standoutTracks.map((track) => (
           <li>{track}</li>
         ))}
-      </ul>
+        </ol>
       </div>
     ) : (
       <p>No standout tracks listed.</p>
     )
   }
+    </div>
+  </div>
+  
+
+  
+
+  
+
+  
+  <!-- <h4 class="album-details__heading">Notes</h4>
+  <div class="album-details__notes">
+    <p>{album.notes}</p>
+  </div> -->
+
 </BaseLayout>

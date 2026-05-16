@@ -4,7 +4,7 @@ export function formatReleaseText(album: {
 }) {
     if (!album?.year) return null;
 
-    return `Released ${album.year}${album.label ? `, ${album.label}` : ""}`;
+    return `${album.year}${album.label ? `, ${album.label}` : ""}`;
 }
 
 export function formatListenedAt(listenedAt?: string | null) {

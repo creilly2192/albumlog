@@ -1,14 +1,14 @@
 export const RATING_CONFIG = {
     loved: {
-        color: "var(--color-coral)",
+        color: "var(--accent)",
         label: "Loved",
     },
     interesting: {
-        color: "var(--color-purple)",
+        color: "var(--accent-interesting)",
         label: "Interesting",
     },
     not_for_me: {
-        color: "var(--color-blue)",
+        color: "var(--accent-no)",
         label: "Not for me",
     },
 } as const;
