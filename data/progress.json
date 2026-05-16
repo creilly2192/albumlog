@@ -14,6 +14,17 @@
     ],
     "spotifyLink": "https://open.spotify.com/album/0Rzg7fqyWE39G6wKipxrns"
   },
+  "pj-harvey-rid-of-me-1993": {
+    "status": "listened",
+    "rating": "not_for_me",
+    "favorite": false,
+    "listenedAt": "2026-05-10",
+    "notes": "I appreciate and understand why this is on the list, but it just wasn't for me.",
+    "standoutTracks": [
+      "Me-Jane",
+      "Rid of Me"
+    ]
+  },
   "elton-john-goodbye-yellow-brick-road-1973": {
     "status": "listened",
     "rating": "interesting",
