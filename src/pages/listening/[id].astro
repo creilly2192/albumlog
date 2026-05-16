@@ -57,12 +57,12 @@ const ratingMeta = getRatingMeta(album.rating);
               <span class="album-details__label">Index</span>
               {album.ranks?.rollingstone ? (
                 <span class="album__rank">
-                  Rolling Stone: <strong> #{album.ranks.rollingstone}</strong>/500
+                  Rolling Stone #{album.ranks.rollingstone}
                 </span>
               ) : null}
               {album.ranks?.apple ? (
                 <span class="album__rank">
-                  Apple: <strong> #{album.ranks.apple}</strong>/100
+                  Apple #{album.ranks.apple}
                 </span>
               ) : null}
             </div>
@@ -77,13 +77,13 @@ const ratingMeta = getRatingMeta(album.rating);
     <div class="album-details__right">
       {
     album.standoutTracks && album.standoutTracks.length ? (
-      <h4 class="album-details__heading">Standout Tracks</h4>
+      <h4 class="album-details__tracks-label">Standout Tracks</h4>
       <div class="album-details__standout-tracks-container">
-        <ul class="album-details__standout-tracks">
+        <ol class="album-details__standout-tracks">
         {album.standoutTracks.map((track) => (
           <li>{track}</li>
         ))}
-      </ul>
+        </ol>
       </div>
     ) : (
       <p>No standout tracks listed.</p>
