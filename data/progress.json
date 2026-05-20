@@ -58,5 +58,19 @@
       "London Calling"
     ],
     "spotifyLink": "https://open.spotify.com/album/0Rzg7fqyWE39G6wKipxrns"
+  },
+  "bob-dylan-bringing-it-all-back-home-1965": {
+    "status": "listened",
+    "rating": "loved",
+    "favorite": false,
+    "listenedAt": "2026-05-19",
+    "notes": "The start of the Electric Trilogy. Ideally, I need to listen to this record a few more times.",
+    "standoutTracks": [
+      "Maggie's Farm",
+      "Love Minus Zero / No Limit",
+      "On the Road Again",
+      "Mr. Tambourine Man",
+      "It's All Over Now, Baby Blue"
+    ]
   }
 }
