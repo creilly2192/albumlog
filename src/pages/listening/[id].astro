@@ -81,7 +81,12 @@ const ratingMeta = getRatingMeta(album.rating);
       <div class="album-details__standout-tracks-container">
         <ol class="album-details__standout-tracks">
         {album.standoutTracks.map((track) => (
-          <li>{track}</li>
+          <li>
+            {track}
+            {album.favoriteTracks?.includes(track) && (
+              <span class="album-details__favorite-track">a perfect song</span>
+            )}
+          </li>
         ))}
         </ol>
       </div>

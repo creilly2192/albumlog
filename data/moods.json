@@ -1,0 +1,62 @@
+[
+  {
+    "id": "energetic",
+    "label": "Energetic",
+    "description": "High-energy, propulsive — gets you moving or pumped up"
+  },
+  {
+    "id": "danceable",
+    "label": "Danceable",
+    "description": "Strong rhythmic pull, makes you want to move your body"
+  },
+  {
+    "id": "euphoric",
+    "label": "Euphoric",
+    "description": "Joyful and uplifting, an emotional high"
+  },
+  {
+    "id": "chill",
+    "label": "Chill",
+    "description": "Relaxed, low-key — good background or wind-down listening"
+  },
+  {
+    "id": "atmospheric",
+    "label": "Atmospheric",
+    "description": "Ambient, textured, creates a mood or sense of place"
+  },
+  {
+    "id": "nostalgic",
+    "label": "Nostalgic",
+    "description": "Takes you back — personal memory or a bygone era"
+  },
+  {
+    "id": "melancholy",
+    "label": "Melancholy",
+    "description": "Somber, bittersweet, or quietly sad"
+  },
+  {
+    "id": "introspective",
+    "label": "Introspective",
+    "description": "Thoughtful and inward — makes you reflect"
+  },
+  {
+    "id": "intense",
+    "label": "Intense",
+    "description": "Demanding, powerful, emotionally heavy"
+  },
+  {
+    "id": "raw",
+    "label": "Raw",
+    "description": "Unpolished, visceral, emotionally exposed"
+  },
+  {
+    "id": "experimental",
+    "label": "Experimental",
+    "description": "Challenging, unconventional, pushes genre boundaries"
+  },
+  {
+    "id": "romantic",
+    "label": "Romantic",
+    "description": "Sensual, intimate, or love-soaked"
+  }
+]

@@ -15,14 +15,18 @@ Each album record combines:
 
 - Basic metadata: `id`, `title`, `artist`, `year`, `label`
 - Listening state: `status`, `listenedAt`, `favorite`, `rating`
-- Notes and extras: `notes`, `standoutTracks`, `spotifyLink`
+- Notes and extras: `notes`, `standoutTracks`, `favoriteTracks`, `spotifyLink`
 - Source rankings: `ranks.rollingstone`, `ranks.apple`, `canonicalRank`
+- Personal tags: `genres` (array), `mood` (array)
 
 Current rating labels in the UI are:
 
 - `loved`
+- `liked`
 - `interesting`
 - `not_for_me`
+
+Mood and genre values should be drawn from the controlled vocabularies in `data/moods.json` and `data/genres.json`. Both fields accept arrays so an album can have multiple genres or moods.
 
 ## Project Structure
 
@@ -30,8 +34,10 @@ Current rating labels in the UI are:
 /
 ├── data/
 │   ├── albums.json        ← album metadata (generated from CSVs)
-│   ├── progress.json      ← personal listening data (status, notes, ratings)
+│   ├── progress.json      ← personal listening data (status, notes, ratings, genres, mood)
 │   ├── now.json
+│   ├── genres.json        ← controlled vocabulary for genre tags
+│   ├── moods.json         ← controlled vocabulary for mood tags
 │   └── sources/
 │       ├── RollingStone.csv
 │       ├── RollingStone150-1.csv
@@ -110,11 +116,16 @@ To record a listen, add an entry to `data/progress.json`:
     "rating": "loved",
     "favorite": true,
     "notes": "...",
-    "standoutTracks": ["Track Name"],
+    "standoutTracks": ["Track A", "Track B", "Track C"],
+    "favoriteTracks": ["Track A"],
+    "genres": ["Pop", "Synth-Pop"],
+    "mood": ["energetic", "danceable"],
     "spotifyLink": "https://open.spotify.com/album/..."
   }
 }
 ```
+
+Genre values reference `data/genres.json`. Mood values reference `data/moods.json`.
 
 Albums not present in `progress.json` default to `status: "queue"`.
 

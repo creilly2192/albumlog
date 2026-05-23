@@ -12,6 +12,21 @@
       "Call Your Girlfriend",
       "Dancehall Queen"
     ],
+    "favoriteTracks": [
+      "Dancing on My Own",
+      "Call Your Girlfriend"
+    ],
+    "genres": [
+      "Electropop",
+      "Dance-Pop",
+      "Synth-Pop"
+    ],
+    "mood": [
+      "energetic",
+      "atmospheric",
+      "danceable",
+      "euphoric"
+    ],
     "spotifyLink": "https://open.spotify.com/album/0Rzg7fqyWE39G6wKipxrns"
   },
   "pj-harvey-rid-of-me-1993": {
@@ -23,6 +38,14 @@
     "standoutTracks": [
       "Me-Jane",
       "Rid of Me"
+    ],
+    "genres": [
+      "Alternative Rock",
+      "Indie Rock"
+    ],
+    "mood": [
+      "intense",
+      "raw"
     ]
   },
   "elton-john-goodbye-yellow-brick-road-1973": {
@@ -35,6 +58,18 @@
       "Bennie and the Jets",
       "Candle in the Wind",
       "I've Seen That Movie Too"
+    ],
+    "favoriteTracks": [
+      "Bennie and the Jets"
+    ],
+    "genres": [
+      "Pop Rock",
+      "Soft Rock",
+      "Glam Rock"
+    ],
+    "mood": [
+      "melancholy",
+      "nostalgic"
     ]
   },
   "guns-n-roses-appetite-for-destruction-1987": {
@@ -46,6 +81,12 @@
     "standoutTracks": [
       "Paradise City",
       "Sweet Child O’ Mine"
+    ],
+    "genres": [
+      "Hard Rock"
+    ],
+    "mood": [
+      "intense"
     ]
   },
   "the-clash-london-calling-1979": {
@@ -57,11 +98,19 @@
     "standoutTracks": [
       "London Calling"
     ],
+    "genres": [
+      "Punk Rock",
+      "New Wave",
+      "Post-Punk"
+    ],
+    "mood": [
+      "intense"
+    ],
     "spotifyLink": "https://open.spotify.com/album/0Rzg7fqyWE39G6wKipxrns"
   },
   "bob-dylan-bringing-it-all-back-home-1965": {
     "status": "listened",
-    "rating": "loved",
+    "rating": "liked",
     "favorite": false,
     "listenedAt": "2026-05-19",
     "notes": "The start of the Electric Trilogy. Ideally, I need to listen to this record a few more times.",
@@ -71,6 +120,46 @@
       "On the Road Again",
       "Mr. Tambourine Man",
       "It's All Over Now, Baby Blue"
+    ],
+    "favoriteTracks": [
+      "It's All Over Now, Baby Blue"
+    ],
+    "genres": [
+      "Folk Rock",
+      "Singer-Songwriter",
+      "Contemporary Folk"
+    ],
+    "mood": [
+      "introspective",
+      "experimental"
+    ]
+  },
+  "prince-and-the-revolution-purple-rain-1984": {
+    "status": "listened",
+    "rating": "loved",
+    "favorite": true,
+    "listenedAt": "2026-05-22",
+    "notes": "Holy shit, the vocals on 'The Beautiful Ones' are simply divine. Darling Nikki is why we have parental advisory on albums now.",
+    "standoutTracks": [
+      "Let's Go Crazy",
+      "The Beautiful Ones",
+      "Darling Nikki",
+      "When Doves Cry",
+      "I Would Die 4 You",
+      "Baby I'm a Star",
+      "Purple Rain"
+    ],
+    "favoriteTracks": [
+      "I Would Die 4 You",
+      "The Beautiful Ones"
+    ],
+    "genres": [
+      "Pop Rock"
+    ],
+    "mood": [
+      "danceable",
+      "energetic",
+      "euphoric"
     ]
   }
 }

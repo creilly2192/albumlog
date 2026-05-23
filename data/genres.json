@@ -1,0 +1,206 @@
+[
+  {
+    "id": "alternative-rock",
+    "label": "Alternative Rock"
+  },
+  {
+    "id": "americana",
+    "label": "Americana"
+  },
+  {
+    "id": "art-rock",
+    "label": "Art Rock"
+  },
+  {
+    "id": "baroque-pop",
+    "label": "Baroque Pop"
+  },
+  {
+    "id": "blues",
+    "label": "Blues"
+  },
+  {
+    "id": "britpop",
+    "label": "Britpop"
+  },
+  {
+    "id": "classic-rock",
+    "label": "Classic Rock"
+  },
+  {
+    "id": "contemporary-folk",
+    "label": "Contemporary Folk"
+  },
+  {
+    "id": "country",
+    "label": "Country"
+  },
+  {
+    "id": "country-rock",
+    "label": "Country Rock"
+  },
+  {
+    "id": "dance",
+    "label": "Dance"
+  },
+  {
+    "id": "dance-pop",
+    "label": "Dance-Pop"
+  },
+  {
+    "id": "delta-blues",
+    "label": "Delta Blues"
+  },
+  {
+    "id": "dream-pop",
+    "label": "Dream Pop"
+  },
+  {
+    "id": "east-coast-hip-hop",
+    "label": "East Coast Hip-Hop"
+  },
+  {
+    "id": "electronic",
+    "label": "Electronic"
+  },
+  {
+    "id": "electropop",
+    "label": "Electropop"
+  },
+  {
+    "id": "folk",
+    "label": "Folk"
+  },
+  {
+    "id": "folk-rock",
+    "label": "Folk Rock"
+  },
+  {
+    "id": "funk",
+    "label": "Funk"
+  },
+  {
+    "id": "garage-rock",
+    "label": "Garage Rock"
+  },
+  {
+    "id": "glam-rock",
+    "label": "Glam Rock"
+  },
+  {
+    "id": "gospel",
+    "label": "Gospel"
+  },
+  {
+    "id": "grunge",
+    "label": "Grunge"
+  },
+  {
+    "id": "hard-rock",
+    "label": "Hard Rock"
+  },
+  {
+    "id": "heavy-metal",
+    "label": "Heavy Metal"
+  },
+  {
+    "id": "hip-hop",
+    "label": "Hip-Hop"
+  },
+  {
+    "id": "indie-pop",
+    "label": "Indie Pop"
+  },
+  {
+    "id": "indie-rock",
+    "label": "Indie Rock"
+  },
+  {
+    "id": "jazz",
+    "label": "Jazz"
+  },
+  {
+    "id": "lo-fi",
+    "label": "Lo-Fi"
+  },
+  {
+    "id": "motown",
+    "label": "Motown"
+  },
+  {
+    "id": "neo-soul",
+    "label": "Neo-Soul"
+  },
+  {
+    "id": "new-wave",
+    "label": "New Wave"
+  },
+  {
+    "id": "noise-rock",
+    "label": "Noise Rock"
+  },
+  {
+    "id": "outlaw-country",
+    "label": "Outlaw Country"
+  },
+  {
+    "id": "pop",
+    "label": "Pop"
+  },
+  {
+    "id": "pop-rock",
+    "label": "Pop Rock"
+  },
+  {
+    "id": "post-punk",
+    "label": "Post-Punk"
+  },
+  {
+    "id": "prog-rock",
+    "label": "Prog Rock"
+  },
+  {
+    "id": "psychedelic-rock",
+    "label": "Psychedelic Rock"
+  },
+  {
+    "id": "punk-rock",
+    "label": "Punk Rock"
+  },
+  {
+    "id": "r-and-b",
+    "label": "R&B"
+  },
+  {
+    "id": "rap",
+    "label": "Rap"
+  },
+  {
+    "id": "reggae",
+    "label": "Reggae"
+  },
+  {
+    "id": "shoegaze",
+    "label": "Shoegaze"
+  },
+  {
+    "id": "singer-songwriter",
+    "label": "Singer-Songwriter"
+  },
+  {
+    "id": "soft-rock",
+    "label": "Soft Rock"
+  },
+  {
+    "id": "soul",
+    "label": "Soul"
+  },
+  {
+    "id": "synth-pop",
+    "label": "Synth-Pop"
+  },
+  {
+    "id": "west-coast-hip-hop",
+    "label": "West Coast Hip-Hop"
+  }
+]

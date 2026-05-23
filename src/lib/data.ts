@@ -27,6 +27,7 @@ export function readAlbums() {
       listenedAt: p.listenedAt ?? null,
       notes: p.notes ?? "",
       ...(p.standoutTracks !== undefined && { standoutTracks: p.standoutTracks }),
+      ...(p.favoriteTracks !== undefined && { favoriteTracks: p.favoriteTracks }),
       ...(p.spotifyLink !== undefined && { spotifyLink: p.spotifyLink }),
     };
   });

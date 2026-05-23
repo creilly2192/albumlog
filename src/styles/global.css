@@ -783,6 +783,14 @@ p {
   padding-top: 0;
 }
 
+.album-details__favorite-track {
+  font-family: var(--font-serif);
+  font-size: .875rem;
+  font-style: italic;
+  color: var(--accent);
+  margin-left: .625rem;
+}
+
 @media screen and (max-width: 860px) {
   .album-details__grid {
     display: block;

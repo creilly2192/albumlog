@@ -3,6 +3,10 @@ export const RATING_CONFIG = {
         color: "var(--accent)",
         label: "Loved",
     },
+    liked: {
+        color: "var(--color-purple)",
+        label: "Liked",
+    },
     interesting: {
         color: "var(--accent-interesting)",
         label: "Interesting",
