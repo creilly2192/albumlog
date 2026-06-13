@@ -161,5 +161,29 @@
       "energetic",
       "euphoric"
     ]
+  },
+  "kendrick-lamar-damn-2017": {
+    "status": "listened",
+    "rating": "liked",
+    "favorite": false,
+    "listenedAt": "2026-06-12",
+    "notes": "",
+    "standoutTracks": [
+      "LOYALTY",
+      "HUMBLE",
+      "LOVE",
+      "GOD."
+    ],
+    "favoriteTracks": [
+      "LOVE"
+    ],
+    "genres": [
+      "Rap"
+    ],
+    "mood": [
+      "introspective",
+      "raw",
+      "energetic"
+    ]
   }
 }
