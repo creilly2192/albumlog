@@ -110,7 +110,7 @@
   },
   "bob-dylan-bringing-it-all-back-home-1965": {
     "status": "listened",
-    "rating": "liked",
+    "rating": "interesting",
     "favorite": false,
     "listenedAt": "2026-05-19",
     "notes": "The start of the Electric Trilogy. Ideally, I need to listen to this record a few more times.",
@@ -185,5 +185,43 @@
       "raw",
       "energetic"
     ]
+  },
+  "neil-young-after-the-gold-rush-1970": {
+    "status": "listened",
+    "rating": "liked",
+    "favorite": false,
+    "listenedAt": "2026-06-13",
+    "notes": "",
+    "standoutTracks": [
+      "Heart of Gold",
+      "The Needle and the Damage Done",
+      "Words (Between the Lines of Age)"
+    ],
+    "favoriteTracks": [],
+    "genres": [
+      "Rock",
+      "Folk Rock"
+    ],
+    "mood": [
+      "introspective",
+      "raw",
+      "melancholy"
+    ]
+  },
+  "the-replacements-let-it-be-1984": {
+    "status": "listened",
+    "rating": "not_for_me",
+    "favorite": false,
+    "listenedAt": "2026-06-15",
+    "notes": "This album has made me realize that rock is not for me.",
+    "standoutTracks": [
+      "Unsatisfied"
+    ],
+    "favoriteTracks": [],
+    "genres": [
+      "Alternative Rock",
+      "Indie Rock"
+    ],
+    "mood": []
   }
 }

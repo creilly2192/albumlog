@@ -1,6 +1,6 @@
 /* ===== CSS TOKENS ===== */
 :root {
-  --color-bg: #f0e7d6;
+  --color-bg: #ffffff;
   --color-text: #241a12;
   --color-ink: #241a12;
   --color-ink2: #4a3a2a;
@@ -120,7 +120,6 @@ p {
 /* Footer */
 .site-footer {
   padding: 2.25rem 0;
-  background-color: var(--paper);
   border-top: .0625rem solid var(--rule);
   margin-top: 4rem;
 }
