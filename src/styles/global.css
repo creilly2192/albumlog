@@ -1,7 +1,7 @@
 /* ===== CSS TOKENS ===== */
 :root {
   --color-bg: #ffffff;
-  --color-text: #241a12;
+  --color-text: #1f0313;
   --color-ink: #241a12;
   --color-ink2: #4a3a2a;
   --paper: #f7efe0;
@@ -15,13 +15,13 @@
   --primary-foreground: #ffffff;
   --secondary: #f8f4ee;
   --secondary-foreground: #2d2d2d;
-  --muted: #8a7864;
+  --muted: #775067;
   --muted-foreground: #7a7a7a;
   --white: #ffffff;
 
-  --accent: #b85a3c;
+  --accent: #511e3c;
   --accentDeep: #8a3a22;
-  --rule: #cfc0a4;
+  --rule: #ebe6e9;
 
   --accent-interesting: #a08438;
   --accent-no: #3b82f6;
@@ -362,7 +362,7 @@ p {
   color: var(--color-ink);
 }
 
-.now-listening__album em {
+.now-listening__album span {
   color: var(--accent);
 }
 
@@ -371,7 +371,6 @@ p {
   color: var(--color-ink2);
   font-family: var(--font-display);
   margin-bottom: 2.25rem;
-  font-style: italic;
   font-weight: 400;
 }
 
@@ -456,7 +455,7 @@ p {
   grid-column: 1 / span 5;
 }
 
-.display em {
+.display span {
   color: var(--accent);
 }
 
@@ -502,7 +501,6 @@ p {
   font-size: 2.75rem;
   font-family: var(--font-display);
   font-weight: 400;
-  font-style: italic;
   border-bottom: 0.0625rem solid var(--border);
   color: var(--color-ink);
   margin-bottom: 0;
@@ -532,7 +530,6 @@ p {
 
 .listening-log__item:not(:last-child) {
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border);
 }
 
 .listening-log__item-wrapper {
@@ -656,7 +653,7 @@ p {
   letter-spacing: -0.05em;
 }
 
-.album-details__album em {
+.album-details__album span {
   color: var(--accent);
 }
 

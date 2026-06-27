@@ -26,7 +26,7 @@ const releasedText = formatReleaseText(album);
                             {album.title
                                 .split(" ")
                                 .map((word, i) =>
-                                    i === 1 ? <em>{word} </em> : word + " ",
+                                    i === 1 ? <span>{word} </span> : word + " ",
                                 )}
                         </h1>
                         <h2 class="now-listening__artist">

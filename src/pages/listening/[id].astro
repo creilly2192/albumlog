@@ -25,7 +25,7 @@ const ratingMeta = getRatingMeta(album.rating);
       <h1 class="album-details__album">{album.title
                                 .split(" ")
                                 .map((word, i) =>
-                                    i === 1 ? <em>{word} </em> : word + " ",
+                                    i === 1 ? <span>{word} </span> : word + " ",
                                 )}</h1>
       <p class="album-details__artist">{album.artist}, {album.year}</p>
     

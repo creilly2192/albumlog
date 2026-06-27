@@ -222,6 +222,32 @@
       "Alternative Rock",
       "Indie Rock"
     ],
-    "mood": []
+    "mood": [
+      "raw",
+      "intense"
+    ]
+  },
+  "queen-a-night-at-the-opera-1975": {
+    "status": "listened",
+    "rating": "liked",
+    "favorite": false,
+    "listenedAt": "2026-06-25",
+    "notes": "The vocals on this album are insane.",
+    "standoutTracks": [
+      "The Prophet's Song",
+      "Bohemian Rhapsody",
+      "You're My Best Friend"
+    ],
+    "favoriteTracks": [
+      "The Prophet's Song"
+    ],
+    "genres": [
+      "Alternative Rock",
+      "Indie Rock"
+    ],
+    "mood": [
+      "experimental",
+      "intense"
+    ]
   }
 }
