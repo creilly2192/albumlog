@@ -63,6 +63,53 @@ export async function getAlbumsWithLogs(supabase: SupabaseClient): Promise<Album
   })
 }
 
+export async function getUnheardPage(
+  supabase: SupabaseClient,
+  userId: string,
+  page: number,
+  pageSize: number
+): Promise<{ albums: Album[]; totalUnheard: number; totalHeard: number }> {
+  const from = (page - 1) * pageSize
+  const to = from + pageSize - 1
+
+  const { data: heardLogs } = await supabase
+    .from('logs')
+    .select('album_id')
+    .eq('user_id', userId)
+    .not('date_listened', 'is', null)
+
+  const heardIds = (heardLogs ?? []).map((l: any) => l.album_id as string)
+  const totalHeard = heardIds.length
+
+  let albumQuery = supabase
+    .from('albums')
+    .select('*', { count: 'exact' })
+    .order('canonical_rank', { ascending: true })
+    .range(from, to)
+
+  if (heardIds.length > 0) {
+    albumQuery = albumQuery.not('id', 'in', `(${heardIds.join(',')})`)
+  }
+
+  const { data: albums, count } = await albumQuery
+
+  return {
+    albums: (albums ?? []).map((a: any) => ({
+      id: a.id,
+      title: a.title,
+      artist: a.artist,
+      year: a.year,
+      label: a.label,
+      genres: a.genres ?? [],
+      rank_rs: a.rank_rs,
+      rank_apple: a.rank_apple,
+      canonical_rank: a.canonical_rank,
+    })),
+    totalUnheard: count ?? 0,
+    totalHeard,
+  }
+}
+
 export async function getNowPlayingAlbum(
   supabase: SupabaseClient
 ): Promise<AlbumWithLog | null> {

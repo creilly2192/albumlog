@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import LogTapeModal from "../components/LogTapeModal.astro";
 import { requireAuth } from "../lib/auth";
-import { getAlbumsWithLogs } from "../lib/db";
+import { getUnheardPage } from "../lib/db";
 import { getTapeColor } from "../lib/genres";
 
 const redirect = requireAuth(Astro);
@@ -10,36 +10,47 @@ if (redirect) return redirect;
 
 const session = Astro.locals.session!;
 
-const [albums, { data: nowPlaying }] = await Promise.all([
-  getAlbumsWithLogs(Astro.locals.supabase),
-  Astro.locals.supabase
-    .from("now_playing")
-    .select("album_id")
+const PAGE_SIZE = 25;
+const pageParam = parseInt(Astro.url.searchParams.get("page") ?? "1", 10);
+const page = isNaN(pageParam) || pageParam < 1 ? 1 : pageParam;
+
+const [{ data: nowPlaying }, { albums, totalUnheard, totalHeard }] =
+  await Promise.all([
+    Astro.locals.supabase
+      .from("now_playing")
+      .select("album_id")
+      .eq("user_id", session.user.id)
+      .maybeSingle(),
+    getUnheardPage(Astro.locals.supabase, session.user.id, page, PAGE_SIZE),
+  ]);
+
+const currentAlbumId = nowPlaying?.album_id ?? null;
+let currentIsLogged = false;
+
+if (currentAlbumId) {
+  const { data: log } = await Astro.locals.supabase
+    .from("logs")
+    .select("date_listened")
+    .eq("album_id", currentAlbumId)
     .eq("user_id", session.user.id)
-    .maybeSingle(),
-]);
+    .maybeSingle();
+  currentIsLogged = !!log?.date_listened;
+}
 
-const currentAlbum = nowPlaying?.album_id
-  ? (albums.find((a) => a.id === nowPlaying.album_id) ?? null)
-  : null;
-
-const currentIsLogged = !!currentAlbum?.log?.date_listened;
-
-const unheard = albums.filter((a) => a.log?.date_listened == null);
-const heardCount = albums.filter((a) => a.log?.date_listened != null).length;
+const totalPages = Math.ceil(totalUnheard / PAGE_SIZE);
 ---
 
 <BaseLayout title="Pick Next">
   <div class="pick-next__header">
     <p class="pick-next__stats">
-      {unheard.length} UNHEARD IN QUEUE &middot; {heardCount} HEARD OVERALL
+      {totalUnheard} UNHEARD IN QUEUE &middot; {totalHeard} HEARD OVERALL
     </p>
     {
-      currentAlbum && !currentIsLogged ? (
+      currentAlbumId && !currentIsLogged ? (
         <button
           class="pick-next__log-current"
           type="button"
-          onclick={`document.dispatchEvent(new CustomEvent('open-log-modal', { detail: { albumId: '${currentAlbum.id}' } }))`}
+          onclick={`document.dispatchEvent(new CustomEvent('open-log-modal', { detail: { albumId: '${currentAlbumId}' } }))`}
         >
           + LOG CURRENT TAPE
         </button>
@@ -55,7 +66,7 @@ const heardCount = albums.filter((a) => a.log?.date_listened != null).length;
 
   <ul class="pick-next__list">
     {
-      unheard.map((album) => (
+      albums.map((album) => (
         <li class="pick-next__item">
           <form
             method="POST"
@@ -89,5 +100,26 @@ const heardCount = albums.filter((a) => a.log?.date_listened != null).length;
       ))
     }
   </ul>
+
+  {
+    totalPages > 1 && (
+      <div class="pick-next__pagination">
+        {page > 1 && (
+          <a href={`/pick-next?page=${page - 1}`} class="pick-next__page-btn">
+            ← PREV
+          </a>
+        )}
+        <span class="pick-next__page-count">
+          {page} / {totalPages}
+        </span>
+        {page < totalPages && (
+          <a href={`/pick-next?page=${page + 1}`} class="pick-next__page-btn">
+            NEXT →
+          </a>
+        )}
+      </div>
+    )
+  }
+
   <LogTapeModal />
 </BaseLayout>
