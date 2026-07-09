@@ -1,31 +1,32 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-import { requireAuth } from '../lib/auth'
-import { getAlbumsWithLogs } from '../lib/db'
-import { getTapeColor } from '../lib/genres'
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LogTapeModal from "../components/LogTapeModal.astro";
+import { requireAuth } from "../lib/auth";
+import { getAlbumsWithLogs } from "../lib/db";
+import { getTapeColor } from "../lib/genres";
 
-const redirect = requireAuth(Astro)
-if (redirect) return redirect
+const redirect = requireAuth(Astro);
+if (redirect) return redirect;
 
-const session = Astro.locals.session!
+const session = Astro.locals.session!;
 
 const [albums, { data: nowPlaying }] = await Promise.all([
   getAlbumsWithLogs(Astro.locals.supabase),
   Astro.locals.supabase
-    .from('now_playing')
-    .select('album_id')
-    .eq('user_id', session.user.id)
+    .from("now_playing")
+    .select("album_id")
+    .eq("user_id", session.user.id)
     .maybeSingle(),
-])
+]);
 
 const currentAlbum = nowPlaying?.album_id
-  ? albums.find((a) => a.id === nowPlaying.album_id) ?? null
-  : null
+  ? (albums.find((a) => a.id === nowPlaying.album_id) ?? null)
+  : null;
 
-const currentIsLogged = !!currentAlbum?.log?.date_listened
+const currentIsLogged = !!currentAlbum?.log?.date_listened;
 
-const unheard = albums.filter((a) => a.log?.date_listened == null)
-const heardCount = albums.filter((a) => a.log?.date_listened != null).length
+const unheard = albums.filter((a) => a.log?.date_listened == null);
+const heardCount = albums.filter((a) => a.log?.date_listened != null).length;
 ---
 
 <BaseLayout title="Pick Next">
@@ -33,33 +34,60 @@ const heardCount = albums.filter((a) => a.log?.date_listened != null).length
     <p class="pick-next__stats">
       {unheard.length} UNHEARD IN QUEUE &middot; {heardCount} HEARD OVERALL
     </p>
-    {currentIsLogged ? (
-      <form method="POST" action="/api/pick-random">
-        <button class="pick-next__random" type="submit">🎲 PICK FOR ME</button>
-      </form>
-    ) : (
-      <form method="POST" action="/api/log-tape">
-        <input type="hidden" name="album_id" value={currentAlbum?.id} />
-        <button class="pick-next__log-current" type="submit">+ LOG CURRENT TAPE</button>
-      </form>
-    )}
+    {
+      currentAlbum && !currentIsLogged ? (
+        <button
+          class="pick-next__log-current"
+          type="button"
+          onclick={`document.dispatchEvent(new CustomEvent('open-log-modal', { detail: { albumId: '${currentAlbum.id}' } }))`}
+        >
+          + LOG CURRENT TAPE
+        </button>
+      ) : (
+        <form method="POST" action="/api/pick-random">
+          <button class="pick-next__random" type="submit">
+            PICK FOR ME
+          </button>
+        </form>
+      )
+    }
   </div>
 
   <ul class="pick-next__list">
-    {unheard.map((album) => (
-      <li class="pick-next__item">
-        <div class="pick-next__color-bar" style={`background: ${getTapeColor(album.genres)}`}></div>
-        <div class="pick-next__info">
-          <span class="pick-next__title">{album.title}</span>
-          <span class="pick-next__artist">{album.artist}</span>
-          <span class="pick-next__meta">
-            {album.genres[0]} &middot; {album.year}
-            {album.rank_rs && <span class="pick-next__pill">RS #{album.rank_rs}</span>}
-            {album.rank_apple && <span class="pick-next__pill">APPLE #{album.rank_apple}</span>}
-          </span>
-        </div>
-        <button class="pick-next__log" type="button">+ LOG</button>
-      </li>
-    ))}
+    {
+      unheard.map((album) => (
+        <li class="pick-next__item">
+          <form
+            method="POST"
+            action="/api/set-now-playing"
+            class="pick-next__row-form"
+          >
+            <input type="hidden" name="album_id" value={album.id} />
+            <button type="submit" class="pick-next__row-btn">
+              <div
+                class="pick-next__color-bar"
+                style={`background: ${getTapeColor(album.genres)}`}
+              />
+              <div class="pick-next__info">
+                <span class="pick-next__title">{album.title}</span>
+                <span class="pick-next__artist">{album.artist}</span>
+                <span class="pick-next__meta">
+                  {album.genres[0]} &middot; {album.year}
+                  {album.rank_rs && (
+                    <span class="pick-next__pill">RS #{album.rank_rs}</span>
+                  )}
+                  {album.rank_apple && (
+                    <span class="pick-next__pill">
+                      APPLE #{album.rank_apple}
+                    </span>
+                  )}
+                </span>
+              </div>
+            </button>
+          </form>
+        </li>
+      ))
+    }
   </ul>
+  <LogTapeModal />
 </BaseLayout>
