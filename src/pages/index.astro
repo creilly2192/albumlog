@@ -73,7 +73,11 @@ const loggedIn = isAuthenticated(Astro);
                 )}
             </>
         ) : (
-            <p>No album queued. Set one in the now_playing table.</p>
+            <div class="now-playing__empty">
+              <div class="now-playing__empty-cassette"></div>
+              <p class="now-playing__empty-label">NO TAPE LOADED</p>
+              <a href="/pick-next" class="now-playing__empty-btn">PICK A TAPE</a>
+            </div>
         )
     }
 </BaseLayout>

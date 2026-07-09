@@ -1,3 +1,8 @@
+---
+import "../styles/log-tape-modal.css";
+import moods from "../../data/moods.json";
+---
+
 <div id="log-tape-modal" class="modal" aria-hidden="true">
   <div class="modal__overlay"></div>
   <div
@@ -11,7 +16,103 @@
       <button class="modal__close" aria-label="Close">&times;</button>
     </div>
     <div class="modal__body">
-      <p style="color: var(--color-text-muted)">Form fields coming soon…</p>
+      <form id="log-tape-form" method="POST" action="/api/log-tape">
+        <input type="hidden" name="album_id" id="modal-album-id" />
+
+        <fieldset class="modal__fieldset">
+          <legend class="modal__label">DATE LISTENED</legend>
+          <input
+            type="date"
+            name="date_listened"
+            id="modal-date-listened"
+            class="modal__input"
+          />
+        </fieldset>
+
+        <fieldset class="modal__fieldset">
+          <legend class="modal__label">MY RATING</legend>
+          <div class="modal__rating-group">
+            {
+              (["not_for_me", "interesting", "liked", "loved"] as const).map(
+                (value) => (
+                  <label class="modal__rating-option">
+                    <input type="radio" name="rating" value={value} />
+                    <span>
+                      {value === "not_for_me"
+                        ? "Not For Me"
+                        : value.charAt(0).toUpperCase() + value.slice(1)}
+                    </span>
+                  </label>
+                ),
+              )
+            }
+          </div>
+        </fieldset>
+
+        <fieldset class="modal__fieldset">
+          <legend class="modal__label">MOOD</legend>
+          <select id="mood-select" name="mood" multiple size={4}>
+            {moods.map((m) => <option value={m.id}>{m.label}</option>)}
+          </select>
+        </fieldset>
+
+        <fieldset class="modal__fieldset">
+          <legend class="modal__label">STANDOUT TRACKS</legend>
+          <ul id="standout-list" class="modal__track-list"></ul>
+          <div class="modal__track-add">
+            <input
+              id="standout-input"
+              type="text"
+              class="modal__input"
+              placeholder="Track name"
+            />
+            <button type="button" id="standout-add" class="modal__add-btn"
+              >+ ADD</button
+            >
+          </div>
+        </fieldset>
+
+        <fieldset class="modal__fieldset">
+          <legend class="modal__label">FAVORITE TRACKS</legend>
+          <ul id="favorite-list" class="modal__track-list"></ul>
+          <div class="modal__track-add">
+            <input
+              id="favorite-input"
+              type="text"
+              class="modal__input"
+              placeholder="Track name"
+            />
+            <input
+              id="favorite-note-input"
+              type="text"
+              class="modal__input"
+              placeholder="Note (optional)"
+              value="a perfect song"
+            />
+            <button type="button" id="favorite-add" class="modal__add-btn"
+              >+ ADD</button
+            >
+          </div>
+          <input
+            type="hidden"
+            name="favorite_tracks"
+            id="favorite-tracks-json"
+            value="[]"
+          />
+        </fieldset>
+
+        <fieldset class="modal__fieldset">
+          <legend class="modal__label">NOTES</legend>
+          <textarea
+            name="notes"
+            class="modal__textarea"
+            placeholder="What did you think..."></textarea>
+        </fieldset>
+
+        <button type="submit" form="log-tape-form" class="modal__submit"
+          >✓ MARK AS HEARD</button
+        >
+      </form>
     </div>
   </div>
 </div>

@@ -33,11 +33,16 @@ Migrating from a static JSON-driven Astro site to a database-backed hybrid app w
 - `data/progress.json` — can be deleted (logs table is seeded)
 
 **Still to do:**
-- `src/pages/api/log-tape.ts` — upsert a log entry (next up)
-- `src/pages/api/set-now-playing.ts` — set a specific album as now playing
-- `src/pages/index.astro` — add `+ LOG TAPE` button for authenticated users
-- `src/pages/listening/[id].astro` — redesign with two-column layout + log entry form
+- `src/pages/pick-next.astro` — wire `+ LOG` row buttons to open `LogTapeModal` with the row's `album_id` + import `LogTapeModal` component
+- `src/pages/api/set-now-playing.ts` — set a specific album as now playing (for manually picking from the pick-next list, separate from 🎲 random)
+- `src/pages/pick-next.astro` — add a "SET AS NOW PLAYING" action per row so user can manually pick without using 🎲 (calls `api/set-now-playing`)
+- `src/pages/listening/[id].astro` — redesign with two-column layout (cassette + info), show log data (rating, date, notes, favorite tracks)
 - Cleanup: delete `src/lib/data.ts`, `data/progress.json`, `data/now.json`, `scripts/pick-album.mjs`, `scripts/migrate-progress.mjs`
+
+**Now Playing empty state** (design: `public/design/Screenshot 2026-07-09 at 3.33.30 PM.png`):
+- Triggers after logging — `api/log-tape.ts` deletes the `now_playing` row on success
+- HTML in place: `now-playing__empty`, `now-playing__empty-cassette`, `now-playing__empty-label`, `now-playing__empty-btn`
+- Needs CSS in `global.css`: greyed cassette outline, "NO TAPE LOADED" monospace label, pink gradient "PICK A TAPE" button
 
 ## Tech stack
 - **Framework:** Astro 7, `output: 'server'`, deployed on Netlify
