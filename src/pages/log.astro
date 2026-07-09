@@ -1,58 +1,43 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { readAlbums } from "../lib/data";
-
+import { getAlbumsWithLogs } from "../lib/db";
 import AlbumListItem from "../components/AlbumListItem.astro";
 
-function formatMonthYear(iso) {
-  if (!iso) return "";
+function formatMonthYear(iso: string) {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return "";
-  return new Intl.DateTimeFormat("en-US", {
-    month: "long",
-    year: "numeric",
-  }).format(d);
+  return new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric" }).format(d);
 }
 
-const albums = readAlbums();
-
-function parseDate(s) {
-  if (!s) return null;
+function parseDate(s: string) {
   return new Date(`${s}T00:00:00`);
 }
 
-// Filter listened
+const albums = await getAlbumsWithLogs(Astro.locals.supabase);
+
 const listened = albums
-  .filter((a) => a.status === "listened" && a.listenedAt)
-  .sort(
-    (a, b) =>
-      parseDate(b.listenedAt).getTime() - parseDate(a.listenedAt).getTime(),
+  .filter((a) => a.log?.date_listened != null)
+  .sort((a, b) =>
+    parseDate(b.log!.date_listened!).getTime() -
+    parseDate(a.log!.date_listened!).getTime()
   );
 
-// Group by month-year
-const groups = {};
+const groups: Record<string, { label: string; items: typeof listened; sortValue: number }> = {};
 
 for (const a of listened) {
-  const d = parseDate(a.listenedAt);
-  if (!d) continue;
-
-  const key = `${d.getFullYear()}-${d.getMonth()}`; // stable key
-
+  const d = parseDate(a.log!.date_listened!);
+  const key = `${d.getFullYear()}-${d.getMonth()}`;
   if (!groups[key]) {
     groups[key] = {
-      label: formatMonthYear(d),
+      label: formatMonthYear(a.log!.date_listened!),
       items: [],
       sortValue: new Date(d.getFullYear(), d.getMonth(), 1).getTime(),
     };
   }
-
   groups[key].items.push(a);
 }
 
-// Sort groups descending by month
-const sortedGroups = Object.values(groups).sort(
-  (a, b) => b.sortValue - a.sortValue,
-);
+const sortedGroups = Object.values(groups).sort((a, b) => b.sortValue - a.sortValue);
 ---
 
 <BaseLayout title="Listening Log">

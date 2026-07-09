@@ -4,8 +4,8 @@ const { album } = Astro.props;
 import { getRatingMeta } from "../lib/rating";
 import { formatReleaseText } from "../lib/releasedYear";
 
-const ratingMeta = getRatingMeta(album.rating);
-const releasedText = formatReleaseText(album.release);
+const ratingMeta = getRatingMeta(album.log?.rating ?? null);
+const releasedText = formatReleaseText(album);
 ---
 
 <li class="listening-log__item">
@@ -35,9 +35,9 @@ const releasedText = formatReleaseText(album.release);
 
                     <div class="listening-log__rankings">
                         {
-                            album.ranks?.rollingstone ? (
+                            album.rank_rs ? (
                                 <span class="listening-log__ranking">
-                                    #{album.ranks.rollingstone} Rolling Stone
+                                    #{album.rank_rs} Rolling Stone
                                 </span>
                             ) : null
                         }

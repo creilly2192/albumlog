@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { requireAuth } from '../lib/auth'
+import { getAlbumsWithLogs } from '../lib/db'
+import { getTapeColor } from '../lib/genres'
+
+const redirect = requireAuth(Astro)
+if (redirect) return redirect
+
+const albums = await getAlbumsWithLogs(Astro.locals.supabase)
+const unheard = albums.filter((a) => a.log?.date_listened == null)
+const heardCount = albums.filter((a) => a.log?.date_listened != null).length
+---
+
+<BaseLayout title="Pick Next">
+  <div class="pick-next__header">
+    <p class="pick-next__stats">
+      {unheard.length} UNHEARD IN QUEUE &middot; {heardCount} HEARD OVERALL
+    </p>
+    <form method="POST" action="/api/pick-random">
+      <button class="pick-next__random" type="submit">🎲 PICK FOR ME</button>
+    </form>
+  </div>
+
+  <ul class="pick-next__list">
+    {unheard.map((album) => (
+      <li class="pick-next__item">
+        <div class="pick-next__color-bar" style={`background: ${getTapeColor(album.genres)}`}></div>
+        <div class="pick-next__info">
+          <span class="pick-next__title">{album.title}</span>
+          <span class="pick-next__artist">{album.artist}</span>
+          <span class="pick-next__meta">
+            {album.genres[0]} &middot; {album.year}
+            {album.rank_rs && <span class="pick-next__pill">RS #{album.rank_rs}</span>}
+            {album.rank_apple && <span class="pick-next__pill">APPLE #{album.rank_apple}</span>}
+          </span>
+        </div>
+        <button class="pick-next__log" type="button">+ LOG</button>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
