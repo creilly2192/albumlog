@@ -10,7 +10,9 @@
     "albums:build": "node scripts/build-albums-json.mjs",
     "pick:album": "node scripts/pick-album.mjs",
     "repick:album": "node scripts/pick-album.mjs --force",
-    "migrate:progress": "node scripts/migrate-progress.mjs"
+    "migrate:progress": "node scripts/migrate-progress.mjs",
+    "db:seed-albums": "node scripts/seed-albums.mjs",
+    "db:seed-logs": "node scripts/seed-logs.mjs"
   },
   "dependencies": {
     "@astrojs/netlify": "^8.1.1",

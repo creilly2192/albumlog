@@ -1,16 +1,10 @@
 ---
-import { readAlbums, readNowId } from "../lib/data";
-import { Play } from "@lucide/astro";
+import { getNowPlayingAlbum } from "../lib/db";
 import { formatReleaseText } from "../lib/releasedYear";
-
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const albums = readAlbums();
-const nowId = readNowId();
-
-const album = nowId ? albums.find((a) => a.id === nowId) : null;
-const missing = nowId && !album;
-const releasedText = formatReleaseText(album);
+const album = await getNowPlayingAlbum(Astro.locals.supabase);
+const releasedText = album ? formatReleaseText(album) : null;
 ---
 
 <BaseLayout title="Now Listening">
@@ -42,23 +36,20 @@ const releasedText = formatReleaseText(album);
                                 <p>{releasedText}</p>
                             </div>
 
-                            {album.ranks ? (
+                            {(album.rank_rs || album.rank_apple) ? (
                                 <div class="album__ranks">
                                     <p class="now-listening__meta-stats-label">
                                         Ranking
                                     </p>
-                                    {album.ranks?.rollingstone ? (
+                                    {album.rank_rs ? (
                                         <span class="album__rank">
                                             Rolling Stone №{" "}
-                                            <span>
-                                                {" "}
-                                                {album.ranks.rollingstone}
-                                            </span>
+                                            <span>{album.rank_rs}</span>
                                         </span>
                                     ) : null}
-                                    {album.ranks?.apple ? (
+                                    {album.rank_apple ? (
                                         <span class="album__rank">
-                                            № <span> {album.ranks.apple}</span>
+                                            Apple № <span>{album.rank_apple}</span>
                                         </span>
                                     ) : null}
                                 </div>
@@ -69,25 +60,8 @@ const releasedText = formatReleaseText(album);
                     <div class="now-listening__album-cover"> </div>
                 </div>
             </>
-        ) : missing ? (
-            <>
-                <p>
-                    Pinned album id <code>{nowId}</code> wasn’t found in{" "}
-                    <code>data/albums.json</code>.
-                </p>
-                <p>
-                    Run <code>npm run albums:build</code> (then commit) or
-                    repick.
-                </p>
-            </>
         ) : (
-            <>
-                <p>No pinned album yet (or it’s invalid).</p>
-                <p>
-                    Run <code>npm run pick:album</code> locally to generate{" "}
-                    <code>data/now.json</code>.
-                </p>
-            </>
+            <p>No album queued. Set one in the now_playing table.</p>
         )
     }
 </BaseLayout>

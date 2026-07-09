@@ -47,7 +47,7 @@ Dark theme (`#211f2a` background). Cassette tape aesthetic — every album is re
 ## Database schema (Supabase)
 **`albums`** — static catalog seeded from `data/albums.json`. Fields: `id, title, artist, year, label, genres text[], rank_rs, rank_apple, canonical_rank`. Genres live here, not on logs.
 
-**`logs`** — user activity. Fields: `id, user_id, album_id, rating (enum: loved/liked/interesting/not_for_me), notes, heard, favorite, date_listened, mood text[], standout_tracks text[], favorite_tracks jsonb [{track_name, note}], created_at, updated_at`. Unique on `(user_id, album_id)`.
+**`logs`** — user activity. Fields: `id, user_id, album_id, rating (enum: loved/liked/interesting/not_for_me), notes, favorite, date_listened, mood text[], standout_tracks text[], favorite_tracks jsonb [{track_name, note}], created_at, updated_at`. Unique on `(user_id, album_id)`. "Heard" is derived — an album is heard when `date_listened IS NOT NULL`.
 
 **`now_playing`** — one row per user: `user_id (PK), album_id, set_at`. Public page reads the row for `PUBLIC_OWNER_USER_ID`.
 

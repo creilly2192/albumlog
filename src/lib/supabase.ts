@@ -1,5 +1,6 @@
-import { createBrowserClient, createServerClient } from '@supabase/ssr'
-import type { AstroCookies } from 'astro'
+import { createBrowserClient, createServerClient, parseCookieHeader } from '@supabase/ssr'
+import type { MiddlewareHandler } from 'astro'
+import type { SerializeOptions } from 'cookie'
 
 export function createClient() {
   return createBrowserClient(
@@ -8,15 +9,22 @@ export function createClient() {
   )
 }
 
-export function createSupabaseServerClient(cookies: AstroCookies) {
+export function createSupabaseServerClient(context: Parameters<MiddlewareHandler>[0]) {
   return createServerClient(
     import.meta.env.PUBLIC_SUPABASE_URL,
     import.meta.env.PUBLIC_SUPABASE_ANON_KEY,
     {
       cookies: {
-        get: (key) => cookies.get(key)?.value,
-        set: (key, value, options) => cookies.set(key, value, options),
-        remove: (key, options) => cookies.delete(key, options),
+        getAll() {
+          return parseCookieHeader(context.request.headers.get('Cookie') ?? '').map(
+            ({ name, value }) => ({ name, value: value ?? '' })
+          )
+        },
+        setAll(cookiesToSet: { name: string; value: string; options?: SerializeOptions }[]) {
+          cookiesToSet.forEach(({ name, value, options }) =>
+            context.cookies.set(name, value, options)
+          )
+        },
       },
     }
   )
