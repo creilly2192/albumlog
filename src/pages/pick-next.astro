@@ -7,7 +7,23 @@ import { getTapeColor } from '../lib/genres'
 const redirect = requireAuth(Astro)
 if (redirect) return redirect
 
-const albums = await getAlbumsWithLogs(Astro.locals.supabase)
+const session = Astro.locals.session!
+
+const [albums, { data: nowPlaying }] = await Promise.all([
+  getAlbumsWithLogs(Astro.locals.supabase),
+  Astro.locals.supabase
+    .from('now_playing')
+    .select('album_id')
+    .eq('user_id', session.user.id)
+    .maybeSingle(),
+])
+
+const currentAlbum = nowPlaying?.album_id
+  ? albums.find((a) => a.id === nowPlaying.album_id) ?? null
+  : null
+
+const currentIsLogged = !!currentAlbum?.log?.date_listened
+
 const unheard = albums.filter((a) => a.log?.date_listened == null)
 const heardCount = albums.filter((a) => a.log?.date_listened != null).length
 ---
@@ -17,9 +33,16 @@ const heardCount = albums.filter((a) => a.log?.date_listened != null).length
     <p class="pick-next__stats">
       {unheard.length} UNHEARD IN QUEUE &middot; {heardCount} HEARD OVERALL
     </p>
-    <form method="POST" action="/api/pick-random">
-      <button class="pick-next__random" type="submit">🎲 PICK FOR ME</button>
-    </form>
+    {currentIsLogged ? (
+      <form method="POST" action="/api/pick-random">
+        <button class="pick-next__random" type="submit">🎲 PICK FOR ME</button>
+      </form>
+    ) : (
+      <form method="POST" action="/api/log-tape">
+        <input type="hidden" name="album_id" value={currentAlbum?.id} />
+        <button class="pick-next__log-current" type="submit">+ LOG CURRENT TAPE</button>
+      </form>
+    )}
   </div>
 
   <ul class="pick-next__list">

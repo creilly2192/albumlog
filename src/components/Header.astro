@@ -1,5 +1,6 @@
 ---
 const { pathname } = Astro.url;
+const isLoggedIn = !!Astro.locals.session;
 ---
 
 <header class="site-header">
@@ -15,22 +16,25 @@ const { pathname } = Astro.url;
                         >Now Listening</a
                     >
                 </li>
+                {
+                    isLoggedIn && (
+                        <li>
+                            <a
+                                href="/pick-next"
+                                class={
+                                    pathname === "/pick-next" ? "active" : ""
+                                }
+                            >
+                                Pick Next
+                            </a>
+                        </li>
+                    )
+                }
                 <li>
                     <a href="/log" class={pathname === "/log" ? "active" : ""}
-                        >Pick Next</a
-                    >
+                        >Log
+                    </a>
                 </li>
-                <li>
-                    <a href="/log" class={pathname === "/log" ? "active" : ""}
-                        >Log</a
-                    >
-                </li>
-                <!-- <li>
-                    <a
-                        href="/favorites"
-                        class={pathname === "/favorites" ? "active" : ""}
-                        >Favorites</a>
-                </li> -->
             </ul>
         </nav>
     </div>

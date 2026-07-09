@@ -8,14 +8,36 @@ Migrating from a static JSON-driven Astro site to a database-backed hybrid app w
 
 **Completed:**
 - Supabase project created, schema running, auth user created
-- `.env` in project root with Supabase keys
+- `.env` in project root with Supabase keys (`PUBLIC_SUPABASE_URL`, `PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `PUBLIC_OWNER_USER_ID`)
 - Packages installed: `@astrojs/netlify`, `@supabase/supabase-js`, `@supabase/ssr`
 - `astro.config.mjs` updated to `output: 'server'` with Netlify adapter
 - `netlify.toml` created
-- `src/lib/supabase.ts` created (browser + server client factories)
-- `src/env.d.ts` created (App.Locals types)
+- `src/lib/supabase.ts` — browser + server client factories (using `getAll`/`setAll` cookie pattern)
+- `src/env.d.ts` — `App.Locals` types with inline imports (no top-level import)
+- `src/middleware.ts` — attaches `supabase` + `session` to `locals` on every request via `getUser()`
+- `src/lib/genres.ts` — `GENRE_COLORS` map (all 17 genres) + `getTapeColor(genres)`
+- `src/lib/db.ts` — `getAlbumsWithLogs()` and `getNowPlayingAlbum()` replacing `data.ts`
+- `src/lib/auth.ts` — `requireAuth()` and `isAuthenticated()` helpers
+- `src/pages/login.astro` — magic link email form with sent confirmation state
+- `src/pages/api/auth/signin.ts` — calls `signInWithOtp`, redirects to `/login?sent=true`
+- `src/pages/api/auth/callback.ts` — exchanges code for session, redirects to `/`
+- `src/pages/api/auth/signout.ts` — signs out, redirects to `/`
+- `src/pages/index.astro` — converted to read from DB via `getNowPlayingAlbum()`
+- `src/pages/log.astro` — converted to read from DB via `getAlbumsWithLogs()`
+- `src/pages/pick-next.astro` — auth-gated, unheard queue, shows LOG CURRENT TAPE or PICK FOR ME based on log status
+- `src/pages/api/pick-random.ts` — picks random unheard album, guards against picking before logging current
+- `src/components/Header.astro` — Pick Next nav item hidden from logged-out visitors
+- `src/components/AlbumListItem.astro` — updated to use DB field names
+- `scripts/seed-albums.mjs` + `scripts/seed-logs.mjs` — one-time data migration scripts (already run)
+- `data/now.json` — can be deleted (now_playing table is seeded)
+- `data/progress.json` — can be deleted (logs table is seeded)
 
-**Still to do:** See plan file at `/Users/christina/.claude/plans/help-me-plan-and-vivid-lake.md`
+**Still to do:**
+- `src/pages/api/log-tape.ts` — upsert a log entry (next up)
+- `src/pages/api/set-now-playing.ts` — set a specific album as now playing
+- `src/pages/index.astro` — add `+ LOG TAPE` button for authenticated users
+- `src/pages/listening/[id].astro` — redesign with two-column layout + log entry form
+- Cleanup: delete `src/lib/data.ts`, `data/progress.json`, `data/now.json`, `scripts/pick-album.mjs`, `scripts/migrate-progress.mjs`
 
 ## Tech stack
 - **Framework:** Astro 7, `output: 'server'`, deployed on Netlify
@@ -27,21 +49,20 @@ Migrating from a static JSON-driven Astro site to a database-backed hybrid app w
 Dark theme (`#211f2a` background). Cassette tape aesthetic — every album is represented as a cassette whose color is derived from its primary genre. Screenshots of all four views are in `/public/`.
 
 **Genre → tape color map:**
-- SOUL → `#ff5d99` (pink)
-- POP → `#4dd6e8` (teal)
-- FOLK → `#b48cf0` (purple)
-- ROCK → `#f0a94d` (orange)
-- GRUNGE → `#7ee08a` (green)
-- TRIP-HOP → `#5ec9c9` (teal-green)
-- SHOEGAZE → `#8c93ff` (periwinkle)
+- SOUL → `#ff5d99`, POP → `#4dd6e8`, FOLK → `#b48cf0`, ROCK → `#f0a94d`
+- GRUNGE → `#7ee08a`, TRIP-HOP → `#5ec9c9`, SHOEGAZE → `#8c93ff`
+- COUNTRY → `#c9915a`, ELECTRONIC → `#4d8dff`, FUNK → `#e558c7`
+- HIP-HOP → `#ffc247`, JAZZ → `#e8c860`, METAL → `#9aa3b8`
+- NEW-WAVE → `#4de8c2`, PUNK → `#ff4d4d`, R&B → `#c66bff`, REGGAE → `#a8e04d`
+- Fallback → `#9b96ab`
 
 ## Pages
 | Route | Auth | Description |
 |---|---|---|
-| `/` | Public | Now Playing — current album as animated cassette SVG |
-| `/log` | Public | Heard albums grouped by month, card grid with mini cassettes |
-| `/pick-next` | Auth required | Unheard queue, search, RS/APPLE filter, 🎲 PICK FOR ME |
-| `/listening/[id]` | Public | Album detail — two-column cassette + info, favorite tracks |
+| `/` | Public | Now Playing — current album, LOG TAPE button for owner |
+| `/log` | Public | Heard albums grouped by month |
+| `/pick-next` | Auth required | Unheard queue, 🎲 PICK FOR ME (or LOG CURRENT TAPE if unlogged) |
+| `/listening/[id]` | Public | Album detail — two-column layout, log entry form for owner |
 | `/login` | — | Magic link login form |
 
 ## Database schema (Supabase)
@@ -58,6 +79,9 @@ Dark theme (`#211f2a` background). Cassette tape aesthetic — every album is re
 - Nav labels: "NOW PLAYING", "PICK NEXT", "LOG" — never "Collection"
 - `listening/[id].astro` stays statically generated (`export const prerender = true`) with `getStaticPaths()` reading `data/albums.json` at build time
 - `PUBLIC_OWNER_USER_ID` env var used to show the right now_playing row to public visitors
+- "Heard" = `date_listened IS NOT NULL` — no separate `heard` boolean column
+- Auth session shape: `{ user: User }` — access via `locals.session?.user`
+- Middleware uses `getUser()` not `getSession()` for security (re-validates against Auth server)
 
 ## Env vars required
 ```
@@ -71,7 +95,5 @@ PUBLIC_OWNER_USER_ID
 `src/lib/rating.ts`, `src/lib/releasedYear.ts`, `src/lib/rankLabels.ts` — pure functions, no I/O.
 
 ## Data still in JSON (do not delete yet)
-- `data/albums.json` — used by `getStaticPaths()` in `[id].astro` at build time
+- `data/albums.json` — still used by `getStaticPaths()` in `[id].astro` at build time
 - `data/moods.json` — source of valid mood options for UI + API validation
-- `data/progress.json` — not yet seeded to DB; needed for `scripts/seed-logs.mjs`
-- `data/now.json` — not yet migrated; delete after `now_playing` table is seeded

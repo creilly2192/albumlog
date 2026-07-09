@@ -1,10 +1,13 @@
 ---
 import { getNowPlayingAlbum } from "../lib/db";
 import { formatReleaseText } from "../lib/releasedYear";
+import { isAuthenticated } from "../lib/auth";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LogTapeModal from "../components/LogTapeModal.astro";
 
 const album = await getNowPlayingAlbum(Astro.locals.supabase);
 const releasedText = album ? formatReleaseText(album) : null;
+const loggedIn = isAuthenticated(Astro);
 ---
 
 <BaseLayout title="Now Listening">
@@ -59,9 +62,19 @@ const releasedText = album ? formatReleaseText(album) : null;
 
                     <div class="now-listening__album-cover"> </div>
                 </div>
+                {loggedIn && (
+                  <button
+                    class="log-tape-btn"
+                    data-album-id={album.id}
+                    onclick={`document.dispatchEvent(new CustomEvent('open-log-modal', { detail: { albumId: '${album.id}' } }))`}
+                  >
+                    + LOG TAPE
+                  </button>
+                )}
             </>
         ) : (
             <p>No album queued. Set one in the now_playing table.</p>
         )
     }
 </BaseLayout>
+{album && loggedIn && <LogTapeModal />}

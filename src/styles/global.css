@@ -796,3 +796,61 @@ p {
     gap: 2rem;
   }
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__panel {
+  position: relative;
+  background: #2a2836;
+  border-radius: 12px;
+  padding: 2rem;
+  width: min(560px, 90vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal__title {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted, #9b96ab);
+}
+
+.modal__close {
+  background: none;
+  border: none;
+  color: var(--color-text-muted, #9b96ab);
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem;
+}
+
+.modal__close:hover {
+  color: #fff;
+}
