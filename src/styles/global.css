@@ -1,9 +1,8 @@
 /* ===== CSS TOKENS ===== */
 :root {
-  --color-bg: #ffffff;
-  --color-text: #1f0313;
-  --color-ink: #241a12;
-  --color-ink2: #4a3a2a;
+  --color-bg: #211f2a;
+  --color-text: #f2ede6;
+  --color-text2: #4a3a2a;
   --paper: #f7efe0;
 
   --card: #ffffff;
@@ -21,10 +20,11 @@
 
   --accent: #511e3c;
   --accentDeep: #8a3a22;
-  --rule: #ebe6e9;
 
   --accent-interesting: #a08438;
   --accent-no: #3b82f6;
+
+  --border: #423e52;
 
   --accent-foreground: #2d2d2d;
   --destructive: #dc2626;
@@ -37,8 +37,6 @@
   --color-green: #4ade80;
   --color-pink: #ff8ba7;
   --color-orange: #fb923c;
-
-  --border: #e8e4dc;
 
   --font-serif: "Newsreader", serif;
   --font-display: "Instrument Serif", serif;
@@ -120,7 +118,7 @@ p {
 /* Footer */
 .site-footer {
   padding: 2.25rem 0;
-  border-top: .0625rem solid var(--rule);
+  border-top: .0625rem solid var(--border);
   margin-top: 4rem;
 }
 
@@ -133,7 +131,7 @@ p {
 .footer__bottom {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid var(--rule);
+  border-top: 1px solid var(--border);
 
 }
 
@@ -175,9 +173,9 @@ p {
   text-decoration: underline;
   text-decoration-thickness: .0313rem;
   text-underline-offset: 3;
-  text-decoration-color: var(--rule);
+  text-decoration-color: var(--border);
   font-style: italic;
-  color: var(--color-ink2);
+  color: var(--color-text2);
 
 }
 
@@ -201,7 +199,7 @@ p {
   text-decoration: underline;
   text-decoration-thickness: .0313rem;
   text-underline-offset: 3;
-  text-decoration-color: var(--rule);
+  text-decoration-color: var(--border);
 }
 
 @media screen and (max-width: 400px) {
@@ -221,7 +219,7 @@ p {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  border-bottom: .0625rem solid var(--rule);
+  border-bottom: .0625rem solid var(--border);
   align-items: center;
   padding: 2rem 0;
 }
@@ -359,7 +357,7 @@ p {
   font-family: var(--font-display);
   line-height: 1.1;
   letter-spacing: -0.04rem;
-  color: var(--color-ink);
+  color: var(--color-text);
 }
 
 .now-listening__album span {
@@ -368,7 +366,7 @@ p {
 
 .now-listening__artist {
   font-size: 2.375rem;
-  color: var(--color-ink2);
+  color: var(--color-text2);
   font-family: var(--font-display);
   margin-bottom: 2.25rem;
   font-weight: 400;
@@ -392,7 +390,7 @@ p {
 
 .now-listening__released {
   font-size: 1rem;
-  color: var(--color-ink2);
+  color: var(--color-text2);
 }
 
 .now-listening__spotify-link {
@@ -485,7 +483,7 @@ p {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: var(--rule);
+  background-color: var(--border);
 }
 
 .listening-log__group:first-of-type {
@@ -502,7 +500,7 @@ p {
   font-family: var(--font-display);
   font-weight: 400;
   border-bottom: 0.0625rem solid var(--border);
-  color: var(--color-ink);
+  color: var(--color-text);
   margin-bottom: 0;
 }
 
@@ -573,7 +571,7 @@ p {
   line-height: 1.1;
   font-weight: 500;
   font-family: var(--font-serif);
-  color: var(--color-ink);
+  color: var(--color-text);
   display: block;
   transition: color 0.3s ease;
 }
@@ -659,7 +657,7 @@ p {
 
 .album-details__artist {
   font-size: 2.25rem;
-  color: var(--color-ink2);
+  color: var(--color-text2);
   font-family: var(--font-display);
   margin-bottom: .375rem;
   font-style: italic;
@@ -669,7 +667,7 @@ p {
   display: flex;
   gap: 2rem;
   align-items: center;
-  border-top: .0625rem solid var(--rule);
+  border-top: .0625rem solid var(--border);
   padding-top: 1.5rem;
   margin-top: .5rem;
   flex-flow: wrap;
@@ -692,7 +690,7 @@ p {
 
 .album__rank {
   font-size: .875rem;
-  color: var(--color-ink2);
+  color: var(--color-text2);
 }
 
 .album__rank:not(:last-child) {
@@ -726,7 +724,7 @@ p {
 
 .album-details__listened-at {
   font-family: var(--font-sans);
-  color: var(--color-ink2);
+  color: var(--color-text2);
   font-size: .875rem;
 }
 
@@ -763,7 +761,7 @@ p {
   font-size: 1.1875rem;
   font-family: var(--font-serif);
   padding: .75rem 0;
-  border-bottom: .0625rem solid var(--rule);
+  border-bottom: .0625rem solid var(--border);
 
 }
 
