@@ -1,4 +1,7 @@
 ---
+import playingIcon from "../../public/icons/playing.svg?raw";
+import pickIcon from "../../public/icons/pick.svg?raw";
+import collectionIcon from "../../public/icons/collection.svg?raw";
 const { pathname } = Astro.url;
 const isLoggedIn = !!Astro.locals.session;
 ---
@@ -6,34 +9,61 @@ const isLoggedIn = !!Astro.locals.session;
 <header class="site-header">
     <div class="container">
         <nav class="site-header__nav">
-            <span class="site-name"
-                ><a href="/">Album Log.</a>
-                <span class="site-name__version">№ 03</span></span
-            >
+            <a href="/" class="site-name">
+                <div class="cassette-icon">
+                    <div class="cassette-icon__window"></div>
+                    <div class="cassette-icon__reels">
+                        <div class="cassette-icon__reel"></div>
+                        <div class="cassette-icon__reel"></div>
+                    </div>
+                </div>
+                <div class="site-name__text">
+                    <span class="site-name__title"
+                        >Album <span class="site-name__title-highlight"
+                            >Log</span
+                        ></span
+                    >
+                    <span class="site-name__tagline"
+                        >GREATEST ALBUMS OF ALL TIME</span
+                    >
+                </div>
+            </a>
             <ul class="site-header__nav-list">
                 <li>
-                    <a href="/" class={pathname === "/" ? "active" : ""}
-                        >Now Listening</a
-                    >
-                </li>
-                {
-                    isLoggedIn && (
-                        <li>
-                            <a
-                                href="/pick-next"
-                                class={
-                                    pathname === "/pick-next" ? "active" : ""
-                                }
-                            >
-                                Pick Next
-                            </a>
-                        </li>
-                    )
-                }
-                <li>
-                    <a href="/log" class={pathname === "/log" ? "active" : ""}
-                        >Log
+                    <a href="/" class={pathname === "/" ? "active" : ""}>
+                        <Fragment set:html={playingIcon} />
+                        <span class="site-header__nav-title">
+                            Now Listening</span
+                        >
                     </a>
+                    {
+                        isLoggedIn && (
+                            <li>
+                                <a
+                                    href="/pick-next"
+                                    class={
+                                        pathname === "/pick-next"
+                                            ? "active"
+                                            : ""
+                                    }
+                                >
+                                    <Fragment set:html={pickIcon} />
+                                    <span class="site-header__nav-title">
+                                        Pick Next
+                                    </span>
+                                </a>
+                            </li>
+                        )
+                    }
+                    <li>
+                        <a
+                            href="/log"
+                            class={pathname === "/log" ? "active" : ""}
+                        >
+                            <Fragment set:html={collectionIcon} />
+                            <span class="site-header__nav-title">Log</span>
+                        </a>
+                    </li>
                 </li>
             </ul>
         </nav>

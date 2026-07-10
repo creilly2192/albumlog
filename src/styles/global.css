@@ -1,52 +1,81 @@
 /* ===== CSS TOKENS ===== */
 :root {
-  --color-bg: #211f2a;
-  --color-text: #f2ede6;
-  --color-text2: #4a3a2a;
-  --paper: #f7efe0;
+  /* Plum scale */
+  --plum-950: #17151b;
+  --plum-900: #211f2a;
+  --plum-800: #2b2836;
+  --plum-700: #332f40;
+  --plum-600: #383345;
+  --plum-500: #423e52;
+  --plum-400: #4a4556;
+  --plum-300: #645f74;
+  --plum-200: #7a7488;
+  --plum-100: #9b96ab;
+  --plum-50: #c7c1d6;
 
-  --card: #ffffff;
-  --card-foreground: #2d2d2d;
-  --popover: #ffffff;
-  --popover-foreground: #2d2d2d;
+  /* Cream */
+  --cream-100: #f2ede6;
+  --cream-200: #e9e2d3;
+  --cream-300: #c9bfa8;
 
-  --primary: #2d2d2d;
-  --primary-foreground: #ffffff;
-  --secondary: #f8f4ee;
-  --secondary-foreground: #2d2d2d;
-  --muted: #775067;
-  --muted-foreground: #7a7a7a;
-  --white: #ffffff;
+  /* Accent primaries */
+  --pink: #ff5d99;
+  --cyan: #4dd6e8;
+  --purple: #b48cf0;
 
-  --accent: #511e3c;
-  --accentDeep: #8a3a22;
+  /* Semantic colour */
+  --color-bg: var(--plum-900);
+  --color-text: var(--cream-100);
+  --color-text2: var(--cream-300);
+  --muted: var(--plum-300);
+  --muted-foreground: var(--plum-100);
+  --border: var(--plum-500);
+  --color-border-muted: var(--plum-400);
+  --color-text-muted: var(--plum-200);
+  --color-inactive-text: #9b9dab;
 
-  --accent-interesting: #a08438;
-  --accent-no: #3b82f6;
+  /* Accent aliases */
+  --accent: var(--pink);
+  --color-purple: var(--purple);
+  --accent-interesting: #e8c860;
+  --accent-no: var(--plum-200);
 
-  --border: #423e52;
-
-  --accent-foreground: #2d2d2d;
-  --destructive: #dc2626;
-  --destructive-foreground: #ffffff;
-
-  --color-coral: #ff6b6b;
-  --color-blue: #5b9cff;
-  --color-purple: #a78bfa;
-  --color-yellow: #fbbf24;
-  --color-green: #4ade80;
-  --color-pink: #ff8ba7;
-  --color-orange: #fb923c;
-
-  --font-serif: "Newsreader", serif;
-  --font-display: "Instrument Serif", serif;
-  --font-sans: "Inter Tight", sans-serif;
-  --font-body: "Space Mono", monospace;
+  /* Fonts */
+  --font-sans: "Space Grotesk", sans-serif;
   --font-mono: "Space Mono", monospace;
+  --font-serif: "Source Serif 4", serif;
 
-  --leading-body: 1.6;
-  --leading-heading: 1.25;
-  --font-size: 16px;
+  /* Typography scale (base: 16px = 1rem) */
+  --text-display-xl: 3rem;
+  /* 48px — Now Playing album title   */
+  --text-display-lg: 1.5rem;
+  /* 24px — wordmark, headings        */
+  --text-title: 1.1875rem;
+  /* 19px — card / row titles         */
+  --text-body-lg: 1.375rem;
+  /* 22px — artist name               */
+  --text-body: 1rem;
+  /* 16px — general UI                */
+  --text-label: 0.8125rem;
+  /* 13px — button labels             */
+  --text-meta: 0.8125rem;
+  /* 13px — row meta / quotes         */
+  --text-eyebrow: 0.625rem;
+  /* 10px — uppercase tags            */
+  --text-eyebrow-lg: 0.75rem;
+  /* 12px — tab / nav labels          */
+  --text-caption: 0.6875rem;
+  /* 11px — footer / timestamps       */
+
+  --leading-display-xl: 1.15;
+  --leading-display-lg: 1;
+  --leading-title: 1.3;
+  --leading-body-lg: 1.3;
+  --leading-body: 1.4;
+  --leading-label: 1.3;
+  --leading-meta: 1.4;
+  --leading-eyebrow: 1.3;
+  --leading-caption: 1.4;
 }
 
 /* ===== BASE RESET ===== */
@@ -65,7 +94,7 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
   line-height: var(--leading-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -93,7 +122,7 @@ p {
 
 .display {
   font-size: 8rem;
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   line-height: .88;
   letter-spacing: -0.04rem;
 }
@@ -110,9 +139,9 @@ p {
 
 /* Containers */
 .container {
-  max-width: 82.5rem;
+  max-width: 87.5rem;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.25rem;
 }
 
 /* Footer */
@@ -137,7 +166,7 @@ p {
 
 .footer__site-title {
   font-size: 1.75rem;
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
 }
 
 .footer__site-tagline {
@@ -209,64 +238,115 @@ p {
   }
 }
 
-/* Header */
-.site-header .container {
-  padding-bottom: 0.5rem;
+/* Cassette icon */
+.cassette-icon {
+  position: relative;
+  width: 4rem;
+  height: 2.5rem;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.75rem rgba(255, 93, 153, 0.28);
+  flex-shrink: 0;
+}
 
+.cassette-icon__window {
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  right: 9px;
+  height: 16px;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+}
+
+.cassette-icon__reels {
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  right: 14px;
+  height: 12px;
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.cassette-icon__reel {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--border);
 }
 
 .site-header__nav {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  border-bottom: .0625rem solid var(--border);
   align-items: center;
-  padding: 2rem 0;
+  padding: 1.25rem 0;
 }
 
-.site-name a {
-  color: var(--color-text);
-  font-style: italic;
+.site-name__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-name {
   text-decoration: none;
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 2rem;
-  letter-spacing: -0.0006rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
-.site-name__version {
-  font-family: var(--font-mono);
-  font-size: .5625rem;
-  letter-spacing: 0.18rem;
+.site-name__title {
+  color: var(--color-text);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.125rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.site-name__title-highlight {
   color: var(--accent);
+}
+
+.site-name__tagline {
+  font-family: var(--font-mono);
+  font-size: .625rem;
+  letter-spacing: 0;
+  color: var(--plum-100);
   text-transform: uppercase;
 }
 
 .site-header__nav-list {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   padding: 0;
   margin: 0;
 }
 
 .site-header__nav-list a {
   text-decoration: none;
-  color: var(--color-text);
-  border-bottom: .0625rem solid transparent;
+  color: var(--color-inactive-text);
+  border-bottom: 2px solid transparent;
   transition: color 0.3s ease, border-color 0.3s ease;
-  font-size: 1.125rem;
-  font-style: italic;
-  font-family: var(--font-serif);
-}
-
-.site-header__nav-list li:not(:last-child)::after {
-  content: "·";
-  position: relative;
-  margin-left: 0.5rem;
-  padding-left: 0.5rem;
-  display: inline-block;
-  color: var(--muted);
+  font-size: .75rem;
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  gap: .375rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .0625rem;
 }
 
 .site-header__nav-list a:hover {
@@ -277,13 +357,21 @@ p {
 .site-header__nav-list a.active {
   color: var(--accent);
   border-color: var(--accent);
+  font-weight: 700;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 840px) {
+  .site-header__nav {
+    padding: 1rem 0;
+  }
 
   .site-name a,
   .site-header__nav-list a {
     font-size: 1rem;
+  }
+
+  .site-name__title {
+    font-size: 1.25rem;
   }
 
   .site-header__nav-list li:not(:last-child)::after {
@@ -292,10 +380,15 @@ p {
   }
 
   .site-header__nav-list {
-    gap: .5rem;
+    gap: 1rem;
   }
 
-  .site-name__version {
+  .site-header__nav-list a {
+    padding-bottom: 0.5rem;
+  }
+
+  .site-header__nav-title,
+  .site-name__tagline {
     display: none;
   }
 }
@@ -354,7 +447,7 @@ p {
 
 .now-listening__album {
   font-size: 9rem;
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   line-height: 1.1;
   letter-spacing: -0.04rem;
   color: var(--color-text);
@@ -367,7 +460,7 @@ p {
 .now-listening__artist {
   font-size: 2.375rem;
   color: var(--color-text2);
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   margin-bottom: 2.25rem;
   font-weight: 400;
 }
@@ -497,7 +590,7 @@ p {
 .listening-log__month {
   text-transform: uppercase;
   font-size: 2.75rem;
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-weight: 400;
   border-bottom: 0.0625rem solid var(--border);
   color: var(--color-text);
@@ -646,7 +739,7 @@ p {
 
 .album-details__album {
   font-size: 6.5rem;
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   line-height: 1;
   letter-spacing: -0.05em;
 }
@@ -658,7 +751,7 @@ p {
 .album-details__artist {
   font-size: 2.25rem;
   color: var(--color-text2);
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   margin-bottom: .375rem;
   font-style: italic;
 }
