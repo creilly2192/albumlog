@@ -9,8 +9,6 @@ const album = await getNowPlayingAlbum(Astro.locals.supabase);
 const releasedText = album ? formatReleaseText(album) : null;
 const loggedIn = isAuthenticated(Astro);
 const isLoggedIn = !!Astro.locals.session;
-
-const { pathname } = Astro.url;
 ---
 
 <BaseLayout title="Now Listening">
@@ -32,7 +30,14 @@ const { pathname } = Astro.url;
                     <CassettePlayer album={album} />
                     <div class="now-listening__album-meta">
                         <div class="now-listening__top-stats">
-                            <p>SOUL</p>
+                            <p>
+                                {(album.genres ?? []).map((genre, i, arr) => (
+                                    <span>
+                                        {genre}
+                                        {i < arr.length - 1 ? ", " : ""}
+                                    </span>
+                                ))}
+                            </p>
                             <p>{releasedText}</p>
                         </div>
                         <h1 class="now-listening__album">{album.title}</h1>
