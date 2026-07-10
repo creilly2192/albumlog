@@ -1,0 +1,39 @@
+.cassette-player {
+    border-radius: 1.15rem;
+    display: inline-block;
+    animation: 3.5s ease-in-out 0s infinite normal none running casGlow;
+}
+
+@keyframes reelSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes casGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 18px rgba(255, 93, 153, .25);
+    }
+
+    50% {
+        box-shadow: 0 0 32px rgba(255, 93, 153, .5);
+    }
+}
+
+@keyframes skeletonPulse {
+
+    0%,
+    100% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}

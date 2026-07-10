@@ -1,5 +1,6 @@
 ---
 const { pathname } = Astro.url;
+const isLoggedIn = !!Astro.locals.session;
 ---
 
 <footer class="site-footer">
@@ -7,8 +8,11 @@ const { pathname } = Astro.url;
         <div class="footer__top">
             <div class="footer__top-left">
                 <div>
-                    <span class="footer__site-title"> Album Log. </span>
-                    <span class="footer__site-tagline"> № 03 </span>
+                    <span class="footer__site-title">
+                        Album <span class="footer__site-title-highlight"
+                            >Log</span
+                        >
+                    </span>
                 </div>
             </div>
 
@@ -17,6 +21,13 @@ const { pathname } = Astro.url;
                 <li>
                     <a href="/">Now Listening</a>
                 </li>
+                {
+                    isLoggedIn && (
+                        <li>
+                            <a href="/pick-next">Pick Next</a>
+                        </li>
+                    )
+                }
                 <li>
                     <a href="/log">Log</a>
                 </li>

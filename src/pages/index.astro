@@ -4,7 +4,7 @@ import { formatReleaseText } from "../lib/releasedYear";
 import { isAuthenticated } from "../lib/auth";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import LogTapeModal from "../components/LogTapeModal.astro";
-
+import CassettePlayer from "../components/CassettePlayer.astro";
 const album = await getNowPlayingAlbum(Astro.locals.supabase);
 const releasedText = album ? formatReleaseText(album) : null;
 const loggedIn = isAuthenticated(Astro);
@@ -15,68 +15,54 @@ const loggedIn = isAuthenticated(Astro);
         album ? (
             <>
                 <div class="now-listening__album-container">
+                    {loggedIn && (
+                        <div class="now-listening__log-btn-container">
+                            <button
+                                class="button"
+                                data-album-id={album.id}
+                                onclick={`document.dispatchEvent(new CustomEvent('open-log-modal', { detail: { albumId: '${album.id}' } }))`}
+                            >
+                                Log this tape
+                            </button>
+                        </div>
+                    )}
+                    <CassettePlayer album={album} />
                     <div class="now-listening__album-meta">
-                        <span class="now-listening__label overline">
-                            Now Listening
-                        </span>
-                        <h1 class="now-listening__album">
-                            {album.title
-                                .split(" ")
-                                .map((word, i) =>
-                                    i === 1 ? <span>{word} </span> : word + " ",
-                                )}
-                        </h1>
-                        <h2 class="now-listening__artist">
-                            <span>by</span>
-                            {album.artist}
-                        </h2>
+                        <div class="now-listening__top-stats">
+                            <p>SOUL</p>
+                            <p>{releasedText}</p>
+                        </div>
+                        <h1 class="now-listening__album">{album.title}</h1>
+                        <h2 class="now-listening__artist">{album.artist}</h2>
 
                         <div class="now-listening__meta-stats">
-                            <div class="now-listening__released">
-                                <p class="now-listening__meta-stats-label">
-                                    Released
-                                </p>
-                                <p>{releasedText}</p>
-                            </div>
-
-                            {(album.rank_rs || album.rank_apple) ? (
+                            {album.rank_rs || album.rank_apple ? (
                                 <div class="album__ranks">
-                                    <p class="now-listening__meta-stats-label">
-                                        Ranking
-                                    </p>
                                     {album.rank_rs ? (
                                         <span class="album__rank">
-                                            Rolling Stone №{" "}
-                                            <span>{album.rank_rs}</span>
+                                            <span>#{album.rank_rs} </span>
+                                            <span>Rolling Stone</span>
                                         </span>
                                     ) : null}
                                     {album.rank_apple ? (
                                         <span class="album__rank">
-                                            Apple № <span>{album.rank_apple}</span>
+                                            <span>#{album.rank_apple} </span>
+                                            <span>Apple</span>
                                         </span>
                                     ) : null}
                                 </div>
                             ) : null}
                         </div>
                     </div>
-
-                    <div class="now-listening__album-cover"> </div>
                 </div>
-                {loggedIn && (
-                  <button
-                    class="log-tape-btn"
-                    data-album-id={album.id}
-                    onclick={`document.dispatchEvent(new CustomEvent('open-log-modal', { detail: { albumId: '${album.id}' } }))`}
-                  >
-                    + LOG TAPE
-                  </button>
-                )}
             </>
         ) : (
             <div class="now-playing__empty">
-              <div class="now-playing__empty-cassette"></div>
-              <p class="now-playing__empty-label">NO TAPE LOADED</p>
-              <a href="/pick-next" class="now-playing__empty-btn">PICK A TAPE</a>
+                <div class="now-playing__empty-cassette" />
+                <p class="now-playing__empty-label">NO TAPE LOADED</p>
+                <a href="/pick-next" class="now-playing__empty-btn">
+                    PICK A TAPE
+                </a>
             </div>
         )
     }
