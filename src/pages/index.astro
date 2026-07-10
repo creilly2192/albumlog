@@ -8,6 +8,9 @@ import CassettePlayer from "../components/CassettePlayer.astro";
 const album = await getNowPlayingAlbum(Astro.locals.supabase);
 const releasedText = album ? formatReleaseText(album) : null;
 const loggedIn = isAuthenticated(Astro);
+const isLoggedIn = !!Astro.locals.session;
+
+const { pathname } = Astro.url;
 ---
 
 <BaseLayout title="Now Listening">
@@ -58,11 +61,66 @@ const loggedIn = isAuthenticated(Astro);
             </>
         ) : (
             <div class="now-playing__empty">
-                <div class="now-playing__empty-cassette" />
+                <div class="now-playing__empty-cassette">
+                    <div
+                        data-dc-tpl="168"
+                        style="position: relative; width: 300px; height: 172px; border: 2px solid rgb(66, 62, 82); border-radius: 14px;"
+                    >
+                        <div
+                            data-dc-tpl="169"
+                            style="position: absolute; top: 9px; left: 9px; width: 7px; height: 7px; border-radius: 50%; border: 1px solid rgb(66, 62, 82);"
+                        />
+                        <div
+                            data-dc-tpl="170"
+                            style="position: absolute; top: 9px; right: 9px; width: 7px; height: 7px; border-radius: 50%; border: 1px solid rgb(66, 62, 82);"
+                        />
+                        <div
+                            data-dc-tpl="171"
+                            style="position: absolute; bottom: 9px; left: 9px; width: 7px; height: 7px; border-radius: 50%; border: 1px solid rgb(66, 62, 82);"
+                        />
+                        <div
+                            data-dc-tpl="172"
+                            style="position: absolute; bottom: 9px; right: 9px; width: 7px; height: 7px; border-radius: 50%; border: 1px solid rgb(66, 62, 82);"
+                        />
+                        <div
+                            data-dc-tpl="173"
+                            style="position: absolute; top: 18px; left: 22px; right: 22px; height: 56px; border: 1px solid rgb(66, 62, 82); border-radius: 5px;"
+                        />
+                        <div
+                            data-dc-tpl="174"
+                            style="position: absolute; bottom: 16px; left: 42px; right: 42px; height: 36px; border: 1px solid rgb(66, 62, 82); border-radius: 7px; display: flex; align-items: center; justify-content: space-between; padding: 0px 14px;"
+                        >
+                            <div
+                                data-dc-tpl="175"
+                                style="width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid rgb(66, 62, 82); display: flex; align-items: center; justify-content: center;"
+                            >
+                                <div
+                                    data-dc-tpl="176"
+                                    style="width: 5px; height: 5px; border-radius: 50%; background: rgb(66, 62, 82);"
+                                />
+                            </div>
+                            <div
+                                data-dc-tpl="177"
+                                style="flex: 1 1 0%; height: 1px; background: rgb(66, 62, 82); margin: 0px 8px;"
+                            />
+                            <div
+                                data-dc-tpl="178"
+                                style="width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid rgb(66, 62, 82); display: flex; align-items: center; justify-content: center;"
+                            >
+                                <div
+                                    data-dc-tpl="179"
+                                    style="width: 5px; height: 5px; border-radius: 50%; background: rgb(66, 62, 82);"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <p class="now-playing__empty-label">NO TAPE LOADED</p>
-                <a href="/pick-next" class="now-playing__empty-btn">
-                    PICK A TAPE
-                </a>
+                {isLoggedIn && (
+                    <a href="/pick-next" class="now-playing__empty-btn button">
+                        PICK A TAPE
+                    </a>
+                )}
             </div>
         )
     }
