@@ -2,48 +2,46 @@
 const { album } = Astro.props;
 
 import { getRatingMeta } from "../lib/rating";
-import { formatReleaseText } from "../lib/releasedYear";
+import { getTapeColor } from "../lib/genres";
 
 const ratingMeta = getRatingMeta(album.log?.rating ?? null);
-const releasedText = formatReleaseText(album);
+const tapeColor = getTapeColor(album.genres);
+const genre = album.genres?.[0] ?? "";
+
+function formatDate(iso: string) {
+    return new Intl.DateTimeFormat("en-US", {
+        month: "short",
+        day: "numeric",
+    }).format(new Date(`${iso}T00:00:00`));
+}
+
+const dateListened = album.log?.date_listened
+    ? formatDate(album.log.date_listened)
+    : null;
 ---
 
-<li class="listening-log__item">
-    <div class="listening-log__item-wrapper">
-        <div class="listening-log__item-content">
-            <div class="listening-log__album-details">
-                <div class="listening-log__album">
-                    <span class="listening-log__release">{releasedText}</span>
-                    <a
-                        class="listening-log__title"
-                        href={`/listening/${album.id}`}
-                    >
-                        {album.title}
-                    </a>
-                    <span class="listening-log__artist">{album.artist}</span>
-                </div>
-
-                <div class="listening-log__meta">
-                    <div
-                        class="listening-log__ratings"
-                        style={`--rating-color: ${ratingMeta.color};`}
-                    >
-                        <span class="listening-log__rating">
-                            &mdash; {ratingMeta.label}
-                        </span>
-                    </div>
-
-                    <div class="listening-log__rankings">
-                        {
-                            album.rank_rs ? (
-                                <span class="listening-log__ranking">
-                                    #{album.rank_rs} Rolling Stone
-                                </span>
-                            ) : null
-                        }
-                    </div>
-                </div>
-            </div>
+<li class="log-item" style={`--tape-color: ${tapeColor}`}>
+    <div class="log-item__cassette">
+        <div class="log-item__cassette-window"></div>
+        <div class="log-item__cassette-reels">
+            <div class="log-item__cassette-reel"></div>
+            <div class="log-item__cassette-reel"></div>
         </div>
     </div>
+    <span class="log-item__genre">{genre}</span>
+    <a class="log-item__title" href={`/listening/${album.id}`}>{album.title}</a>
+    <span class="log-item__artist">{album.artist} &middot; {album.year}</span>
+    <div class="log-item__footer">
+        {
+            ratingMeta.label && (
+                <span class="log-item__rating">{ratingMeta.label}</span>
+            )
+        }
+        {dateListened && <span class="log-item__date">{dateListened}</span>}
+    </div>
+    {
+        album.log?.notes && (
+            <p class="log-item__notes">&ldquo;{album.log.notes}&rdquo;</p>
+        )
+    }
 </li>

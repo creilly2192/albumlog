@@ -1,0 +1,118 @@
+.pick-next__header {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    gap: 2rem;
+}
+
+.pick-next__stats {
+    font-family: var(--font-mono);
+    font-size: 0.94rem;
+    letter-spacing: 0.098rem;
+    color: var(--plum-300);
+}
+
+.pick-next__list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0;
+}
+
+.pick-next__info {
+    margin-left: 1.25rem;
+}
+
+.pick-next__title {
+    font-size: 1.0625rem;
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.pick-next__artist {
+    color: var(--plum-100);
+    font-weight: 400;
+    margin-left: .5rem;
+    font-size: 1rem;
+}
+
+.pick-next__item-btn {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem .75rem;
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--plum-600);
+    background: transparent;
+    border-radius: 0;
+    cursor: default;
+    outline-offset: -1px;
+    width: 100%;
+    text-align: left;
+    color: var(--color-text);
+    transition: border-color 0.15s, border-radius 0.15s;
+    position: relative;
+}
+
+.pick-next__item-btn:before {
+    content: '';
+    position: absolute;
+    top: 1.25rem;
+    left: 1rem;
+    width: .1875rem;
+    height: calc(100% - 2.5rem);
+    background: var(--tape-color, var(--pink));
+    border-radius: 0.25rem;
+}
+
+.pick-next__item-btn:hover {
+    border-color: var(--tape-color, var(--pink));
+    border-radius: .5rem;
+}
+
+.pick-next__meta {
+    display: block;
+    margin-top: .5rem;
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+}
+
+.pick-next__meta-item {
+    font-family: var(--font-mono);
+    color: var(--plum-100);
+    font-size: 0.8125rem;
+}
+
+.pick-next__pill {
+    padding: .1875rem .5rem;
+    border-radius: 0.25rem;
+    background: rgba(255, 93, 153, 0.15);
+    color: var(--pink);
+    font-weight: 700;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+}
+
+.pick-next__pill--apple {
+    color: var(--cyan);
+    background: rgba(77, 214, 232, 0.15);
+}
+
+.pick-next__pagination {
+    color: var(--plum-100);
+    font-family: var(--font-mono);
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-size: 0.8125rem;
+}
+
+.pick-next__page-btn {
+    color: var(--pink);
+    transition: color 0.15s;
+}
+
+.pick-next__page-btn:hover {
+    color: var(--purple);
+}

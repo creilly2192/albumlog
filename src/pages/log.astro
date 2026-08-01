@@ -2,11 +2,29 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getAlbumsWithLogs } from "../lib/db";
 import AlbumListItem from "../components/AlbumListItem.astro";
+import LogTapeModal from "../components/LogTapeModal.astro";
+import { isAuthenticated } from "../lib/auth";
+import "../styles/log.css";
+
+const authed = isAuthenticated(Astro);
+let nowPlayingAlbumId: string | null = null;
+
+if (authed) {
+  const { data } = await Astro.locals.supabase
+    .from("now_playing")
+    .select("album_id")
+    .eq("user_id", Astro.locals.session!.user.id)
+    .maybeSingle();
+  nowPlayingAlbumId = data?.album_id ?? null;
+}
 
 function formatMonthYear(iso: string) {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return "";
-  return new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric" }).format(d);
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    year: "numeric",
+  }).format(d);
 }
 
 function parseDate(s: string) {
@@ -17,12 +35,16 @@ const albums = await getAlbumsWithLogs(Astro.locals.supabase);
 
 const listened = albums
   .filter((a) => a.log?.date_listened != null)
-  .sort((a, b) =>
-    parseDate(b.log!.date_listened!).getTime() -
-    parseDate(a.log!.date_listened!).getTime()
+  .sort(
+    (a, b) =>
+      parseDate(b.log!.date_listened!).getTime() -
+      parseDate(a.log!.date_listened!).getTime(),
   );
 
-const groups: Record<string, { label: string; items: typeof listened; sortValue: number }> = {};
+const groups: Record<
+  string,
+  { label: string; items: typeof listened; sortValue: number }
+> = {};
 
 for (const a of listened) {
   const d = parseDate(a.log!.date_listened!);
@@ -37,15 +59,25 @@ for (const a of listened) {
   groups[key].items.push(a);
 }
 
-const sortedGroups = Object.values(groups).sort((a, b) => b.sortValue - a.sortValue);
+const sortedGroups = Object.values(groups).sort(
+  (a, b) => b.sortValue - a.sortValue,
+);
 ---
 
 <BaseLayout title="Listening Log">
-  <div class="section-heading section-heading--grid">
-    <h1 class="display">
-      What I've been <span>listening</span> to
-    </h1>
-    <p>A ledger of every album I've listened to this year from this project.</p>
+  <div class="log__header">
+    <span class="log__tapes-count">{listened.length} TAPES HEARD</span>
+    {
+      authed && nowPlayingAlbumId && (
+        <button
+          class="button log__log-btn"
+          type="button"
+          onclick={`document.dispatchEvent(new CustomEvent('open-log-modal', { detail: { albumId: '${nowPlayingAlbumId}' } }))`}
+        >
+          + LOG TAPE
+        </button>
+      )
+    }
   </div>
 
   {
@@ -56,9 +88,6 @@ const sortedGroups = Object.values(groups).sort((a, b) => b.sortValue - a.sortVa
         <section class="listening-log__group">
           <div class="listening-log__group-header">
             <h2 class="listening-log__month">{group.label}</h2>
-            <span class="listening-log__month-count">
-              {group.items.length} albums
-            </span>
           </div>
           <ul class="listening-log__list">
             {group.items.map((a) => {
@@ -69,4 +98,6 @@ const sortedGroups = Object.values(groups).sort((a, b) => b.sortValue - a.sortVa
       ))
     )
   }
+
+  {authed && <LogTapeModal />}
 </BaseLayout>

@@ -4,6 +4,7 @@ import LogTapeModal from "../components/LogTapeModal.astro";
 import { requireAuth } from "../lib/auth";
 import { getUnheardPage } from "../lib/db";
 import { getTapeColor } from "../lib/genres";
+import "../styles/pick-next.css";
 
 const redirect = requireAuth(Astro);
 if (redirect) return redirect;
@@ -48,11 +49,11 @@ const totalPages = Math.ceil(totalUnheard / PAGE_SIZE);
     {
       currentAlbumId && !currentIsLogged ? (
         <button
-          class="pick-next__log-current"
+          class="pick-next__log-current button"
           type="button"
           onclick={`document.dispatchEvent(new CustomEvent('open-log-modal', { detail: { albumId: '${currentAlbumId}' } }))`}
         >
-          + LOG CURRENT TAPE
+          Log Current Tape +
         </button>
       ) : (
         <form method="POST" action="/api/pick-random">
@@ -67,35 +68,30 @@ const totalPages = Math.ceil(totalUnheard / PAGE_SIZE);
   <ul class="pick-next__list">
     {
       albums.map((album) => (
-        <li class="pick-next__item">
-          <form
-            method="POST"
-            action="/api/set-now-playing"
-            class="pick-next__row-form"
+        <li class="pick-next__item" style={`--tape-color: ${getTapeColor(album.genres)}`}>
+          <button
+            class="pick-next__item-btn"
+            type="button"
+            data-album-id={album.id}
           >
-            <input type="hidden" name="album_id" value={album.id} />
-            <button type="submit" class="pick-next__row-btn">
-              <div
-                class="pick-next__color-bar"
-                style={`background: ${getTapeColor(album.genres)}`}
-              />
-              <div class="pick-next__info">
-                <span class="pick-next__title">{album.title}</span>
-                <span class="pick-next__artist">{album.artist}</span>
-                <span class="pick-next__meta">
+            <div class="pick-next__info">
+              <span class="pick-next__title">{album.title}</span>
+              <span class="pick-next__artist">{album.artist}</span>
+              <span class="pick-next__meta">
+                <div class="pick-next__meta-item">
                   {album.genres[0]} &middot; {album.year}
-                  {album.rank_rs && (
-                    <span class="pick-next__pill">RS #{album.rank_rs}</span>
-                  )}
-                  {album.rank_apple && (
-                    <span class="pick-next__pill">
-                      APPLE #{album.rank_apple}
-                    </span>
-                  )}
-                </span>
-              </div>
-            </button>
-          </form>
+                </div>
+                {album.rank_rs && (
+                  <span class="pick-next__pill">RS #{album.rank_rs}</span>
+                )}
+                {album.rank_apple && (
+                  <span class="pick-next__pill pick-next__pill--apple">
+                    APPLE #{album.rank_apple}
+                  </span>
+                )}
+              </span>
+            </div>
+          </button>
         </li>
       ))
     }
@@ -123,3 +119,5 @@ const totalPages = Math.ceil(totalUnheard / PAGE_SIZE);
 
   <LogTapeModal />
 </BaseLayout>
+
+<script src="../scripts/pick-album.ts"></script>
