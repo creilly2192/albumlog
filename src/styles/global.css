@@ -956,6 +956,17 @@ p {
   opacity: .85;
 }
 
+.login__input--error {
+  border-color: var(--pink);
+}
+
+.login__error {
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  color: var(--pink);
+  margin-top: -.25rem;
+}
+
 .login__sent {
   font-family: var(--font-mono);
   font-size: .9375rem;

@@ -12,11 +12,12 @@ export const POST: APIRoute = async ({ locals, request, redirect }) => {
     email,
     options: {
       emailRedirectTo: `${new URL(request.url).origin}/api/auth/callback`,
+      shouldCreateUser: false,
     },
   })
 
   if (error) {
-    return new Response(error.message, { status: 400 })
+    return redirect('/login?error=true')
   }
 
   return redirect('/login?sent=true')
