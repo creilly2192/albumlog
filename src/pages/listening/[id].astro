@@ -1,111 +1,120 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { readAlbums } from "../../lib/data";
-import { formatReleaseText, formatListenedAt } from "../../lib/releasedYear";
 import { getRatingMeta } from "../../lib/rating";
+import { getTapeColor } from "../../lib/genres";
 
-export async function getStaticPaths() {
-  const albums = readAlbums();
+export const prerender = false;
 
-  return albums.map((album) => ({
-    params: { id: album.id },
-    props: { album },
-  }));
-}
+const { id } = Astro.params;
 
-const { album } = Astro.props;
-const releasedText = formatReleaseText(album);
-const listenedAtText = formatListenedAt(album.listenedAt);
-const ratingMeta = getRatingMeta(album.rating);
+const [{ data: album }, { data: log }] = await Promise.all([
+  Astro.locals.supabase.from("albums").select("*").eq("id", id!).maybeSingle(),
+  Astro.locals.supabase
+    .from("logs")
+    .select("*")
+    .eq("album_id", id!)
+    .eq("user_id", import.meta.env.PUBLIC_OWNER_USER_ID)
+    .maybeSingle(),
+]);
+
+if (!album) return Astro.redirect("/log");
+
+const tapeColor = getTapeColor(album.genres);
+const ratingMeta = getRatingMeta(log?.rating ?? null);
+const genre = album.genres?.[0] ?? "";
+
+const listenedAtFull = log?.date_listened
+  ? new Intl.DateTimeFormat("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }).format(new Date(`${log.date_listened}T00:00:00`))
+  : null;
+
+type FavoriteTrack = { track_name: string; note: string };
+const favoriteTracks: FavoriteTrack[] = log?.favorite_tracks ?? [];
+const standoutTracks: string[] = log?.standout_tracks ?? [];
+
+const favoriteMap = new Map(favoriteTracks.map((t) => [t.track_name, t.note]));
 ---
 
 <BaseLayout title={`${album.title} — ${album.artist}`}>
-  <div class="album-details__grid">
-    <div class="album-details__left">
-      <h1 class="album-details__album">{album.title
-                                .split(" ")
-                                .map((word, i) =>
-                                    i === 1 ? <span>{word} </span> : word + " ",
-                                )}</h1>
-      <p class="album-details__artist">{album.artist}, {album.year}</p>
-    
-      <div class="album-details__meta">
-        <div>
-          <span class="album-details__label">Listened</span>
+  <a href="/log" class="album-detail__back">← BACK TO LOG</a>
 
-          {
-            listenedAtText ? (
-              <span class="album-details__listened-at">{listenedAtText}</span>
-            ) : null
-          }
-        </div>
-        <div class="album__personal-rating">
-          <span class="album-details__label">My Rating</span>
-          <div
-              class="album-details__ratings"
-              style={`--rating-color: ${ratingMeta.color};`}
-            >
-              <span class="album-details__rating">
-                {ratingMeta.label}
-              </span>
-            </div>
-        </div>
-
-        {
-          album.ranks ? (
-            <div class="album__ranks">
-              <span class="album-details__label">Index</span>
-              {album.ranks?.rollingstone ? (
-                <span class="album__rank">
-                  Rolling Stone #{album.ranks.rollingstone}
-                </span>
-              ) : null}
-              {album.ranks?.apple ? (
-                <span class="album__rank">
-                  Apple #{album.ranks.apple}
-                </span>
-              ) : null}
-            </div>
-          ) : null
-        }
-
+  <div class="album-detail__hero">
+    <div class="album-detail__cassette" style={`--tape-color: ${tapeColor}`}>
+      <div class="album-detail__cassette-window"></div>
+      <div class="album-detail__cassette-reels">
+        <div class="album-detail__cassette-reel"></div>
+        <div class="album-detail__cassette-reel"></div>
       </div>
-              
-
     </div>
 
-    <div class="album-details__right">
+    <div class="album-detail__info">
+      <p class="album-detail__genre-year" style={`--tape-color: ${tapeColor}`}>
+        {genre}<span class="album-detail__dot"> · </span>{album.year}
+      </p>
+      <h1 class="album-detail__title">{album.title}</h1>
+      <p class="album-detail__artist">{album.artist}</p>
+
       {
-    album.standoutTracks && album.standoutTracks.length ? (
-      <h4 class="album-details__tracks-label">Standout Tracks</h4>
-      <div class="album-details__standout-tracks-container">
-        <ol class="album-details__standout-tracks">
-        {album.standoutTracks.map((track) => (
-          <li>
-            {track}
-            {album.favoriteTracks?.includes(track) && (
-              <span class="album-details__favorite-track">a perfect song</span>
+        (album.rank_rs || album.rank_apple) && (
+          <div class="album-detail__ranks">
+            {album.rank_rs && (
+              <span class="album-detail__rank album-detail__rank--rs">#{album.rank_rs} Rolling Stone</span>
             )}
-          </li>
-        ))}
-        </ol>
-      </div>
-    ) : (
-      <p>No standout tracks listed.</p>
-    )
-  }
+            {album.rank_apple && (
+              <span class="album-detail__rank album-detail__rank--apple">#{album.rank_apple} Apple</span>
+            )}
+          </div>
+        )
+      }
+
+      {
+        (ratingMeta.label || listenedAtFull) && (
+          <div class="album-detail__rating-row" style={`--tape-color: ${tapeColor}`}>
+            {ratingMeta.label && (
+              <span class="album-detail__rating-badge">{ratingMeta.label}</span>
+            )}
+            {listenedAtFull && (
+              <span class="album-detail__heard">Heard {listenedAtFull}</span>
+            )}
+          </div>
+        )
+      }
+
+      {
+        log?.notes && (
+          <blockquote class="album-detail__notes">
+            &ldquo;{log.notes}&rdquo;
+          </blockquote>
+        )
+      }
     </div>
   </div>
-  
 
-  
-
-  
-
-  
-  <!-- <h4 class="album-details__heading">Notes</h4>
-  <div class="album-details__notes">
-    <p>{album.notes}</p>
-  </div> -->
-
+  {
+    standoutTracks.length > 0 && (
+      <div class="album-detail__tracks-section">
+        <p class="album-detail__tracks-label">Standout Tracks</p>
+        <ul class="album-detail__tracks-grid">
+          {standoutTracks.map((trackName: string) => {
+            const note = favoriteMap.get(trackName);
+            const isFavorite = favoriteMap.has(trackName);
+            return (
+              <li
+                class={`album-detail__track-card${isFavorite ? " album-detail__track-card--favorite" : ""}`}
+                style={`--tape-color: ${tapeColor}`}
+              >
+                <span class="album-detail__track-name">{trackName}</span>
+                {note && (
+                  <em class="album-detail__track-note">{note}</em>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    )
+  }
 </BaseLayout>

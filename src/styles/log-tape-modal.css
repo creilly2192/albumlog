@@ -1,0 +1,215 @@
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+}
+
+.modal[aria-hidden="false"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__panel {
+    position: relative;
+    background: #2a2836;
+    border-radius: 12px;
+    padding: 2rem;
+    width: min(560px, 90vw);
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1;
+    border: 1px solid rgb(66, 62, 82);
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal__title {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: #9b96ab;
+}
+
+.modal__close {
+    background: none;
+    border: none;
+    color: #9b96ab;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem;
+}
+
+.modal__close:hover {
+    color: #fff;
+}
+
+.modal__fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.modal__label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: #9b96ab;
+    margin-bottom: .625rem;
+    display: block;
+}
+
+.modal__rating-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.modal__rating-option input[type="radio"] {
+    display: none;
+}
+
+.modal__rating-option span {
+    display: block;
+    padding: 0.4rem 1rem;
+    border: 1px solid #3d3a4e;
+    border-radius: 6px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    color: #9b96ab;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.modal__rating-option input[type="radio"]:checked+span {
+    border-color: #ff5d99;
+    color: #ff5d99;
+    background: rgba(255, 93, 153, 0.1);
+}
+
+.modal__rating-option span:hover {
+    border-color: #6b6880;
+    color: #fff;
+}
+
+#modal-date-listened {
+    background: rgb(33, 31, 42);
+    color: var(--color-text);
+    border: 1px solid var(--plum-500);
+    padding: .375rem;
+    border-radius: 6px;
+}
+
+.modal__track-list {
+    list-style: none;
+    padding: 0;
+}
+
+.modal__track-item {
+    margin-bottom: 0.5rem;
+    background: transparent;
+    border: 1px solid var(--plum-500);
+    border-radius: 0.375rem;
+    padding: .625rem .75rem;
+    font-family: var(--font-sans);
+    display: flex;
+    align-items: center;
+}
+
+.modal__track-note {
+    margin-left: 0.5rem;
+    color: var(--purple);
+    font-style: italic;
+    font-size: 0.75rem;
+}
+
+.modal__track-remove {
+    background: none;
+    border: none;
+    color: var(--plum-500);
+    font-size: .8125rem;
+    cursor: pointer;
+    margin-left: auto;
+    transition: color 0.15s;
+}
+
+.modal__track-remove:hover {
+    color: var(--color-text);
+}
+
+.modal__textarea {
+    background: transparent;
+    border: 1px solid var(--plum-500);
+    border-radius: 0.375rem;
+    padding: .625rem .75rem;
+    font-family: var(--font-mono);
+    color: var(--color-text);
+    width: 100%;
+}
+
+.modal__track-list {
+    margin: 0;
+}
+
+.modal__track-add {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.modal__track-add input {
+    background: transparent;
+    border: 1px solid var(--plum-500);
+    border-radius: 0.375rem;
+    padding: .625rem .75rem;
+    font-family: var(--font-mono);
+    color: var(--color-text);
+    flex: 1 1 0%;
+}
+
+.modal__add-btn {
+    border: 1px solid var(--plum-500);
+    border-radius: 0.375rem;
+    padding: .625rem 1rem;
+    font-family: var(--font-mono);
+    background-color: var(--plum-500);
+    color: var(--color-text);
+    font-size: 0.75rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.15s;
+}
+
+.modal__add-btn:hover {
+    background-color: var(--plum-700);
+}
+
+.modal__panel select {
+    background: rgb(33, 31, 42);
+    width: 100%;
+    border: 1px solid var(--plum-500);
+    padding: .375rem;
+    border-radius: 6px;
+    color: var(--color-text);
+    font-family: var(--font-mono);
+}
+
+.modal__panel select option {
+    padding: 0.3125rem 0.375rem;
+}
+
+.modal__submit {
+    width: 100%;
+}

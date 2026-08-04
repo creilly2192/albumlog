@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+if (Astro.locals.session) {
+  return Astro.redirect('/')
+}
+
+const sent = Astro.url.searchParams.get('sent') === 'true'
+const error = Astro.url.searchParams.get('error') === 'true'
+---
+
+<BaseLayout title="Sign In">
+  <div class="login">
+    {sent ? (
+      <p class="login__sent">Check your email for a sign-in link.</p>
+    ) : (
+      <form class="login__form" method="POST" action="/api/auth/signin">
+        <label class="login__label" for="email">Email</label>
+        <input
+          class={`login__input${error ? ' login__input--error' : ''}`}
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="you@example.com"
+        />
+        {error && (
+          <p class="login__error">That email isn't recognised. Try a different address.</p>
+        )}
+        <button class="login__button" type="submit">Send Sign-In Link</button>
+      </form>
+    )}
+  </div>
+</BaseLayout>

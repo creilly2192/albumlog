@@ -1,5 +1,6 @@
 ---
 const { pathname } = Astro.url;
+const isLoggedIn = !!Astro.locals.session;
 ---
 
 <footer class="site-footer">
@@ -7,10 +8,12 @@ const { pathname } = Astro.url;
         <div class="footer__top">
             <div class="footer__top-left">
                 <div>
-                    <span class="footer__site-title"> Album Log. </span>
-                    <span class="footer__site-tagline"> № 01 </span>
+                    <span class="footer__site-title">
+                        Album <span class="footer__site-title-highlight"
+                            >Log</span
+                        >
+                    </span>
                 </div>
-                <p>A log of records — kept for the love of listening.</p>
             </div>
 
             <div class="footer__column">
@@ -18,11 +21,15 @@ const { pathname } = Astro.url;
                 <li>
                     <a href="/">Now Listening</a>
                 </li>
+                {
+                    isLoggedIn && (
+                        <li>
+                            <a href="/pick-next">Pick Next</a>
+                        </li>
+                    )
+                }
                 <li>
                     <a href="/log">Log</a>
-                </li>
-                <li>
-                    <a href="/favorites">Favorites</a>
                 </li>
             </div>
 
@@ -51,6 +58,7 @@ const { pathname } = Astro.url;
                 Made by <a href="https://christinareilly.com">Christina</a>. ©
                 2026.
             </p>
+            {isLoggedIn && <a href="/api/auth/signout">Sign Out</a>}
         </div>
     </div>
 </footer>

@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LogTapeModal from "../components/LogTapeModal.astro";
+import { requireAuth } from "../lib/auth";
+import { getUnheardPage } from "../lib/db";
+import { getTapeColor } from "../lib/genres";
+import "../styles/pick-next.css";
+
+const redirect = requireAuth(Astro);
+if (redirect) return redirect;
+
+const session = Astro.locals.session!;
+
+const PAGE_SIZE = 25;
+const pageParam = parseInt(Astro.url.searchParams.get("page") ?? "1", 10);
+const page = isNaN(pageParam) || pageParam < 1 ? 1 : pageParam;
+
+const [{ data: nowPlaying }, { albums, totalUnheard, totalHeard }] =
+  await Promise.all([
+    Astro.locals.supabase
+      .from("now_playing")
+      .select("album_id")
+      .eq("user_id", session.user.id)
+      .maybeSingle(),
+    getUnheardPage(Astro.locals.supabase, session.user.id, page, PAGE_SIZE),
+  ]);
+
+const currentAlbumId = nowPlaying?.album_id ?? null;
+let currentIsLogged = false;
+
+if (currentAlbumId) {
+  const { data: log } = await Astro.locals.supabase
+    .from("logs")
+    .select("date_listened")
+    .eq("album_id", currentAlbumId)
+    .eq("user_id", session.user.id)
+    .maybeSingle();
+  currentIsLogged = !!log?.date_listened;
+}
+
+const totalPages = Math.ceil(totalUnheard / PAGE_SIZE);
+---
+
+<BaseLayout title="Pick Next">
+  <div class="pick-next__header">
+    <p class="pick-next__stats">
+      {totalUnheard} UNHEARD IN QUEUE &middot; {totalHeard} HEARD OVERALL
+    </p>
+    {
+      currentAlbumId && !currentIsLogged ? (
+        <button
+          class="pick-next__log-current button"
+          type="button"
+          onclick={`document.dispatchEvent(new CustomEvent('open-log-modal', { detail: { albumId: '${currentAlbumId}' } }))`}
+        >
+          Log Current Tape +
+        </button>
+      ) : (
+        <form method="POST" action="/api/pick-random">
+          <button class="pick-next__random" type="submit">
+            PICK FOR ME
+          </button>
+        </form>
+      )
+    }
+  </div>
+
+  <ul class="pick-next__list">
+    {
+      albums.map((album) => (
+        <li class="pick-next__item" style={`--tape-color: ${getTapeColor(album.genres)}`}>
+          <button
+            class="pick-next__item-btn"
+            type="button"
+            data-album-id={album.id}
+          >
+            <div class="pick-next__info">
+              <span class="pick-next__title">{album.title}</span>
+              <span class="pick-next__artist">{album.artist}</span>
+              <span class="pick-next__meta">
+                <div class="pick-next__meta-item">
+                  {album.genres[0]} &middot; {album.year}
+                </div>
+                {album.rank_rs && (
+                  <span class="pick-next__pill">RS #{album.rank_rs}</span>
+                )}
+                {album.rank_apple && (
+                  <span class="pick-next__pill pick-next__pill--apple">
+                    APPLE #{album.rank_apple}
+                  </span>
+                )}
+              </span>
+            </div>
+          </button>
+        </li>
+      ))
+    }
+  </ul>
+
+  {
+    totalPages > 1 && (
+      <div class="pick-next__pagination">
+        {page > 1 && (
+          <a href={`/pick-next?page=${page - 1}`} class="pick-next__page-btn">
+            ← PREV
+          </a>
+        )}
+        <span class="pick-next__page-count">
+          {page} / {totalPages}
+        </span>
+        {page < totalPages && (
+          <a href={`/pick-next?page=${page + 1}`} class="pick-next__page-btn">
+            NEXT →
+          </a>
+        )}
+      </div>
+    )
+  }
+
+  <LogTapeModal />
+</BaseLayout>
+
+<script src="../scripts/pick-album.ts"></script>

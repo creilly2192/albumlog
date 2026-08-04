@@ -1,0 +1,5 @@
+<svg class="icon-playing" data-dc-tpl="18" width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle data-dc-tpl="19" cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.6"></circle>
+          <circle data-dc-tpl="20" cx="9" cy="9" r="2.3" fill="currentColor"></circle>
+          <path data-dc-tpl="21" d="M9 2 L9 4.3 M9 13.7 L9 16 M2 9 L4.3 9 M13.7 9 L16 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+        </svg>
