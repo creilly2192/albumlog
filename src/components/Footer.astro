@@ -58,6 +58,7 @@ const isLoggedIn = !!Astro.locals.session;
                 Made by <a href="https://christinareilly.com">Christina</a>. ©
                 2026.
             </p>
+            {isLoggedIn && <a href="/api/auth/signout">Sign Out</a>}
         </div>
     </div>
 </footer>

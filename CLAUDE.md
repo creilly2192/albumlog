@@ -31,12 +31,15 @@ Migrating from a static JSON-driven Astro site to a database-backed hybrid app w
 - `scripts/seed-albums.mjs` + `scripts/seed-logs.mjs` — one-time data migration scripts (already run)
 - `data/now.json` — can be deleted (now_playing table is seeded)
 - `data/progress.json` — can be deleted (logs table is seeded)
+- `src/pages/listening/[id].astro` — redesigned: `prerender = false`, reads from DB, two-column layout (large cassette outline left, info right), rank badges (RS pink / Apple cyan), rating pill + heard date, italic notes, standout tracks grid with favorites highlighted by tape-color border + note
+- `src/styles/global.css` — `album-detail__*` CSS block replacing old `album-details__*` styles; `album__rank` base styles restored for now-playing page
+- `src/pages/login.astro` — styled: centered layout, dark input with pink focus border, pink submit button, mono font, confirmation state
+- `src/pages/api/auth/signout.ts` — added `GET` handler (link clicks are GET; was POST-only)
 
 **Still to do:**
 - `src/pages/pick-next.astro` — wire `+ LOG` row buttons to open `LogTapeModal` with the row's `album_id` + import `LogTapeModal` component
 - `src/pages/api/set-now-playing.ts` — set a specific album as now playing (for manually picking from the pick-next list, separate from 🎲 random)
 - `src/pages/pick-next.astro` — add a "SET AS NOW PLAYING" action per row so user can manually pick without using 🎲 (calls `api/set-now-playing`)
-- `src/pages/listening/[id].astro` — redesign with two-column layout (cassette + info), show log data (rating, date, notes, favorite tracks)
 - Cleanup: delete `src/lib/data.ts`, `data/progress.json`, `data/now.json`, `scripts/pick-album.mjs`, `scripts/migrate-progress.mjs`
 
 **Now Playing empty state** (design: `public/design/Screenshot 2026-07-09 at 3.33.30 PM.png`):
@@ -82,7 +85,7 @@ Dark theme (`#211f2a` background). Cassette tape aesthetic — every album is re
 - `mood` is `text[]` of predefined IDs from `data/moods.json`, validated at API level
 - `genres` belong to the album (static catalog), not the log entry
 - Nav labels: "NOW PLAYING", "PICK NEXT", "LOG" — never "Collection"
-- `listening/[id].astro` stays statically generated (`export const prerender = true`) with `getStaticPaths()` reading `data/albums.json` at build time
+- `listening/[id].astro` is server-rendered (`prerender = false`) — reads album + log from DB at request time
 - `PUBLIC_OWNER_USER_ID` env var used to show the right now_playing row to public visitors
 - "Heard" = `date_listened IS NOT NULL` — no separate `heard` boolean column
 - Auth session shape: `{ user: User }` — access via `locals.session?.user`
@@ -100,5 +103,5 @@ PUBLIC_OWNER_USER_ID
 `src/lib/rating.ts`, `src/lib/releasedYear.ts`, `src/lib/rankLabels.ts` — pure functions, no I/O.
 
 ## Data still in JSON (do not delete yet)
-- `data/albums.json` — still used by `getStaticPaths()` in `[id].astro` at build time
+- `data/albums.json` — no longer used at runtime; safe to delete once cleanup task is done
 - `data/moods.json` — source of valid mood options for UI + API validation

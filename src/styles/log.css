@@ -50,6 +50,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    transition: border-color 0.3s ease;
+}
+
+.log-item:hover {
+    border-color: var(--tape-color);
 }
 
 .log-item:not(:last-child) {
