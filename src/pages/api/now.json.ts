@@ -1,13 +1,12 @@
 import type { APIRoute } from "astro";
-import { readAlbums, readNowId } from "../../lib/data";
+import { getNowPlayingAlbum } from "../../lib/db";
 
-// Static endpoint — generated at build time.
-// Returns the currently selected album so external sites can consume it.
-export const GET: APIRoute = () => {
-  const nowId = readNowId();
-  const albums = readAlbums();
+export const prerender = false;
 
-  const album = nowId ? albums.find((a: { id: string }) => a.id === nowId) : null;
+// Public endpoint — external sites (e.g. personal site) can poll this
+// to show the currently playing album.
+export const GET: APIRoute = async ({ locals }) => {
+  const album = await getNowPlayingAlbum(locals.supabase);
 
   if (!album) {
     return new Response(JSON.stringify({ album: null }), {
@@ -16,13 +15,16 @@ export const GET: APIRoute = () => {
     });
   }
 
-  // Only expose the fields needed by consumers — no internal metadata
+  // Only expose the fields needed by consumers — no internal ids/log data
   const payload = {
     album: {
-      title: album.title as string,
-      artist: album.artist as string,
-      year: album.year as number,
-      notes: album.notes as string | null,
+      title: album.title,
+      artist: album.artist,
+      year: album.year,
+      label: album.label,
+      genres: album.genres,
+      rank_rs: album.rank_rs,
+      rank_apple: album.rank_apple,
     },
   };
 

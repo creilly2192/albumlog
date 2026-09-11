@@ -57,7 +57,7 @@ const totalPages = Math.ceil(totalUnheard / PAGE_SIZE);
         </button>
       ) : (
         <form method="POST" action="/api/pick-random">
-          <button class="pick-next__random" type="submit">
+          <button class="pick-next__random button" type="submit">
             PICK FOR ME
           </button>
         </form>
@@ -68,7 +68,10 @@ const totalPages = Math.ceil(totalUnheard / PAGE_SIZE);
   <ul class="pick-next__list">
     {
       albums.map((album) => (
-        <li class="pick-next__item" style={`--tape-color: ${getTapeColor(album.genres)}`}>
+        <li
+          class="pick-next__item"
+          style={`--tape-color: ${getTapeColor(album.genres)}`}
+        >
           <button
             class="pick-next__item-btn"
             type="button"

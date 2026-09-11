@@ -33,6 +33,8 @@ export const POST: APIRoute = async ({ locals, request, redirect }) => {
     return new Response('Invalid favorite_tracks JSON', { status: 400 })
   }
 
+  const favorite = form.get('favorite') === 'true'
+
   const notes = form.get('notes')?.toString() || null
 
   const rawDate = form.get('date_listened')?.toString()
@@ -44,6 +46,7 @@ export const POST: APIRoute = async ({ locals, request, redirect }) => {
       album_id: albumId,
       rating,
       notes,
+      favorite,
       date_listened: dateListen,
       mood,
       standout_tracks: standoutTracks,
